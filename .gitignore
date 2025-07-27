@@ -1,1 +1,3 @@
 tiny-imagenet-200/
+checkpoints/
+lightning_logs/

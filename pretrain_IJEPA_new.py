@@ -44,7 +44,8 @@ def main(args):
         context_scale=(args.context_scale_min, args.context_scale_max),
         M=args.M,
         m=args.m,
-        m_start_end=(args.m_start, args.m_end)
+        m_start_end=(args.m_start, args.m_end),
+        fuzzy=args.fuzzy
     )
     
     # Define callbacks
@@ -164,6 +165,8 @@ if __name__ == "__main__":
                         help="Starting momentum value")
     parser.add_argument("--m_end", type=float, default=1.0,
                         help="Ending momentum value")
+    parser.add_argument("--fuzzy", type=int, default=0,
+                        help="Use fuzzy target blocks")
     
     # Hardware parameters
     parser.add_argument("--accelerator", type=str, default="gpu",

@@ -16,7 +16,8 @@ def run_pretraining(config_name):
             "--decoder_depth", "2",
             "--batch_size", "64",
             "--max_epochs", "1",
-            "--checkpoint_dir", "checkpoints/small"
+            "--checkpoint_dir", "checkpoints/small",
+            "--fuzzy", "0"
         ],
         "verbose": [
             "--img_size", "64",
@@ -28,7 +29,8 @@ def run_pretraining(config_name):
             "--batch_size", "8",
             "--max_epochs", "2",
             "--checkpoint_dir", "checkpoints/verbose",
-            "--limit_val_batches", "1.0"  # Use all validation batches
+            "--limit_val_batches", "1.0",
+            "--fuzzy", "0"
         ],
         "fast": [
             "--img_size", "64",
@@ -40,7 +42,8 @@ def run_pretraining(config_name):
             "--batch_size", "16",
             "--max_epochs", "5",
             "--checkpoint_dir", "checkpoints/fast",
-            "--data_fraction", "0.1"  # Use only 10% of the data
+            "--data_fraction", "0.1",
+            "--fuzzy", "1"
         ],
         "medium": [
             "--img_size", "64",
@@ -51,7 +54,8 @@ def run_pretraining(config_name):
             "--decoder_depth", "4",
             "--batch_size", "32",
             "--max_epochs", "50",
-            "--checkpoint_dir", "checkpoints/medium"
+            "--checkpoint_dir", "checkpoints/medium",
+            "--fuzzy", "0"
         ],
         "large": [
             "--img_size", "64",
@@ -62,7 +66,8 @@ def run_pretraining(config_name):
             "--decoder_depth", "6",
             "--batch_size", "16",
             "--max_epochs", "100",
-            "--checkpoint_dir", "checkpoints/large"
+            "--checkpoint_dir", "checkpoints/large",
+            "--fuzzy", "0"
         ],
         "cpu": [
             "--img_size", "64",
@@ -75,7 +80,8 @@ def run_pretraining(config_name):
             "--max_epochs", "5",
             "--accelerator", "cpu",
             "--precision", "32",
-            "--checkpoint_dir", "checkpoints/cpu"
+            "--checkpoint_dir", "checkpoints/cpu",
+            "--fuzzy", "0"
         ]
     }
     
@@ -103,6 +109,7 @@ if __name__ == "__main__":
                         help="Configuration to use (small, medium, large, cpu, verbose, or fast)")
     parser.add_argument("additional_args", nargs="*",
                         help="Additional arguments to pass to pretrain_IJEPA_new.py")
+    parser.add_argument('--fuzzy', action='store_true', help='Use fuzzy target and context blocks')
     
     args = parser.parse_args()
     

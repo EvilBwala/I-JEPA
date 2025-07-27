@@ -93,11 +93,13 @@ class Predictor(nn.Module):
     
 '''Main Model Class'''
 class IJEPA_base(nn.Module):
-    def __init__(self, img_size, patch_size, in_chans, embed_dim, enc_depth, pred_depth, num_heads, post_emb_norm=False, M = 4, mode="train", layer_dropout=0.):
+    def __init__(self, img_size, patch_size, in_chans, embed_dim, enc_depth, pred_depth, num_heads, post_emb_norm=False, M=4, mode='train', layer_dropout=0., fuzzy=0):
         super().__init__()
         self.M = M
         self.mode = mode
         self.layer_dropout = layer_dropout
+        self.fuzzy = fuzzy
+        print(f"[DEBUG] Initializing IJEPA_base with fuzzy set to: {self.fuzzy}")
 
         #define the patch embedding and positional embedding
         self.patch_embed = PatchEmbed(img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim)
@@ -120,9 +122,10 @@ class IJEPA_base(nn.Module):
         )  
         self.student_encoder = copy.deepcopy(self.teacher_encoder).cuda()
         self.predictor = Predictor(embed_dim, num_heads, pred_depth)
+        print(f"fuzzy: {self.fuzzy}")
 
-    @torch.no_grad() 
-    def get_target_block(self, target_encoder, x, patch_dim, aspect_ratio, scale, M):  
+    @torch.no_grad()
+    def get_target_block(self, target_encoder, x, patch_dim, aspect_ratio, scale, M):
         #get the target block
         target_encoder = target_encoder.eval()
         x = target_encoder(x)
@@ -152,8 +155,7 @@ class IJEPA_base(nn.Module):
                 for j in range(block_w):
                     patches.append(start_patch + i * patch_w + j)
                     if start_patch + i * patch_w + j not in all_patches:
-                        all_patches.append(start_patch + i * patch_w + j)
-                    
+                        all_patches.append(start_patch + i * patch_w + j) 
             #get the target block
             target_patches.append(patches)
             target_block[z] = x[:, patches, :]
@@ -177,10 +179,63 @@ class IJEPA_base(nn.Module):
                 if start_patch + i * patch_w + j not in target_patches: #remove the target patches
                     patches.append(start_patch + i * patch_w + j)
         return x[:, patches, :]
+    
+
+    def get_fuzzy_target_block(self, target_encoder, x, patch_dim, M, sigma=5):
+        target_encoder = target_encoder.eval()
+        x = target_encoder(x)
+        x = self.norm(x)
+        # x shape: [batch_size, patch_h * patch_w, embed_dim]
+        batch_size, total_patches, embed_dim = x.shape
+        patch_h, patch_w = patch_dim  # e.g., [8, 8]
+        
+        output = torch.zeros((M, batch_size, total_patches, embed_dim))  # Output shape: [M, batch_size, patch_h*patch_w, embed_dim]
+        
+        for m in range(M):
+            # Reshape x to [batch_size, patch_h, patch_w, embed_dim]
+            reshaped_x = x.view(batch_size, patch_h, patch_w, embed_dim)
+            
+            # Choose a random patch location (i, j) in the patch grid
+            random_i = torch.randint(0, patch_h, (1,)).item()
+            random_j = torch.randint(0, patch_w, (1,)).item()
+            
+            # Create a 2D Gaussian kernel centered at (random_i, random_j)
+            i_grid = torch.linspace(0, patch_h-1, patch_h)
+            j_grid = torch.linspace(0, patch_w-1, patch_w)
+            ii, jj = torch.meshgrid(i_grid, j_grid, indexing='ij')  # [patch_h, patch_w]
+            gaussian_kernel = torch.exp(-((ii - random_i)**2 + (jj - random_j)**2) / (2 * sigma**2))  # [patch_h, patch_w]
+            gaussian_kernel = gaussian_kernel.unsqueeze(0).unsqueeze(-1)  # [1, patch_h, patch_w, 1] for broadcasting
+            
+            # Apply the Gaussian filter: Multiply reshaped_x by the kernel
+            fuzzy_x = reshaped_x * gaussian_kernel.to(x.device)  # [batch_size, patch_h, patch_w, embed_dim]
+            
+            # Reshape back to [batch_size, patch_h * patch_w, embed_dim]
+            fuzzy_x = fuzzy_x.view(batch_size, patch_h * patch_w, embed_dim)
+            
+            output[m] = fuzzy_x  # Store for this block
+        
+        return output.cuda()  # Shape: [M, batch_size, patch_h * patch_w, embed_dim]
+
+    def get_fuzzy_context_block(self, x, target_block):
+        # x shape: [batch_size, total_patches, embed_dim]
+        # target_block shape: [M, batch_size, total_patches, embed_dim]
+        batch_size, total_patches, embed_dim = x.shape  # x is [batch_size, total_patches, embed_dim]
+        M = target_block.shape[0]  # Number of blocks
+        
+        output = x.clone()  # Initialize output as a copy of x
+        #print("output device: ", output.device)
+        #print("target_block device: ", target_block.device)
+        for m in range(M):
+            # Subtract the m-th target block from output
+            # Ensure shapes align: output and target_block[m] are both [batch_size, total_patches, embed_dim]
+            output = output - target_block[m]  # Element-wise subtraction for each m
+        
+        return output  # Return the final subtracted tensor, shape: [batch_size, total_patches, embed_dim]
 
 
     def forward(self, x, target_aspect_ratio=1, target_scale=1, context_aspect_ratio=1, context_scale=1):
         #get the patch embeddings
+        #self.fuzzy = True
         x = self.patch_embed(x)
         b, n, e = x.shape
         #add the positional embeddings
@@ -191,22 +246,41 @@ class IJEPA_base(nn.Module):
         if self.mode == 'test':
             return self.student_encoder(x)
         # #get target embeddings
-        target_blocks, target_patches, all_patches = self.get_target_block(self.teacher_encoder, x, self.patch_dim, target_aspect_ratio, target_scale, self.M)
-        m, b, n, e = target_blocks.shape
-        #get context embedding
+        if self.fuzzy == 1:
+            target_blocks = self.get_fuzzy_target_block(self.teacher_encoder, x, self.patch_dim, self.M)
+            m, b, n, e = target_blocks.shape
+            #get context embedding
 
-        context_block = self.get_context_block(x, self.patch_dim, context_aspect_ratio, context_scale, all_patches)
-        context_encoding = self.student_encoder(context_block)
-        context_encoding = self.norm(context_encoding)
+            context_block = self.get_fuzzy_context_block(x, target_blocks)
+            context_encoding = self.student_encoder(context_block)
+            context_encoding = self.norm(context_encoding)
 
 
-        prediction_blocks = torch.zeros((m, b, n, e)).cuda()
-        #get the prediction blocks, predict each target block separately
-        for i in range(m):
-            target_masks = self.mask_token.repeat(b, n, 1)
-            target_pos_embedding = self.pos_embedding[:, target_patches[i], :]
-            target_masks = target_masks + target_pos_embedding
-            prediction_blocks[i] = self.predictor(context_encoding, target_masks)
+            prediction_blocks = torch.zeros((m, b, n, e)).cuda()
+            #get the prediction blocks, predict each target block separately
+            for i in range(m):
+                target_masks = self.mask_token.repeat(b, n, 1)
+                target_pos_embedding = self.pos_embedding[:, torch.arange(n), :]
+                target_masks = target_masks + target_pos_embedding
+                prediction_blocks[i] = self.predictor(context_encoding, target_masks)
+        
+        else:
+            target_blocks, target_patches, all_patches = self.get_target_block(self.teacher_encoder, x, self.patch_dim, target_aspect_ratio, target_scale, self.M)
+            m, b, n, e = target_blocks.shape
+            #get context embedding
+
+            context_block = self.get_context_block(x, self.patch_dim, context_aspect_ratio, context_scale, all_patches)
+            context_encoding = self.student_encoder(context_block)
+            context_encoding = self.norm(context_encoding)
+
+
+            prediction_blocks = torch.zeros((m, b, n, e)).cuda()
+            #get the prediction blocks, predict each target block separately
+            for i in range(m):
+                target_masks = self.mask_token.repeat(b, n, 1)
+                target_pos_embedding = self.pos_embedding[:, target_patches[i], :]
+                target_masks = target_masks + target_pos_embedding
+                prediction_blocks[i] = self.predictor(context_encoding, target_masks)
 
         return prediction_blocks, target_blocks
 
@@ -252,7 +326,7 @@ class TinyImageNetDataset(Dataset):
         
         elif stage == 'val':
             # Validation set structure
-            val_dir = os.path.join(dataset_path, 'val')
+            val_dir = os.path.join(dataset_path, 'val_parsed')
             
             # Check if val_dir has subfolders or direct images
             if os.path.exists(os.path.join(val_dir, 'images')):
@@ -493,14 +567,15 @@ class IJEPA(pl.LightningModule):
             context_scale = (0.85,1.0),
             M = 4, #number of different target blocks
             m=0.996, #momentum
-            m_start_end = (.996, 1.)
+            m_start_end = (.996, 1.),
+            fuzzy=0
     ):
         super().__init__()
         self.save_hyperparameters()
         
         #define models
         self.model = IJEPA_base(img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim, 
-                                enc_depth=enc_depth, num_heads=enc_heads, pred_depth=decoder_depth, M=M)
+                                enc_depth=enc_depth, num_heads=enc_heads, pred_depth=decoder_depth, M=M, fuzzy=fuzzy)
 
         #define hyperparameters
         self.M = M
@@ -515,6 +590,7 @@ class IJEPA(pl.LightningModule):
         self.patch_size = patch_size
         self.num_tokens = (img_size // patch_size) ** 2
         self.m_start_end = m_start_end
+        self.fuzzy = fuzzy
 
         #define loss
         self.criterion = nn.MSELoss()
@@ -592,7 +668,7 @@ class IJEPA(pl.LightningModule):
         sys.stdout.write(info_str)
         sys.stdout.flush()
     
-    def forward(self, x, target_aspect_ratio, target_scale, context_aspect_ratio, context_scale):
+    def forward(self, x, target_aspect_ratio=1, target_scale=1, context_aspect_ratio=1, context_scale=1):
         return self.model(x, target_aspect_ratio, target_scale, context_aspect_ratio, context_scale)
     
     '''Update momentum for teacher encoder'''
@@ -713,7 +789,8 @@ if __name__ == '__main__':
         enc_depth=12,
         decoder_depth=4,
         lr=1e-3,
-        M=4
+        M=4,
+        fuzzy=0
     )
     
     # Define callbacks
