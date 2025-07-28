@@ -1,0 +1,44 @@
+name: brain_jepa
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  # Python version
+  - python=3.9
+  
+  # Core ML libraries - CPU version for macOS
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - torchaudio>=2.0.0
+  
+  # Data processing
+  - numpy>=1.21.0
+  - pillow>=9.0.0
+  - einops>=0.6.0
+  
+  # Visualization
+  - matplotlib>=3.5.0
+  
+  # Machine learning utilities
+  - scikit-learn>=1.0.0
+  
+  # Progress bars
+  - tqdm>=4.62.0
+  
+  # Pip dependencies (not available in conda)
+  - pip
+  - pip:
+      # PyTorch Lightning for training
+      - pytorch-lightning>=2.0.0
+      
+      # Transformer architectures
+      - x-transformers>=1.0.0
+      
+      # Experiment tracking (optional)
+      - wandb>=0.13.0
+      
+      # Additional utilities for development
+      - ipython>=8.0.0
+      - jupyter>=1.0.0
+      - ipykernel>=6.0.0

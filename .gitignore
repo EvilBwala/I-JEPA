@@ -1,3 +1,43 @@
 tiny-imagenet-200/
 checkpoints/
 lightning_logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment
+venv/
+ENV/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific - heavy files
+embeddings/
+fast/
+*.zip
+*.ckpt
+*.pth
+*.pt
+*.npy
+*.h5
+
+# Temporary files
+*.tmp
+*.log
+.claude/
+
+# Jupyter
+.ipynb_checkpoints/
