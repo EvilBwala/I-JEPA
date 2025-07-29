@@ -21,6 +21,9 @@ import copy
 from PIL import Image
 
 # Import model components
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent.parent))
 from model_new import IJEPA, IJEPA_base, TinyImageNetDataModule
 
 
@@ -107,6 +110,76 @@ class TinyImageNetDatasetWithLabels(Dataset):
             return torch.zeros((3, self.img_size, self.img_size)), label
 
 
+class MaskingStrategies:
+    """Masking strategies for I-JEPA style training."""
+    
+    @staticmethod
+    def ijepa_block_masking(patch_h: int, patch_w: int, 
+                           target_aspect_ratio: Tuple[float, float] = (0.75, 1.5),
+                           target_scale: Tuple[float, float] = (0.15, 0.2),
+                           M: int = 4) -> torch.Tensor:
+        """I-JEPA style block masking with multiple target blocks.
+        
+        Args:
+            patch_h, patch_w: Height and width of patch grid
+            target_aspect_ratio: Range for aspect ratio of target blocks
+            target_scale: Range for scale (fraction of patches) per block
+            M: Number of target blocks
+            
+        Returns:
+            Boolean mask where True = visible, False = masked
+        """
+        num_patches = patch_h * patch_w
+        mask = torch.ones(num_patches, dtype=torch.bool)
+        
+        masked_patches = set()
+        
+        for _ in range(M):
+            # Sample aspect ratio and scale
+            aspect_ratio = np.random.uniform(target_aspect_ratio[0], target_aspect_ratio[1])
+            scale = np.random.uniform(target_scale[0], target_scale[1])
+            
+            # Calculate block dimensions
+            num_patches_block = int(num_patches * scale)
+            block_h = int(np.sqrt(num_patches_block / aspect_ratio))
+            block_w = int(aspect_ratio * block_h)
+            
+            # Ensure block fits in grid
+            block_h = min(block_h, patch_h)
+            block_w = min(block_w, patch_w)
+            
+            # Random starting position
+            if patch_h > block_h:
+                start_h = torch.randint(0, patch_h - block_h + 1, (1,)).item()
+            else:
+                start_h = 0
+            if patch_w > block_w:
+                start_w = torch.randint(0, patch_w - block_w + 1, (1,)).item()
+            else:
+                start_w = 0
+            
+            # Mark patches in this block as masked
+            for i in range(block_h):
+                for j in range(block_w):
+                    patch_idx = (start_h + i) * patch_w + (start_w + j)
+                    masked_patches.add(patch_idx)
+        
+        # Apply mask
+        for idx in masked_patches:
+            mask[idx] = False
+            
+        return mask
+    
+    @staticmethod
+    def random_masking(num_patches: int, mask_ratio: float = 0.75) -> torch.Tensor:
+        """Random masking of patches."""
+        num_masked = int(num_patches * mask_ratio)
+        mask = torch.ones(num_patches, dtype=torch.bool)
+        masked_indices = torch.randperm(num_patches)[:num_masked]
+        mask[masked_indices] = False
+        return mask
+
+
 class IJEPA_base_fixed(IJEPA_base):
     """Fixed version of IJEPA_base that works with MPS/CPU."""
     
@@ -144,6 +217,8 @@ class IJEPA_base_fixed(IJEPA_base):
         self.student_encoder = copy.deepcopy(self.teacher_encoder)
         
         # Initialize predictor
+        import sys
+        sys.path.append(str(Path(__file__).parent.parent.parent))
         from model_new import Predictor
         self.predictor = Predictor(self.embed_dim, self.enc_heads, self.pred_depth)
         
@@ -155,7 +230,15 @@ class EmbeddingExtractor:
     """Extract embeddings from I-JEPA model using both encoders."""
     
     def __init__(self, checkpoint_path: str, device: str = 'cuda'):
-        self.device = torch.device(device if torch.cuda.is_available() or device == 'mps' else 'cpu')
+        # Properly handle device selection
+        if device == 'cuda' and torch.cuda.is_available():
+            self.device = torch.device('cuda')
+        elif device == 'mps' and torch.backends.mps.is_available():
+            self.device = torch.device('mps')
+        else:
+            self.device = torch.device('cpu')
+        
+        print(f"Using device: {self.device}")
         self.checkpoint_path = checkpoint_path
         self.model = None
         self.base_model = None
@@ -165,7 +248,7 @@ class EmbeddingExtractor:
         print(f"Loading model from {self.checkpoint_path}")
         
         # Load checkpoint
-        checkpoint = torch.load(self.checkpoint_path, map_location=self.device)
+        checkpoint = torch.load(self.checkpoint_path, map_location=self.device, weights_only=False)
         
         # Extract hyperparameters
         hparams = checkpoint['hyper_parameters']
@@ -195,11 +278,13 @@ class EmbeddingExtractor:
         self.patch_size = self.base_model.patch_size
         self.img_size = self.base_model.img_size
         self.num_patches = (self.img_size // self.patch_size) ** 2
+        self.grid_size = self.img_size // self.patch_size
         
         print(f"Model loaded: embed_dim={self.embed_dim}, patch_size={self.patch_size}, img_size={self.img_size}")
+        print(f"Grid size: {self.grid_size}x{self.grid_size}, total patches: {self.num_patches}")
         
-    def extract_both_embeddings(self, images: torch.Tensor) -> Dict[str, torch.Tensor]:
-        """Extract embeddings from both encoders."""
+    def extract_both_embeddings(self, images: torch.Tensor, mask: Optional[torch.Tensor] = None) -> Dict[str, torch.Tensor]:
+        """Extract embeddings from both encoders. Only student sees masked input."""
         with torch.no_grad():
             # Convert images to patches
             x = self.base_model.patch_embed(images)  # [B, embed_dim, H, W]
@@ -208,13 +293,23 @@ class EmbeddingExtractor:
             # Add positional embeddings
             x = x + self.base_model.pos_embed
             
-            # Pass through both encoders
-            student_embeddings = self.base_model.student_encoder(x)  # [B, num_patches, embed_dim]
-            teacher_embeddings = self.base_model.teacher_encoder(x)  # [B, num_patches, embed_dim]
+            # Apply mask only for student
+            if mask is not None:
+                # mask shape: [num_patches] where True = keep, False = mask
+                # Expand mask for batch
+                batch_mask = mask.unsqueeze(0).unsqueeze(-1).expand(x.shape[0], -1, x.shape[-1])
+                x_student = x * batch_mask.float()  # Student sees masked input
+            else:
+                x_student = x
+            
+            # Pass through encoders
+            student_embeddings = self.base_model.student_encoder(x_student)  # Student with mask
+            teacher_embeddings = self.base_model.teacher_encoder(x)  # Teacher sees full input
             
         return {
             'student': student_embeddings,
-            'teacher': teacher_embeddings
+            'teacher': teacher_embeddings,
+            'mask': mask
         }
 
 
@@ -306,6 +401,123 @@ def process_split(extractor: EmbeddingExtractor,
     return stats
 
 
+def process_split_with_multiple_masks(extractor: EmbeddingExtractor,
+                                    dataloader: DataLoader,
+                                    split_name: str,
+                                    output_dir: Path,
+                                    mask_type: str = 'ijepa',
+                                    mask_ratio: float = 0.75,
+                                    num_mask_samples: int = 10,
+                                    samples_per_mask: int = 1000,
+                                    M: int = 4,
+                                    target_scale: Tuple[float, float] = (0.15, 0.2),
+                                    target_aspect_ratio: Tuple[float, float] = (0.75, 1.5)) -> Dict:
+    """Process a split with multiple applications of the same mask type."""
+    print(f"\nProcessing {split_name} split with {num_mask_samples} different {mask_type} masks...")
+    
+    # Create output directory
+    split_dir = output_dir / split_name / f"{mask_type}_{int(mask_ratio*100)}"
+    split_dir.mkdir(parents=True, exist_ok=True)
+    
+    all_results = {}
+    
+    # Apply the same mask type multiple times with different random patterns
+    for mask_idx in range(num_mask_samples):
+        print(f"\n  Applying {mask_type} mask sample {mask_idx + 1}/{num_mask_samples}...")
+        mask_sample_dir = split_dir / f"mask_{mask_idx:02d}"
+        mask_sample_dir.mkdir(exist_ok=True)
+        
+        # Generate a new random mask for this sample
+        if mask_type == 'ijepa':
+            mask = MaskingStrategies.ijepa_block_masking(
+                extractor.grid_size, extractor.grid_size,
+                target_aspect_ratio=target_aspect_ratio,
+                target_scale=target_scale,
+                M=M
+            )
+        elif mask_type == 'random':
+            mask = MaskingStrategies.random_masking(extractor.num_patches, mask_ratio)
+        else:
+            raise ValueError(f"Unknown mask type: {mask_type}")
+        
+        mask = mask.to(extractor.device)
+        
+        # Storage for this mask
+        student_masked_list = []
+        teacher_list = []
+        labels_list = []
+        
+        # Reset dataloader for each mask
+        samples_processed = 0
+        for batch_idx, (images, labels) in enumerate(dataloader):
+            if samples_processed >= samples_per_mask:
+                break
+                
+            images = images.to(extractor.device)
+            
+            # Extract embeddings with mask (only student is masked)
+            embeddings = extractor.extract_both_embeddings(images, mask)
+            
+            # Pool over patches
+            student_masked_pooled = embeddings['student'].mean(dim=1)  # [B, embed_dim]
+            teacher_pooled = embeddings['teacher'].mean(dim=1)
+            
+            # Store results
+            student_masked_list.append(student_masked_pooled.cpu().numpy())
+            teacher_list.append(teacher_pooled.cpu().numpy())
+            labels_list.append(labels.numpy())
+            
+            samples_processed += images.shape[0]
+        
+        # Concatenate and save
+        student_masked = np.vstack(student_masked_list)[:samples_per_mask]
+        teacher_emb = np.vstack(teacher_list)[:samples_per_mask]
+        all_labels = np.concatenate(labels_list)[:samples_per_mask]
+        
+        # Save embeddings
+        np.save(mask_sample_dir / 'student_embeddings_masked_pooled.npy', student_masked)
+        np.save(mask_sample_dir / 'teacher_embeddings_pooled.npy', teacher_emb)
+        np.save(mask_sample_dir / 'labels.npy', all_labels)
+        
+        # Save mask visualization
+        mask_visual = mask.cpu().numpy().reshape(extractor.grid_size, extractor.grid_size)
+        np.save(mask_sample_dir / 'mask_pattern.npy', mask_visual)
+        
+        # Compute statistics
+        actual_mask_ratio = 1.0 - mask.float().mean().item()
+        
+        all_results[f'mask_{mask_idx:02d}'] = {
+            'mask_ratio': actual_mask_ratio,
+            'num_masked_patches': int(mask.sum().item() == 0),
+            'num_visible_patches': int(mask.sum().item()),
+            'total_samples': len(all_labels),
+            'embedding_dim': extractor.embed_dim
+        }
+        
+        print(f"    Processed {len(all_labels)} samples with {actual_mask_ratio:.1%} masking")
+    
+    # Save overall metadata
+    metadata = {
+        'mask_type': mask_type,
+        'num_mask_samples': num_mask_samples,
+        'samples_per_mask': samples_per_mask,
+        'mask_results': all_results
+    }
+    
+    # Add mask-specific parameters
+    if mask_type == 'ijepa':
+        metadata['M'] = M
+        metadata['target_scale'] = target_scale
+        metadata['target_aspect_ratio'] = target_aspect_ratio
+    elif mask_type == 'random':
+        metadata['target_mask_ratio'] = mask_ratio
+    
+    with open(split_dir / 'metadata.json', 'w') as f:
+        json.dump(metadata, f, indent=2)
+    
+    return all_results
+
+
 def analyze_encoders(output_dir: Path, splits: List[str] = ['train', 'val']):
     """Analyze differences between student and teacher encoders."""
     print("\n=== Encoder Analysis ===")
@@ -348,7 +560,7 @@ def main():
                        help='Path to model checkpoint')
     parser.add_argument('--data_path', type=str, required=True,
                        help='Path to dataset')
-    parser.add_argument('--output_dir', type=str, default='embeddings',
+    parser.add_argument('--output_dir', type=str, default='analysis/dim_reduction/embeddings',
                        help='Output directory for embeddings')
     parser.add_argument('--batch_size', type=int, default=32,
                        help='Batch size for extraction')
@@ -360,6 +572,12 @@ def main():
                        help='Device to use (cuda/cpu/mps)')
     parser.add_argument('--analyze', action='store_true',
                        help='Perform analysis of encoder differences')
+    parser.add_argument('--with_masks', action='store_true',
+                       help='Extract embeddings with I-JEPA style masking')
+    parser.add_argument('--num_mask_samples', type=int, default=10,
+                       help='Number of different mask patterns to apply')
+    parser.add_argument('--samples_per_mask', type=int, default=1000,
+                       help='Number of samples to process per mask pattern')
     
     args = parser.parse_args()
     
@@ -405,20 +623,37 @@ def main():
         pin_memory=(args.device == 'cuda')
     )
     
-    # Process each split
-    all_stats = []
-    
-    for split_name, dataloader in [('train', train_loader), ('val', val_loader)]:
-        stats = process_split(
-            extractor=extractor,
-            dataloader=dataloader,
-            split_name=split_name,
-            output_dir=output_dir,
-            pool_patches=not args.no_pool
-        )
-        all_stats.append(stats)
-        print(f"Completed {split_name}: {stats['total_samples']} samples")
-        print(f"  - Avg cosine similarity (student vs teacher): {stats['avg_cosine_similarity']:.4f}")
+    # Process embeddings
+    if args.with_masks:
+        # Process with I-JEPA style masking
+        print("\nExtracting embeddings with I-JEPA style masking...")
+        
+        for split_name, dataloader in [('val', val_loader)]:  # Usually just val for analysis
+            mask_results = process_split_with_multiple_masks(
+                extractor=extractor,
+                dataloader=dataloader,
+                split_name=split_name,
+                output_dir=output_dir / 'masked',
+                mask_type='ijepa',
+                num_mask_samples=args.num_mask_samples,
+                samples_per_mask=args.samples_per_mask
+            )
+            print(f"\nCompleted {split_name} with {len(mask_results)} mask patterns")
+    else:
+        # Process normally without masking
+        all_stats = []
+        
+        for split_name, dataloader in [('train', train_loader), ('val', val_loader)]:
+            stats = process_split(
+                extractor=extractor,
+                dataloader=dataloader,
+                split_name=split_name,
+                output_dir=output_dir,
+                pool_patches=not args.no_pool
+            )
+            all_stats.append(stats)
+            print(f"Completed {split_name}: {stats['total_samples']} samples")
+            print(f"  - Avg cosine similarity (student vs teacher): {stats['avg_cosine_similarity']:.4f}")
         
     # Save metadata
     metadata = {
@@ -433,10 +668,13 @@ def main():
         'extraction_config': {
             'batch_size': args.batch_size,
             'pool_patches': not args.no_pool,
-            'device': args.device
-        },
-        'statistics': all_stats
+            'device': args.device,
+            'with_masks': args.with_masks
+        }
     }
+    
+    if not args.with_masks:
+        metadata['statistics'] = all_stats
     
     with open(output_dir / 'metadata.json', 'w') as f:
         json.dump(metadata, f, indent=2)
