@@ -1,0 +1,2222 @@
+{
+  "epoch_00": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.14400000000000002,
+        "knn_1_std": 0.03611094017053558,
+        "knn_5_accuracy": 0.122,
+        "knn_5_std": 0.03969886648255842,
+        "mean_local_purity": 0.11560000000000001,
+        "std_local_purity": 0.10861233815731985,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.0128542240071898,
+            "normalized_mutual_info": 0.06670682257607523,
+            "adjusted_mutual_info": 0.030187347207963604,
+            "v_measure": 0.06670682257607523,
+            "homogeneity": 0.06615583306158267,
+            "completeness": 0.06726706718298676,
+            "fowlkes_mallows": 0.11337089111070026,
+            "mean_cluster_entropy": 2.1415330695825037,
+            "weighted_cluster_entropy": 2.1502556579718424,
+            "max_cluster_entropy": 2.2243329213307237,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.010964938709417685,
+            "normalized_mutual_info": 0.05809837759540004,
+            "adjusted_mutual_info": 0.021264073895810816,
+            "v_measure": 0.05809837759540004,
+            "homogeneity": 0.05759226952880228,
+            "completeness": 0.05861345965389056,
+            "fowlkes_mallows": 0.11221644122026542,
+            "mean_cluster_entropy": 2.1664869128810103,
+            "weighted_cluster_entropy": 2.169973991705331,
+            "max_cluster_entropy": 2.2482522676064427,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": -5.1199984070281706e-05,
+            "normalized_mutual_info": 0.008844651389156818,
+            "adjusted_mutual_info": 0.0009487625153312852,
+            "v_measure": 0.008844651389156818,
+            "homogeneity": 0.004514447060721098,
+            "completeness": 0.21671796749646047,
+            "fowlkes_mallows": 0.31087205699235926,
+            "noise_ratio": 0.034
+          }
+        },
+        "fisher_ratio": 0.0866821422813505,
+        "within_class_scatter": 142.30309610865072,
+        "between_class_scatter": 12.335137224833579,
+        "mean_centroid_distance": 0.20978553945381795,
+        "min_centroid_distance": 0.009064754500380516,
+        "max_centroid_distance": 0.43442038199568944
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.13399999999999998,
+        "knn_1_std": 0.04498888751680797,
+        "knn_5_accuracy": 0.13999999999999999,
+        "knn_5_std": 0.0316227766016838,
+        "mean_local_purity": 0.1212,
+        "std_local_purity": 0.11589029294984114,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.011989823526481334,
+            "normalized_mutual_info": 0.06067970805591095,
+            "adjusted_mutual_info": 0.023353853522243912,
+            "v_measure": 0.06067970805591094,
+            "homogeneity": 0.059736653524567127,
+            "completeness": 0.06165301594354923,
+            "fowlkes_mallows": 0.11494773551714471,
+            "mean_cluster_entropy": 2.12143376592392,
+            "weighted_cluster_entropy": 2.165036365083027,
+            "max_cluster_entropy": 2.2523314778277475,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.011267168148549573,
+            "normalized_mutual_info": 0.06030866716648481,
+            "adjusted_mutual_info": 0.02342034357092969,
+            "v_measure": 0.06030866716648481,
+            "homogeneity": 0.059693531522643485,
+            "completeness": 0.06093661263207892,
+            "fowlkes_mallows": 0.11295297372902392,
+            "mean_cluster_entropy": 2.1477516946727526,
+            "weighted_cluster_entropy": 2.1651356571618368,
+            "max_cluster_entropy": 2.2438213160065876,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.3134331043690034,
+            "noise_ratio": 0.056
+          }
+        },
+        "fisher_ratio": 0.10811036504882408,
+        "within_class_scatter": 3018.4787732068853,
+        "between_class_scatter": 326.32884206460415,
+        "mean_centroid_distance": 1.0746390974250681,
+        "min_centroid_distance": 0.16305816637161533,
+        "max_centroid_distance": 2.371547793281261
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.12799999999999997,
+        "knn_1_std": 0.03429285639896449,
+        "knn_5_accuracy": 0.144,
+        "knn_5_std": 0.040298883359219766,
+        "mean_local_purity": 0.1216,
+        "std_local_purity": 0.11337301266174415,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01611172360761976,
+            "normalized_mutual_info": 0.0653738563654851,
+            "adjusted_mutual_info": 0.028940362713811788,
+            "v_measure": 0.06537385636548511,
+            "homogeneity": 0.06495395833072447,
+            "completeness": 0.06579921862669569,
+            "fowlkes_mallows": 0.11548510170747867,
+            "mean_cluster_entropy": 2.141733340191179,
+            "weighted_cluster_entropy": 2.153023076810763,
+            "max_cluster_entropy": 2.217626632649458,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.017098145753732464,
+            "normalized_mutual_info": 0.06922553436245789,
+            "adjusted_mutual_info": 0.03245902997441742,
+            "v_measure": 0.06922553436245789,
+            "homogeneity": 0.06836470145366018,
+            "completeness": 0.07010832255508873,
+            "fowlkes_mallows": 0.11879563346574727,
+            "mean_cluster_entropy": 2.121436116982048,
+            "weighted_cluster_entropy": 2.145169550539859,
+            "max_cluster_entropy": 2.2312597286494813,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00934747753189581,
+            "normalized_mutual_info": 0.055616032173376795,
+            "adjusted_mutual_info": 0.030979685530216804,
+            "v_measure": 0.0556160321733768,
+            "homogeneity": 0.03878536271057666,
+            "completeness": 0.09825179318257982,
+            "fowlkes_mallows": 0.2248236163640833,
+            "noise_ratio": 0.02
+          }
+        },
+        "fisher_ratio": 0.10285354828751012,
+        "within_class_scatter": 5183.462008727939,
+        "between_class_scatter": 533.1374600122018,
+        "mean_centroid_distance": 1.3422123605609506,
+        "min_centroid_distance": 0.24555388234456976,
+        "max_centroid_distance": 3.4131350363821857
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.13,
+        "knn_1_std": 0.022803508501982764,
+        "knn_5_accuracy": 0.13,
+        "knn_5_std": 0.04427188724235731,
+        "mean_local_purity": 0.1258,
+        "std_local_purity": 0.11275797089341401,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.012063660663923656,
+            "normalized_mutual_info": 0.06323208961800497,
+            "adjusted_mutual_info": 0.02655610818183524,
+            "v_measure": 0.06323208961800497,
+            "homogeneity": 0.06266945300132075,
+            "completeness": 0.06380492028361529,
+            "fowlkes_mallows": 0.11306995996706365,
+            "mean_cluster_entropy": 2.1370173413229914,
+            "weighted_cluster_entropy": 2.1582833447271135,
+            "max_cluster_entropy": 2.2606432912626344,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.018083047416835238,
+            "normalized_mutual_info": 0.0710756584046343,
+            "adjusted_mutual_info": 0.03435002558067977,
+            "v_measure": 0.0710756584046343,
+            "homogeneity": 0.07008637224369339,
+            "completeness": 0.07209327244924477,
+            "fowlkes_mallows": 0.12083963021270394,
+            "mean_cluster_entropy": 2.116541126424586,
+            "weighted_cluster_entropy": 2.1412052570436853,
+            "max_cluster_entropy": 2.263413277398233,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.010596864327709668,
+            "normalized_mutual_info": 0.06906144506221394,
+            "adjusted_mutual_info": 0.03366092749774677,
+            "v_measure": 0.06906144506221396,
+            "homogeneity": 0.05884510897607666,
+            "completeness": 0.08357044645007033,
+            "fowlkes_mallows": 0.16499778877172383,
+            "noise_ratio": 0.026
+          }
+        },
+        "fisher_ratio": 0.11157816765841519,
+        "within_class_scatter": 6263.963878878846,
+        "between_class_scatter": 698.9216118849164,
+        "mean_centroid_distance": 1.487584308669459,
+        "min_centroid_distance": 0.20008163115229494,
+        "max_centroid_distance": 3.7981118982598803
+      }
+    }
+  },
+  "epoch_01": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.126,
+        "knn_1_std": 0.0397994974842648,
+        "knn_5_accuracy": 0.16,
+        "knn_5_std": 0.020976176963403034,
+        "mean_local_purity": 0.1192,
+        "std_local_purity": 0.11433004854367902,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.013223763537902227,
+            "normalized_mutual_info": 0.06698841886059623,
+            "adjusted_mutual_info": 0.0304327836717165,
+            "v_measure": 0.06698841886059624,
+            "homogeneity": 0.06631353932846576,
+            "completeness": 0.06767717626239382,
+            "fowlkes_mallows": 0.11509356149756116,
+            "mean_cluster_entropy": 2.1255554753569306,
+            "weighted_cluster_entropy": 2.149892525872646,
+            "max_cluster_entropy": 2.2438208737133962,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.012370177245749615,
+            "normalized_mutual_info": 0.05964226125725344,
+            "adjusted_mutual_info": 0.022352494979170034,
+            "v_measure": 0.05964226125725344,
+            "homogeneity": 0.058768069575749315,
+            "completeness": 0.06054285335012428,
+            "fowlkes_mallows": 0.11560058046877245,
+            "mean_cluster_entropy": 2.142369120606381,
+            "weighted_cluster_entropy": 2.1672666120448882,
+            "max_cluster_entropy": 2.267229974390565,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.31344965249693474,
+            "noise_ratio": 0.052
+          }
+        },
+        "fisher_ratio": 0.08199313416947161,
+        "within_class_scatter": 129.57831057598597,
+        "between_class_scatter": 10.624531805330212,
+        "mean_centroid_distance": 0.19224192450744254,
+        "min_centroid_distance": 0.028984962729183238,
+        "max_centroid_distance": 0.4204665655973022
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.118,
+        "knn_1_std": 0.01939071942966531,
+        "knn_5_accuracy": 0.12200000000000003,
+        "knn_5_std": 0.018330302779823362,
+        "mean_local_purity": 0.11320000000000002,
+        "std_local_purity": 0.10893006931054437,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.017951943678301743,
+            "normalized_mutual_info": 0.0778566260300172,
+            "adjusted_mutual_info": 0.04131755259236534,
+            "v_measure": 0.0778566260300172,
+            "homogeneity": 0.07670495021350325,
+            "completeness": 0.07904341236151355,
+            "fowlkes_mallows": 0.12095336766712161,
+            "mean_cluster_entropy": 2.0973773967726133,
+            "weighted_cluster_entropy": 2.125965418073582,
+            "max_cluster_entropy": 2.230082404092804,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01388672944620446,
+            "normalized_mutual_info": 0.0712866791900971,
+            "adjusted_mutual_info": 0.03355155997706039,
+            "v_measure": 0.0712866791900971,
+            "homogeneity": 0.06935982568540079,
+            "completeness": 0.07332364987659612,
+            "fowlkes_mallows": 0.12101577734096852,
+            "mean_cluster_entropy": 2.068373437680632,
+            "weighted_cluster_entropy": 2.1428781923181766,
+            "max_cluster_entropy": 2.254729525201675,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00021896281756443448,
+            "normalized_mutual_info": 0.015518582648438573,
+            "adjusted_mutual_info": -8.098508478088878e-05,
+            "v_measure": 0.015518582648438575,
+            "homogeneity": 0.008086803666778348,
+            "completeness": 0.1915893155110104,
+            "fowlkes_mallows": 0.3086558103780903,
+            "noise_ratio": 0.056
+          }
+        },
+        "fisher_ratio": 0.10146648589676391,
+        "within_class_scatter": 2983.984346859109,
+        "between_class_scatter": 302.77440564775867,
+        "mean_centroid_distance": 1.031697627649676,
+        "min_centroid_distance": 0.140204348649598,
+        "max_centroid_distance": 2.3458188110225353
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.11800000000000002,
+        "knn_1_std": 0.04069397989875161,
+        "knn_5_accuracy": 0.10799999999999998,
+        "knn_5_std": 0.029257477676655586,
+        "mean_local_purity": 0.1194,
+        "std_local_purity": 0.11525467452559136,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.014364117060368378,
+            "normalized_mutual_info": 0.06634548383344996,
+            "adjusted_mutual_info": 0.029830008159781606,
+            "v_measure": 0.06634548383344996,
+            "homogeneity": 0.06582202549271687,
+            "completeness": 0.06687733465954479,
+            "fowlkes_mallows": 0.1144980320489317,
+            "mean_cluster_entropy": 2.116757651482266,
+            "weighted_cluster_entropy": 2.1510242783038422,
+            "max_cluster_entropy": 2.262526656710861,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.012140191621888214,
+            "normalized_mutual_info": 0.05784366768960093,
+            "adjusted_mutual_info": 0.02079551885072031,
+            "v_measure": 0.05784366768960093,
+            "homogeneity": 0.05725786479311651,
+            "completeness": 0.05844158114010599,
+            "fowlkes_mallows": 0.11329148954566032,
+            "mean_cluster_entropy": 2.162562481863635,
+            "weighted_cluster_entropy": 2.1707439870647467,
+            "max_cluster_entropy": 2.2509874280667637,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.007333877824802976,
+            "normalized_mutual_info": 0.040727495736290725,
+            "adjusted_mutual_info": 0.01791156513981816,
+            "v_measure": 0.040727495736290725,
+            "homogeneity": 0.031198546668061457,
+            "completeness": 0.05863692994519566,
+            "fowlkes_mallows": 0.19398790418916448,
+            "noise_ratio": 0.042
+          }
+        },
+        "fisher_ratio": 0.11057171715168142,
+        "within_class_scatter": 3918.662091964625,
+        "between_class_scatter": 433.2931964468344,
+        "mean_centroid_distance": 1.2039037826085317,
+        "min_centroid_distance": 0.2332159708538019,
+        "max_centroid_distance": 3.062380467260923
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.134,
+        "knn_1_std": 0.030724582991474434,
+        "knn_5_accuracy": 0.124,
+        "knn_5_std": 0.03072458299147443,
+        "mean_local_purity": 0.11619999999999998,
+        "std_local_purity": 0.10989795266518845,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.014740730556486123,
+            "normalized_mutual_info": 0.067777796142765,
+            "adjusted_mutual_info": 0.03138243787343261,
+            "v_measure": 0.067777796142765,
+            "homogeneity": 0.06727844219402043,
+            "completeness": 0.06828461812896494,
+            "fowlkes_mallows": 0.11475217524503356,
+            "mean_cluster_entropy": 2.1269516785512317,
+            "weighted_cluster_entropy": 2.147670754918233,
+            "max_cluster_entropy": 2.2629576965004015,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.012990832508597297,
+            "normalized_mutual_info": 0.05831072235997151,
+            "adjusted_mutual_info": 0.021329155822338793,
+            "v_measure": 0.05831072235997153,
+            "homogeneity": 0.05771526886381207,
+            "completeness": 0.05891859063246757,
+            "fowlkes_mallows": 0.1144328052924197,
+            "mean_cluster_entropy": 2.1663207041945522,
+            "weighted_cluster_entropy": 2.169690775270089,
+            "max_cluster_entropy": 2.2575440253630346,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.012537198719412482,
+            "normalized_mutual_info": 0.06879474285680452,
+            "adjusted_mutual_info": 0.033741448180267135,
+            "v_measure": 0.06879474285680452,
+            "homogeneity": 0.05757513074713412,
+            "completeness": 0.0854454104089106,
+            "fowlkes_mallows": 0.1777882432064258,
+            "noise_ratio": 0.024
+          }
+        },
+        "fisher_ratio": 0.10273194137753738,
+        "within_class_scatter": 5277.946228236542,
+        "between_class_scatter": 542.2136625140183,
+        "mean_centroid_distance": 1.3436291703758627,
+        "min_centroid_distance": 0.32353687012610893,
+        "max_centroid_distance": 3.3780805203429525
+      }
+    }
+  },
+  "epoch_02": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.092,
+        "knn_1_std": 0.029257477676655583,
+        "knn_5_accuracy": 0.11400000000000002,
+        "knn_5_std": 0.03382306905057553,
+        "mean_local_purity": 0.1186,
+        "std_local_purity": 0.10370168754653901,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.4,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.016403745117718353,
+            "normalized_mutual_info": 0.06999445572915582,
+            "adjusted_mutual_info": 0.03196105987181016,
+            "v_measure": 0.06999445572915582,
+            "homogeneity": 0.06756172730570821,
+            "completeness": 0.07260892094216927,
+            "fowlkes_mallows": 0.1312895227629945,
+            "mean_cluster_entropy": 2.115658410358551,
+            "weighted_cluster_entropy": 2.147018466842993,
+            "max_cluster_entropy": 2.250242216007117,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.011938068718910335,
+            "normalized_mutual_info": 0.06847583194851126,
+            "adjusted_mutual_info": 0.029901811417488423,
+            "v_measure": 0.06847583194851126,
+            "homogeneity": 0.06573924416055948,
+            "completeness": 0.07145015297351501,
+            "fowlkes_mallows": 0.12899227215265766,
+            "mean_cluster_entropy": 2.092664819119166,
+            "weighted_cluster_entropy": 2.151214889365246,
+            "max_cluster_entropy": 2.2659454441676044,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": -1.2621328586900488e-05,
+            "normalized_mutual_info": 0.009339167354100735,
+            "adjusted_mutual_info": 0.0002950560574810403,
+            "v_measure": 0.009339167354100734,
+            "homogeneity": 0.004824258501493531,
+            "completeness": 0.14564282735438566,
+            "fowlkes_mallows": 0.3087540324836431,
+            "noise_ratio": 0.042
+          }
+        },
+        "fisher_ratio": 0.09093363456355694,
+        "within_class_scatter": 1049.7024377297364,
+        "between_class_scatter": 95.45325787390006,
+        "mean_centroid_distance": 0.5695171679723692,
+        "min_centroid_distance": 0.07806971679635948,
+        "max_centroid_distance": 1.3367515338914464
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.10800000000000001,
+        "knn_1_std": 0.016,
+        "knn_5_accuracy": 0.122,
+        "knn_5_std": 0.029933259094191526,
+        "mean_local_purity": 0.1118,
+        "std_local_purity": 0.11314044369720316,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.023121881073231154,
+            "normalized_mutual_info": 0.08031589729966372,
+            "adjusted_mutual_info": 0.04363673958726293,
+            "v_measure": 0.08031589729966374,
+            "homogeneity": 0.07888736851432425,
+            "completeness": 0.08179711715287058,
+            "fowlkes_mallows": 0.12639742084414277,
+            "mean_cluster_entropy": 2.078313836155004,
+            "weighted_cluster_entropy": 2.120940214227435,
+            "max_cluster_entropy": 2.215421842776014,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01754957974523481,
+            "normalized_mutual_info": 0.07361139327198478,
+            "adjusted_mutual_info": 0.03610065103127274,
+            "v_measure": 0.07361139327198478,
+            "homogeneity": 0.07175626925267746,
+            "completeness": 0.07556498449424051,
+            "fowlkes_mallows": 0.12411103413421448,
+            "mean_cluster_entropy": 2.072592663002389,
+            "weighted_cluster_entropy": 2.1373601770839636,
+            "max_cluster_entropy": 2.209407695900994,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.3133970368323776,
+            "noise_ratio": 0.062
+          }
+        },
+        "fisher_ratio": 0.10953670561842593,
+        "within_class_scatter": 2737.1121809784654,
+        "between_class_scatter": 299.8142512135413,
+        "mean_centroid_distance": 1.0315272567219287,
+        "min_centroid_distance": 0.14215439083773737,
+        "max_centroid_distance": 2.2523892758037394
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.13799999999999998,
+        "knn_1_std": 0.03709447398198282,
+        "knn_5_accuracy": 0.11000000000000001,
+        "knn_5_std": 0.018973665961010275,
+        "mean_local_purity": 0.11980000000000002,
+        "std_local_purity": 0.11396473138651274,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01995627215269286,
+            "normalized_mutual_info": 0.06668221266989968,
+            "adjusted_mutual_info": 0.029681534630473398,
+            "v_measure": 0.0666822126698997,
+            "homogeneity": 0.06570110662894375,
+            "completeness": 0.06769306435531963,
+            "fowlkes_mallows": 0.12255796629427033,
+            "mean_cluster_entropy": 2.146539879855771,
+            "weighted_cluster_entropy": 2.151302704277027,
+            "max_cluster_entropy": 2.2419337001032176,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.0207860731345311,
+            "normalized_mutual_info": 0.07235065001434347,
+            "adjusted_mutual_info": 0.0343043776269313,
+            "v_measure": 0.07235065001434346,
+            "homogeneity": 0.07008760175810881,
+            "completeness": 0.07476471695468653,
+            "fowlkes_mallows": 0.1298986803236489,
+            "mean_cluster_entropy": 2.10233323631855,
+            "weighted_cluster_entropy": 2.141202425982121,
+            "max_cluster_entropy": 2.238991051962429,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.01454718876425359,
+            "normalized_mutual_info": 0.04487701347047196,
+            "adjusted_mutual_info": 0.01977047671497577,
+            "v_measure": 0.04487701347047196,
+            "homogeneity": 0.03177585676021683,
+            "completeness": 0.07636029216260225,
+            "fowlkes_mallows": 0.22429004473742933,
+            "noise_ratio": 0.06
+          }
+        },
+        "fisher_ratio": 0.11050598037589288,
+        "within_class_scatter": 12635.513831724247,
+        "between_class_scatter": 1396.2998435289478,
+        "mean_centroid_distance": 2.115018765524421,
+        "min_centroid_distance": 0.17895981049550383,
+        "max_centroid_distance": 5.149766759898813
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.158,
+        "knn_1_std": 0.0331058907144937,
+        "knn_5_accuracy": 0.14800000000000002,
+        "knn_5_std": 0.024,
+        "mean_local_purity": 0.1238,
+        "std_local_purity": 0.11972284660832284,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.019733960438983466,
+            "normalized_mutual_info": 0.07170721630090966,
+            "adjusted_mutual_info": 0.03573494874513431,
+            "v_measure": 0.07170721630090965,
+            "homogeneity": 0.07142407056085784,
+            "completeness": 0.07199261591973269,
+            "fowlkes_mallows": 0.11783299943057919,
+            "mean_cluster_entropy": 2.132454265326751,
+            "weighted_cluster_entropy": 2.13812509283966,
+            "max_cluster_entropy": 2.2439767227521354,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.017435867768478427,
+            "normalized_mutual_info": 0.06972417168455534,
+            "adjusted_mutual_info": 0.03348494566012774,
+            "v_measure": 0.06972417168455534,
+            "homogeneity": 0.06926479305210312,
+            "completeness": 0.07018968439031367,
+            "fowlkes_mallows": 0.11696812585091564,
+            "mean_cluster_entropy": 2.1338453191191875,
+            "weighted_cluster_entropy": 2.143097013042955,
+            "max_cluster_entropy": 2.2374613676350132,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.018351938347092027,
+            "normalized_mutual_info": 0.07141222368083733,
+            "adjusted_mutual_info": 0.03685059674265687,
+            "v_measure": 0.07141222368083731,
+            "homogeneity": 0.06179362214889135,
+            "completeness": 0.08457725391894869,
+            "fowlkes_mallows": 0.17457269378830073,
+            "noise_ratio": 0.028
+          }
+        },
+        "fisher_ratio": 0.11408182348707632,
+        "within_class_scatter": 8274.287498836637,
+        "between_class_scatter": 943.9458059247443,
+        "mean_centroid_distance": 1.7431714366295343,
+        "min_centroid_distance": 0.16947348157375275,
+        "max_centroid_distance": 4.053632826023153
+      }
+    }
+  },
+  "epoch_03": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.14800000000000002,
+        "knn_1_std": 0.026381811916545837,
+        "knn_5_accuracy": 0.11000000000000001,
+        "knn_5_std": 0.04,
+        "mean_local_purity": 0.1154,
+        "std_local_purity": 0.1038404545444597,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01059280527173098,
+            "normalized_mutual_info": 0.05520562200594411,
+            "adjusted_mutual_info": 0.01813909771366999,
+            "v_measure": 0.055205622005944116,
+            "homogeneity": 0.05465482639556847,
+            "completeness": 0.05576763215246452,
+            "fowlkes_mallows": 0.11230157069069564,
+            "mean_cluster_entropy": 2.160355600380876,
+            "weighted_cluster_entropy": 2.176737704475432,
+            "max_cluster_entropy": 2.243286258666618,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.011075291904224212,
+            "normalized_mutual_info": 0.05618796249764959,
+            "adjusted_mutual_info": 0.018706954424023793,
+            "v_measure": 0.056187962497649575,
+            "homogeneity": 0.055359593599187414,
+            "completeness": 0.05704149844620847,
+            "fowlkes_mallows": 0.11422458866632819,
+            "mean_cluster_entropy": 2.143892376393757,
+            "weighted_cluster_entropy": 2.1751149180183478,
+            "max_cluster_entropy": 2.2504786208911747,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00036316644894241113,
+            "normalized_mutual_info": 0.0197406608377501,
+            "adjusted_mutual_info": 0.0029567046449007696,
+            "v_measure": 0.0197406608377501,
+            "homogeneity": 0.010996230857219876,
+            "completeness": 0.09639967107797562,
+            "fowlkes_mallows": 0.29555543334557216,
+            "noise_ratio": 0.026
+          }
+        },
+        "fisher_ratio": 0.07574458586241203,
+        "within_class_scatter": 1874.553310123757,
+        "between_class_scatter": 141.98726415309505,
+        "mean_centroid_distance": 0.7055630567929007,
+        "min_centroid_distance": 0.17803080286401973,
+        "max_centroid_distance": 1.4622852327097349
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.10200000000000001,
+        "knn_1_std": 0.027129319932501072,
+        "knn_5_accuracy": 0.13999999999999999,
+        "knn_5_std": 0.0316227766016838,
+        "mean_local_purity": 0.11660000000000001,
+        "std_local_purity": 0.1100201799671315,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.012375930401125992,
+            "normalized_mutual_info": 0.06557741433923757,
+            "adjusted_mutual_info": 0.029039589259815753,
+            "v_measure": 0.06557741433923758,
+            "homogeneity": 0.06505881585602957,
+            "completeness": 0.06610434698671504,
+            "fowlkes_mallows": 0.1127721325559658,
+            "mean_cluster_entropy": 2.1229269397023076,
+            "weighted_cluster_entropy": 2.152781633436107,
+            "max_cluster_entropy": 2.2478883082629197,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.014890735145896608,
+            "normalized_mutual_info": 0.06703919799418649,
+            "adjusted_mutual_info": 0.029515715274573945,
+            "v_measure": 0.0670391979941865,
+            "homogeneity": 0.06556499456006923,
+            "completeness": 0.06858122008764571,
+            "fowlkes_mallows": 0.1211421144900726,
+            "mean_cluster_entropy": 2.085458254056424,
+            "weighted_cluster_entropy": 2.1516161138977945,
+            "max_cluster_entropy": 2.24811140321547,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.001433325050986175,
+            "normalized_mutual_info": 0.035858554687952376,
+            "adjusted_mutual_info": 0.0147151800803597,
+            "v_measure": 0.03585855468795238,
+            "homogeneity": 0.01943173550332397,
+            "completeness": 0.23188464380607063,
+            "fowlkes_mallows": 0.30365050919649156,
+            "noise_ratio": 0.052
+          }
+        },
+        "fisher_ratio": 0.0963415664966465,
+        "within_class_scatter": 2200.849912464841,
+        "between_class_scatter": 212.03332819183353,
+        "mean_centroid_distance": 0.8686601481059568,
+        "min_centroid_distance": 0.1655908109076464,
+        "max_centroid_distance": 1.8770566423305484
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.12200000000000003,
+        "knn_1_std": 0.021354156504062624,
+        "knn_5_accuracy": 0.118,
+        "knn_5_std": 0.027129319932501072,
+        "mean_local_purity": 0.11059999999999999,
+        "std_local_purity": 0.10727366871697824,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01177872764974299,
+            "normalized_mutual_info": 0.05297518072963947,
+            "adjusted_mutual_info": 0.015794420711993197,
+            "v_measure": 0.05297518072963947,
+            "homogeneity": 0.05248012960128683,
+            "completeness": 0.053479660548950446,
+            "fowlkes_mallows": 0.1126379589506406,
+            "mean_cluster_entropy": 2.185935699902891,
+            "weighted_cluster_entropy": 2.181745128895727,
+            "max_cluster_entropy": 2.261682760523374,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01042246668738206,
+            "normalized_mutual_info": 0.055859499328909136,
+            "adjusted_mutual_info": 0.01795197697294091,
+            "v_measure": 0.05585949932890914,
+            "homogeneity": 0.05464287426190524,
+            "completeness": 0.057131534482751156,
+            "fowlkes_mallows": 0.11769986045706964,
+            "mean_cluster_entropy": 2.166739203410443,
+            "weighted_cluster_entropy": 2.1767652252802345,
+            "max_cluster_entropy": 2.266599545829472,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.011529742197321937,
+            "normalized_mutual_info": 0.03472789148737168,
+            "adjusted_mutual_info": 0.016706957601857125,
+            "v_measure": 0.034727891487371675,
+            "homogeneity": 0.02521770185808534,
+            "completeness": 0.05575406219215397,
+            "fowlkes_mallows": 0.2115804295224644,
+            "noise_ratio": 0.046
+          }
+        },
+        "fisher_ratio": 0.10057592552077449,
+        "within_class_scatter": 958.8718272345855,
+        "between_class_scatter": 96.43942148092037,
+        "mean_centroid_distance": 0.5594869454635126,
+        "min_centroid_distance": 0.09168738055998756,
+        "max_centroid_distance": 1.3480728985976658
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.15000000000000002,
+        "knn_1_std": 0.02898275349237888,
+        "knn_5_accuracy": 0.12,
+        "knn_5_std": 0.014142135623730954,
+        "mean_local_purity": 0.1252,
+        "std_local_purity": 0.1164687082438884,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.013163071075255847,
+            "normalized_mutual_info": 0.0623996435628031,
+            "adjusted_mutual_info": 0.025861288498732905,
+            "v_measure": 0.062399643562803093,
+            "homogeneity": 0.06201025526904418,
+            "completeness": 0.06279395302209435,
+            "fowlkes_mallows": 0.11273654274502429,
+            "mean_cluster_entropy": 2.139181889590197,
+            "weighted_cluster_entropy": 2.159801203598789,
+            "max_cluster_entropy": 2.240772752812053,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.012655201704993412,
+            "normalized_mutual_info": 0.06538836594877223,
+            "adjusted_mutual_info": 0.028729666626701695,
+            "v_measure": 0.06538836594877225,
+            "homogeneity": 0.06479980715293954,
+            "completeness": 0.06598771417683108,
+            "fowlkes_mallows": 0.11327631862981004,
+            "mean_cluster_entropy": 2.1101398915734517,
+            "weighted_cluster_entropy": 2.153378023014798,
+            "max_cluster_entropy": 2.2525864215501366,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.013670615529075359,
+            "normalized_mutual_info": 0.05751134483146761,
+            "adjusted_mutual_info": 0.02471831868060066,
+            "v_measure": 0.0575113448314676,
+            "homogeneity": 0.05181137633569976,
+            "completeness": 0.06462049350085011,
+            "fowlkes_mallows": 0.14672679468224653,
+            "noise_ratio": 0.018
+          }
+        },
+        "fisher_ratio": 0.0989354850951041,
+        "within_class_scatter": 3512.6700001308004,
+        "between_class_scatter": 347.52771044294946,
+        "mean_centroid_distance": 1.0996681990043293,
+        "min_centroid_distance": 0.14518779306326868,
+        "max_centroid_distance": 2.350485566717168
+      }
+    }
+  },
+  "epoch_04": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.10600000000000001,
+        "knn_1_std": 0.027276363393971714,
+        "knn_5_accuracy": 0.122,
+        "knn_5_std": 0.01720465053408525,
+        "mean_local_purity": 0.1114,
+        "std_local_purity": 0.1053092588522016,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01593116824500982,
+            "normalized_mutual_info": 0.06627271875749596,
+            "adjusted_mutual_info": 0.02981246080519131,
+            "v_measure": 0.06627271875749596,
+            "homogeneity": 0.06581641935379322,
+            "completeness": 0.06673538929839916,
+            "fowlkes_mallows": 0.11536122557324284,
+            "mean_cluster_entropy": 2.139305947251137,
+            "weighted_cluster_entropy": 2.151037186915757,
+            "max_cluster_entropy": 2.2510781576811554,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.014035826976824888,
+            "normalized_mutual_info": 0.05637433771197022,
+            "adjusted_mutual_info": 0.019403930178160833,
+            "v_measure": 0.05637433771197022,
+            "homogeneity": 0.05585180995803461,
+            "completeness": 0.056906734932588084,
+            "fowlkes_mallows": 0.11504043266553311,
+            "mean_cluster_entropy": 2.181006136856452,
+            "weighted_cluster_entropy": 2.173981547967938,
+            "max_cluster_entropy": 2.2531689711501595,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.3133718819170128,
+            "noise_ratio": 0.034
+          }
+        },
+        "fisher_ratio": 0.08626110840230491,
+        "within_class_scatter": 2426.9399236004238,
+        "between_class_scatter": 209.35052783644036,
+        "mean_centroid_distance": 0.841270560329475,
+        "min_centroid_distance": 0.24258635502819328,
+        "max_centroid_distance": 2.1691701865715243
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.13,
+        "knn_1_std": 0.02966479394838266,
+        "knn_5_accuracy": 0.11200000000000002,
+        "knn_5_std": 0.02712931993250107,
+        "mean_local_purity": 0.10940000000000001,
+        "std_local_purity": 0.10340038684647171,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.4,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.019805622361366265,
+            "normalized_mutual_info": 0.06751025661681474,
+            "adjusted_mutual_info": 0.03044502716757182,
+            "v_measure": 0.06751025661681474,
+            "homogeneity": 0.06632345299553488,
+            "completeness": 0.06874030786747112,
+            "fowlkes_mallows": 0.1245065486785467,
+            "mean_cluster_entropy": 2.141604734340539,
+            "weighted_cluster_entropy": 2.1498696988106354,
+            "max_cluster_entropy": 2.245019529381898,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.010922919310687437,
+            "normalized_mutual_info": 0.062360905556873195,
+            "adjusted_mutual_info": 0.0258311632451059,
+            "v_measure": 0.062360905556873195,
+            "homogeneity": 0.061937668341985136,
+            "completeness": 0.06278996676254794,
+            "fowlkes_mallows": 0.11126203010025791,
+            "mean_cluster_entropy": 2.1431569282988137,
+            "weighted_cluster_entropy": 2.1599683411749813,
+            "max_cluster_entropy": 2.2754471730063357,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": -3.7399573800841936e-05,
+            "normalized_mutual_info": 0.00554887308466811,
+            "adjusted_mutual_info": -0.0034139725264497197,
+            "v_measure": 0.0055488730846681095,
+            "homogeneity": 0.0028563950362785837,
+            "completeness": 0.09669390427496972,
+            "fowlkes_mallows": 0.30935938403752644,
+            "noise_ratio": 0.054
+          }
+        },
+        "fisher_ratio": 0.09443850477157117,
+        "within_class_scatter": 2491.478695137382,
+        "between_class_scatter": 235.29152263994396,
+        "mean_centroid_distance": 0.9166872295654295,
+        "min_centroid_distance": 0.24631801919541746,
+        "max_centroid_distance": 2.086482280433935
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.13199999999999998,
+        "knn_1_std": 0.03429285639896449,
+        "knn_5_accuracy": 0.134,
+        "knn_5_std": 0.01854723699099141,
+        "mean_local_purity": 0.12100000000000001,
+        "std_local_purity": 0.11991246807567593,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01099486007394357,
+            "normalized_mutual_info": 0.061855486689782954,
+            "adjusted_mutual_info": 0.02432408729670028,
+            "v_measure": 0.06185548668978297,
+            "homogeneity": 0.06073934428836566,
+            "completeness": 0.06301341731527464,
+            "fowlkes_mallows": 0.11535199186923159,
+            "mean_cluster_entropy": 2.0929879861612566,
+            "weighted_cluster_entropy": 2.162727584277422,
+            "max_cluster_entropy": 2.2483796477853617,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.008795480901115604,
+            "normalized_mutual_info": 0.05481143744790629,
+            "adjusted_mutual_info": 0.016417247048522186,
+            "v_measure": 0.054811437447906286,
+            "homogeneity": 0.053391533147525705,
+            "completeness": 0.056308927472150515,
+            "fowlkes_mallows": 0.11669406732702438,
+            "mean_cluster_entropy": 2.094342209889069,
+            "weighted_cluster_entropy": 2.1796465446764555,
+            "max_cluster_entropy": 2.249253009747197,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.009687594114049517,
+            "normalized_mutual_info": 0.035171037710081836,
+            "adjusted_mutual_info": 0.01612625288652759,
+            "v_measure": 0.03517103771008184,
+            "homogeneity": 0.02370129477906059,
+            "completeness": 0.06815154305916854,
+            "fowlkes_mallows": 0.22853649006858784,
+            "noise_ratio": 0.048
+          }
+        },
+        "fisher_ratio": 0.08588298795272742,
+        "within_class_scatter": 2694.6121833339976,
+        "between_class_scatter": 231.42134567940505,
+        "mean_centroid_distance": 0.8267472053932952,
+        "min_centroid_distance": 0.03852216560866051,
+        "max_centroid_distance": 2.5743495938242265
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.12,
+        "knn_1_std": 0.02280350850198276,
+        "knn_5_accuracy": 0.13799999999999998,
+        "knn_5_std": 0.029933259094191533,
+        "mean_local_purity": 0.11660000000000001,
+        "std_local_purity": 0.11218039044324993,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01342634490653609,
+            "normalized_mutual_info": 0.052561857116642595,
+            "adjusted_mutual_info": 0.015739942412438687,
+            "v_measure": 0.05256185711664259,
+            "homogeneity": 0.05229307041409965,
+            "completeness": 0.05283342122566995,
+            "fowlkes_mallows": 0.11256319769407526,
+            "mean_cluster_entropy": 2.1866953780773057,
+            "weighted_cluster_entropy": 2.1821758485916516,
+            "max_cluster_entropy": 2.268157636291159,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.010039455155999992,
+            "normalized_mutual_info": 0.04692908991924014,
+            "adjusted_mutual_info": 0.00887585111038765,
+            "v_measure": 0.04692908991924015,
+            "homogeneity": 0.04613761674767266,
+            "completeness": 0.047748191891490974,
+            "fowlkes_mallows": 0.11395814250723424,
+            "mean_cluster_entropy": 2.186565220594026,
+            "weighted_cluster_entropy": 2.196349304444582,
+            "max_cluster_entropy": 2.2652571789590823,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.009221072478543549,
+            "normalized_mutual_info": 0.06317409337030613,
+            "adjusted_mutual_info": 0.028455946928266508,
+            "v_measure": 0.06317409337030612,
+            "homogeneity": 0.0493752495122089,
+            "completeness": 0.08767711536665446,
+            "fowlkes_mallows": 0.1973546818985216,
+            "noise_ratio": 0.04
+          }
+        },
+        "fisher_ratio": 0.08614351247121642,
+        "within_class_scatter": 5376.1468201572225,
+        "between_class_scatter": 463.1201706501656,
+        "mean_centroid_distance": 1.2052037269613574,
+        "min_centroid_distance": 0.08534609027426858,
+        "max_centroid_distance": 3.273633843335378
+      }
+    }
+  },
+  "epoch_05": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.10800000000000001,
+        "knn_1_std": 0.00748331477354788,
+        "knn_5_accuracy": 0.124,
+        "knn_5_std": 0.02154065922853801,
+        "mean_local_purity": 0.1098,
+        "std_local_purity": 0.10992706673062826,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.008810086170333749,
+            "normalized_mutual_info": 0.058898904530780956,
+            "adjusted_mutual_info": 0.021768194028535477,
+            "v_measure": 0.058898904530780956,
+            "homogeneity": 0.05817932859039577,
+            "completeness": 0.05963650315696276,
+            "fowlkes_mallows": 0.111429421659761,
+            "mean_cluster_entropy": 2.1343807009612474,
+            "weighted_cluster_entropy": 2.168622238261398,
+            "max_cluster_entropy": 2.2391769701868856,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01009339203556156,
+            "normalized_mutual_info": 0.060619276344636014,
+            "adjusted_mutual_info": 0.02253960481211147,
+            "v_measure": 0.06061927634463602,
+            "homogeneity": 0.05911558116969361,
+            "completeness": 0.062201465710147064,
+            "fowlkes_mallows": 0.11754629004129412,
+            "mean_cluster_entropy": 2.1106379115474705,
+            "weighted_cluster_entropy": 2.1664664370290296,
+            "max_cluster_entropy": 2.2616739903085477,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0002325515329424427,
+            "normalized_mutual_info": 0.010023212235138594,
+            "adjusted_mutual_info": 0.0007566415395241585,
+            "v_measure": 0.010023212235138591,
+            "homogeneity": 0.005283959859764572,
+            "completeness": 0.09723062861093341,
+            "fowlkes_mallows": 0.3055135610479715,
+            "noise_ratio": 0.046
+          }
+        },
+        "fisher_ratio": 0.07066280465538692,
+        "within_class_scatter": 1471.1139690307318,
+        "between_class_scatter": 103.95303902013615,
+        "mean_centroid_distance": 0.5699173906986397,
+        "min_centroid_distance": 0.06511348797338079,
+        "max_centroid_distance": 1.5707993644939777
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.154,
+        "knn_1_std": 0.024166091947189147,
+        "knn_5_accuracy": 0.14,
+        "knn_5_std": 0.02449489742783178,
+        "mean_local_purity": 0.12,
+        "std_local_purity": 0.11747340124470732,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.014747711478621134,
+            "normalized_mutual_info": 0.06978825947561934,
+            "adjusted_mutual_info": 0.03245533572510668,
+            "v_measure": 0.06978825947561935,
+            "homogeneity": 0.0683944822934295,
+            "completeness": 0.07124002455003714,
+            "fowlkes_mallows": 0.11970232879172238,
+            "mean_cluster_entropy": 2.111850652743051,
+            "weighted_cluster_entropy": 2.14510097762215,
+            "max_cluster_entropy": 2.239858368754885,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.014381655709701223,
+            "normalized_mutual_info": 0.06886114773136506,
+            "adjusted_mutual_info": 0.031197051965784418,
+            "v_measure": 0.06886114773136508,
+            "homogeneity": 0.06718153626012004,
+            "completeness": 0.07062689696736835,
+            "fowlkes_mallows": 0.12163316876270004,
+            "mean_cluster_entropy": 2.1117518793045678,
+            "weighted_cluster_entropy": 2.1478938890770536,
+            "max_cluster_entropy": 2.212288296894542,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00020023584952471918,
+            "normalized_mutual_info": 0.011501501171508834,
+            "adjusted_mutual_info": 0.0030125729949831903,
+            "v_measure": 0.011501501171508832,
+            "homogeneity": 0.005896190305420101,
+            "completeness": 0.2331379621093598,
+            "fowlkes_mallows": 0.31058506357777416,
+            "noise_ratio": 0.046
+          }
+        },
+        "fisher_ratio": 0.0932856155000457,
+        "within_class_scatter": 2185.5290419636963,
+        "between_class_scatter": 203.87842187374147,
+        "mean_centroid_distance": 0.8714051001153487,
+        "min_centroid_distance": 0.12671484747107128,
+        "max_centroid_distance": 1.743273836564625
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.136,
+        "knn_1_std": 0.01624807680927192,
+        "knn_5_accuracy": 0.118,
+        "knn_5_std": 0.009797958971132711,
+        "mean_local_purity": 0.12440000000000001,
+        "std_local_purity": 0.11508535962493231,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.00953594378781989,
+            "normalized_mutual_info": 0.05549620145183128,
+            "adjusted_mutual_info": 0.018902065472201295,
+            "v_measure": 0.05549620145183129,
+            "homogeneity": 0.05529247222229666,
+            "completeness": 0.055701437544536575,
+            "fowlkes_mallows": 0.10844664893397618,
+            "mean_cluster_entropy": 2.169462672550705,
+            "weighted_cluster_entropy": 2.1752694707001985,
+            "max_cluster_entropy": 2.2609919914943197,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.008631438734183086,
+            "normalized_mutual_info": 0.057726746003170355,
+            "adjusted_mutual_info": 0.021038987943159636,
+            "v_measure": 0.05772674600317036,
+            "homogeneity": 0.057377571606228646,
+            "completeness": 0.05808019626145294,
+            "fowlkes_mallows": 0.10867209751152687,
+            "mean_cluster_entropy": 2.156529141696158,
+            "weighted_cluster_entropy": 2.170468351941345,
+            "max_cluster_entropy": 2.2759434837724264,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": -0.0003097340473418779,
+            "normalized_mutual_info": 0.029330537903468297,
+            "adjusted_mutual_info": 0.0013491273254736113,
+            "v_measure": 0.02933053790346829,
+            "homogeneity": 0.017822033394526506,
+            "completeness": 0.0827951903710385,
+            "fowlkes_mallows": 0.273508436191556,
+            "noise_ratio": 0.03
+          }
+        },
+        "fisher_ratio": 0.077919459902163,
+        "within_class_scatter": 1062.673612544686,
+        "between_class_scatter": 82.80295394254154,
+        "mean_centroid_distance": 0.5485188414138418,
+        "min_centroid_distance": 0.07559681842990235,
+        "max_centroid_distance": 1.2476950278494385
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.16,
+        "knn_1_std": 0.0322490309931942,
+        "knn_5_accuracy": 0.182,
+        "knn_5_std": 0.029933259094191526,
+        "mean_local_purity": 0.1414,
+        "std_local_purity": 0.1488154561865131,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.8,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01908592397964033,
+            "normalized_mutual_info": 0.07198806957856033,
+            "adjusted_mutual_info": 0.03602917164276727,
+            "v_measure": 0.07198806957856034,
+            "homogeneity": 0.07169601243919041,
+            "completeness": 0.07228251586772731,
+            "fowlkes_mallows": 0.11736967165943352,
+            "mean_cluster_entropy": 2.136605678971941,
+            "weighted_cluster_entropy": 2.13749892352445,
+            "max_cluster_entropy": 2.2225076286465932,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.018599532560078017,
+            "normalized_mutual_info": 0.07489523750492472,
+            "adjusted_mutual_info": 0.03880358575701538,
+            "v_measure": 0.07489523750492472,
+            "homogeneity": 0.07434132648576505,
+            "completeness": 0.07545746477734264,
+            "fowlkes_mallows": 0.11840507532759069,
+            "mean_cluster_entropy": 2.1166160301121133,
+            "weighted_cluster_entropy": 2.1314078628345197,
+            "max_cluster_entropy": 2.2564377305159296,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00892414137353692,
+            "normalized_mutual_info": 0.06457633971448143,
+            "adjusted_mutual_info": 0.029743005908967814,
+            "v_measure": 0.06457633971448143,
+            "homogeneity": 0.05428311112664754,
+            "completeness": 0.07968661025135518,
+            "fowlkes_mallows": 0.17827838588212444,
+            "noise_ratio": 0.016
+          }
+        },
+        "fisher_ratio": 0.07514850770702754,
+        "within_class_scatter": 3617.154854988922,
+        "between_class_scatter": 271.8237894983986,
+        "mean_centroid_distance": 1.0104610927238216,
+        "min_centroid_distance": 0.17105504504993188,
+        "max_centroid_distance": 2.017441668029859
+      }
+    }
+  },
+  "epoch_06": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.10400000000000001,
+        "knn_1_std": 0.014966629547095768,
+        "knn_5_accuracy": 0.10600000000000001,
+        "knn_5_std": 0.03136877428271625,
+        "mean_local_purity": 0.11,
+        "std_local_purity": 0.10554619841567009,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.011544452917729554,
+            "normalized_mutual_info": 0.05249235691739958,
+            "adjusted_mutual_info": 0.015235673165197918,
+            "v_measure": 0.05249235691739958,
+            "homogeneity": 0.051928211865107154,
+            "completeness": 0.05306889427660126,
+            "fowlkes_mallows": 0.1133426630862389,
+            "mean_cluster_entropy": 2.1819058724522664,
+            "weighted_cluster_entropy": 2.1830159664476128,
+            "max_cluster_entropy": 2.268060610959478,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.008802353372847151,
+            "normalized_mutual_info": 0.054157617742890705,
+            "adjusted_mutual_info": 0.01655470438777623,
+            "v_measure": 0.054157617742890705,
+            "homogeneity": 0.05326768332058776,
+            "completeness": 0.05507779337611464,
+            "fowlkes_mallows": 0.11356358289599246,
+            "mean_cluster_entropy": 2.1601265104679874,
+            "weighted_cluster_entropy": 2.1799317194417327,
+            "max_cluster_entropy": 2.2597356283179963,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.010213511794007481,
+            "normalized_mutual_info": 0.024737716761571858,
+            "adjusted_mutual_info": 0.018538681332590505,
+            "v_measure": 0.024737716761571854,
+            "homogeneity": 0.01598017451440678,
+            "completeness": 0.05473254297201712,
+            "fowlkes_mallows": 0.23762201049230153,
+            "noise_ratio": 0.03
+          }
+        },
+        "fisher_ratio": 0.1009175558553613,
+        "within_class_scatter": 1966.0852526805568,
+        "between_class_scatter": 198.41251830480138,
+        "mean_centroid_distance": 0.7924394221272089,
+        "min_centroid_distance": 0.05619346497777479,
+        "max_centroid_distance": 1.983256450966379
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.10599999999999998,
+        "knn_1_std": 0.030724582991474434,
+        "knn_5_accuracy": 0.10600000000000001,
+        "knn_5_std": 0.018547236990991412,
+        "mean_local_purity": 0.11220000000000002,
+        "std_local_purity": 0.1046477902298945,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.016008166589547016,
+            "normalized_mutual_info": 0.062362145771582264,
+            "adjusted_mutual_info": 0.025329619490932452,
+            "v_measure": 0.062362145771582264,
+            "homogeneity": 0.06159293986888488,
+            "completeness": 0.06315080716252947,
+            "fowlkes_mallows": 0.11751458995189212,
+            "mean_cluster_entropy": 2.1442009448369848,
+            "weighted_cluster_entropy": 2.1607621078182726,
+            "max_cluster_entropy": 2.22816850494809,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.02075162608031412,
+            "normalized_mutual_info": 0.0774178229389889,
+            "adjusted_mutual_info": 0.040034807468432264,
+            "v_measure": 0.0774178229389889,
+            "homogeneity": 0.07552069966914592,
+            "completeness": 0.07941271588743211,
+            "fowlkes_mallows": 0.12692000771986608,
+            "mean_cluster_entropy": 2.084124629314469,
+            "weighted_cluster_entropy": 2.1286922557233896,
+            "max_cluster_entropy": 2.2331679413249557,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.31341322260119436,
+            "noise_ratio": 0.05
+          }
+        },
+        "fisher_ratio": 0.10380231215348165,
+        "within_class_scatter": 2101.350217791005,
+        "between_class_scatter": 218.12501125196655,
+        "mean_centroid_distance": 0.8724094677866951,
+        "min_centroid_distance": 0.126517126244338,
+        "max_centroid_distance": 1.901977306441729
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.11800000000000002,
+        "knn_1_std": 0.016,
+        "knn_5_accuracy": 0.124,
+        "knn_5_std": 0.0233238075793812,
+        "mean_local_purity": 0.11580000000000001,
+        "std_local_purity": 0.10473948634588581,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.006928888876440191,
+            "normalized_mutual_info": 0.045260792407313385,
+            "adjusted_mutual_info": 0.007419752325059556,
+            "v_measure": 0.045260792407313385,
+            "homogeneity": 0.04456257625764735,
+            "completeness": 0.045981236433572374,
+            "fowlkes_mallows": 0.11170449805518473,
+            "mean_cluster_entropy": 2.1960629068165867,
+            "weighted_cluster_entropy": 2.1999759691977765,
+            "max_cluster_entropy": 2.2799604029509926,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.0053696530089833066,
+            "normalized_mutual_info": 0.048180937162706446,
+            "adjusted_mutual_info": 0.009933823206171775,
+            "v_measure": 0.04818093716270645,
+            "homogeneity": 0.04717606734876502,
+            "completeness": 0.04922954694428502,
+            "fowlkes_mallows": 0.11142857142857142,
+            "mean_cluster_entropy": 2.17216424524365,
+            "weighted_cluster_entropy": 2.1939581835706963,
+            "max_cluster_entropy": 2.2792634516074424,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.012104888539285675,
+            "normalized_mutual_info": 0.052707046795021036,
+            "adjusted_mutual_info": 0.024266287465090207,
+            "v_measure": 0.05270704679502104,
+            "homogeneity": 0.0402621268454312,
+            "completeness": 0.07628723515107715,
+            "fowlkes_mallows": 0.2004970851553711,
+            "noise_ratio": 0.036
+          }
+        },
+        "fisher_ratio": 0.054284213740753075,
+        "within_class_scatter": 1005.2378744193736,
+        "between_class_scatter": 54.568547635824416,
+        "mean_centroid_distance": 0.43430136909122413,
+        "min_centroid_distance": 0.05935096720801446,
+        "max_centroid_distance": 0.9384531297380151
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.132,
+        "knn_1_std": 0.019390719429665318,
+        "knn_5_accuracy": 0.13399999999999998,
+        "knn_5_std": 0.028705400188814643,
+        "mean_local_purity": 0.11860000000000002,
+        "std_local_purity": 0.11222317051304512,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01930339405517689,
+            "normalized_mutual_info": 0.06613087560757276,
+            "adjusted_mutual_info": 0.029719059880387408,
+            "v_measure": 0.06613087560757278,
+            "homogeneity": 0.06566175738471627,
+            "completeness": 0.06660674526463549,
+            "fowlkes_mallows": 0.11889249322031081,
+            "mean_cluster_entropy": 2.1497250739128084,
+            "weighted_cluster_entropy": 2.1513933092602064,
+            "max_cluster_entropy": 2.2387876912538403,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.02158213777771641,
+            "normalized_mutual_info": 0.07532832211749624,
+            "adjusted_mutual_info": 0.038412331931781646,
+            "v_measure": 0.07532832211749624,
+            "homogeneity": 0.07384809215430278,
+            "completeness": 0.07686910605251074,
+            "fowlkes_mallows": 0.1270502928221821,
+            "mean_cluster_entropy": 2.110567819981252,
+            "weighted_cluster_entropy": 2.1325435768534975,
+            "max_cluster_entropy": 2.2414366867399127,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.009946764356544562,
+            "normalized_mutual_info": 0.050466930328020215,
+            "adjusted_mutual_info": 0.020020028823286226,
+            "v_measure": 0.05046693032802023,
+            "homogeneity": 0.03614052247449324,
+            "completeness": 0.08361105923526635,
+            "fowlkes_mallows": 0.22710247210779147,
+            "noise_ratio": 0.032
+          }
+        },
+        "fisher_ratio": 0.10497366619077429,
+        "within_class_scatter": 3724.0499914855936,
+        "between_class_scatter": 390.92718068501426,
+        "mean_centroid_distance": 1.1434089732477652,
+        "min_centroid_distance": 0.1461077441032133,
+        "max_centroid_distance": 2.721615634090099
+      }
+    }
+  },
+  "epoch_07": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.14400000000000002,
+        "knn_1_std": 0.017435595774162697,
+        "knn_5_accuracy": 0.10400000000000001,
+        "knn_5_std": 0.02244994432064365,
+        "mean_local_purity": 0.1078,
+        "std_local_purity": 0.09939396359940579,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.012087287732219867,
+            "normalized_mutual_info": 0.05908955018844898,
+            "adjusted_mutual_info": 0.022678122280929674,
+            "v_measure": 0.05908955018844898,
+            "homogeneity": 0.05891723383132384,
+            "completeness": 0.0592628774560736,
+            "fowlkes_mallows": 0.11034098997033287,
+            "mean_cluster_entropy": 2.165131683449155,
+            "weighted_cluster_entropy": 2.166923148653595,
+            "max_cluster_entropy": 2.241827842367643,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01448721205302928,
+            "normalized_mutual_info": 0.06970325573735968,
+            "adjusted_mutual_info": 0.03320331809835443,
+            "v_measure": 0.06970325573735968,
+            "homogeneity": 0.06900291753725989,
+            "completeness": 0.07041795572582174,
+            "fowlkes_mallows": 0.11584152273891263,
+            "mean_cluster_entropy": 2.123844146219158,
+            "weighted_cluster_entropy": 2.1437000036996543,
+            "max_cluster_entropy": 2.2256091101794264,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.31333611099467656,
+            "noise_ratio": 0.058
+          }
+        },
+        "fisher_ratio": 0.07797745482061612,
+        "within_class_scatter": 547.322770418701,
+        "between_class_scatter": 42.67883660339848,
+        "mean_centroid_distance": 0.3770565879544481,
+        "min_centroid_distance": 0.07396304317179216,
+        "max_centroid_distance": 0.9753777474717138
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.14400000000000002,
+        "knn_1_std": 0.01959591794226542,
+        "knn_5_accuracy": 0.14400000000000002,
+        "knn_5_std": 0.020591260281974003,
+        "mean_local_purity": 0.11259999999999999,
+        "std_local_purity": 0.10030573263777101,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.0113580796640215,
+            "normalized_mutual_info": 0.05805585876607198,
+            "adjusted_mutual_info": 0.020921785196085178,
+            "v_measure": 0.058055858766071985,
+            "homogeneity": 0.05739165051345627,
+            "completeness": 0.0587356211344828,
+            "fowlkes_mallows": 0.11310687431556883,
+            "mean_cluster_entropy": 2.1505089229770187,
+            "weighted_cluster_entropy": 2.1704359340594372,
+            "max_cluster_entropy": 2.222210490740903,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.006388816743788307,
+            "normalized_mutual_info": 0.0540870649990361,
+            "adjusted_mutual_info": 0.015381519692610273,
+            "v_measure": 0.054087064999036094,
+            "homogeneity": 0.05242540212406394,
+            "completeness": 0.05585751117291033,
+            "fowlkes_mallows": 0.1172772156167492,
+            "mean_cluster_entropy": 2.129509088789131,
+            "weighted_cluster_entropy": 2.1818711435689573,
+            "max_cluster_entropy": 2.254946153403619,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00013711841908138725,
+            "normalized_mutual_info": 0.009253345039987995,
+            "adjusted_mutual_info": 8.666263180027879e-05,
+            "v_measure": 0.009253345039987993,
+            "homogeneity": 0.004797034997791065,
+            "completeness": 0.1302769852183455,
+            "fowlkes_mallows": 0.30841401452013006,
+            "noise_ratio": 0.04
+          }
+        },
+        "fisher_ratio": 0.08068581307820027,
+        "within_class_scatter": 1914.4409955184306,
+        "between_class_scatter": 154.46822831445058,
+        "mean_centroid_distance": 0.7362396482784896,
+        "min_centroid_distance": 0.05976980206095826,
+        "max_centroid_distance": 1.7477444731433673
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.128,
+        "knn_1_std": 0.019390719429665314,
+        "knn_5_accuracy": 0.124,
+        "knn_5_std": 0.01496662954709577,
+        "mean_local_purity": 0.1124,
+        "std_local_purity": 0.1049106286321839,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.4,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.007760550765819853,
+            "normalized_mutual_info": 0.04883312210742009,
+            "adjusted_mutual_info": 0.011976662012512684,
+            "v_measure": 0.04883312210742009,
+            "homogeneity": 0.04865032667168406,
+            "completeness": 0.04901729637019658,
+            "fowlkes_mallows": 0.1068835344609376,
+            "mean_cluster_entropy": 2.1922602731392287,
+            "weighted_cluster_entropy": 2.1905635760305353,
+            "max_cluster_entropy": 2.267432870795925,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.009724867875178764,
+            "normalized_mutual_info": 0.05668227958507217,
+            "adjusted_mutual_info": 0.01959531451594108,
+            "v_measure": 0.05668227958507217,
+            "homogeneity": 0.05609707369902206,
+            "completeness": 0.0572798239472918,
+            "fowlkes_mallows": 0.11133517540905775,
+            "mean_cluster_entropy": 2.165509380049825,
+            "weighted_cluster_entropy": 2.1734168073340894,
+            "max_cluster_entropy": 2.264416841538347,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00012198525056844168,
+            "normalized_mutual_info": 0.018468700287083743,
+            "adjusted_mutual_info": 0.0019093110759835356,
+            "v_measure": 0.01846870028708374,
+            "homogeneity": 0.009729749230374223,
+            "completeness": 0.18136470895946158,
+            "fowlkes_mallows": 0.3065280451114903,
+            "noise_ratio": 0.026
+          }
+        },
+        "fisher_ratio": 0.06768891782526591,
+        "within_class_scatter": 2986.944017073909,
+        "between_class_scatter": 202.18300812106236,
+        "mean_centroid_distance": 0.8222819433399489,
+        "min_centroid_distance": 0.029575522892898123,
+        "max_centroid_distance": 2.1222104752198088
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.136,
+        "knn_1_std": 0.028705400188814654,
+        "knn_5_accuracy": 0.152,
+        "knn_5_std": 0.02135415650406262,
+        "mean_local_purity": 0.1194,
+        "std_local_purity": 0.11028889336646733,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.008374028708008664,
+            "normalized_mutual_info": 0.05488384037110323,
+            "adjusted_mutual_info": 0.018346062271357388,
+            "v_measure": 0.05488384037110322,
+            "homogeneity": 0.05473756556968764,
+            "completeness": 0.05503089904544903,
+            "fowlkes_mallows": 0.10697708771038936,
+            "mean_cluster_entropy": 2.1738147013869655,
+            "weighted_cluster_entropy": 2.1765471904864984,
+            "max_cluster_entropy": 2.2489773685248706,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.0070627245746198025,
+            "normalized_mutual_info": 0.052063318584951154,
+            "adjusted_mutual_info": 0.01530182716981187,
+            "v_measure": 0.05206331858495116,
+            "homogeneity": 0.05185173462385704,
+            "completeness": 0.05227663638190818,
+            "fowlkes_mallows": 0.10636492862810902,
+            "mean_cluster_entropy": 2.1752913811102688,
+            "weighted_cluster_entropy": 2.183192061803269,
+            "max_cluster_entropy": 2.2554825471775453,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.008963453677320895,
+            "normalized_mutual_info": 0.03392844131929504,
+            "adjusted_mutual_info": 0.02276325267212201,
+            "v_measure": 0.03392844131929504,
+            "homogeneity": 0.024456770077299267,
+            "completeness": 0.055373681384887116,
+            "fowlkes_mallows": 0.20442924849243205,
+            "noise_ratio": 0.032
+          }
+        },
+        "fisher_ratio": 0.0791630585912955,
+        "within_class_scatter": 3078.5062735692436,
+        "between_class_scatter": 243.70397250902442,
+        "mean_centroid_distance": 0.9165977084064411,
+        "min_centroid_distance": 0.13034970257547385,
+        "max_centroid_distance": 2.1274497049336167
+      }
+    }
+  },
+  "epoch_08": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.10800000000000001,
+        "knn_1_std": 0.0331058907144937,
+        "knn_5_accuracy": 0.152,
+        "knn_5_std": 0.02315167380558045,
+        "mean_local_purity": 0.11560000000000001,
+        "std_local_purity": 0.12015256967705684,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.7,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.017568871444094712,
+            "normalized_mutual_info": 0.07361864685735092,
+            "adjusted_mutual_info": 0.034597439551557606,
+            "v_measure": 0.07361864685735092,
+            "homogeneity": 0.07019206903421253,
+            "completeness": 0.07739694636679893,
+            "fowlkes_mallows": 0.13489269565669193,
+            "mean_cluster_entropy": 2.054109620307945,
+            "weighted_cluster_entropy": 2.1409618811894586,
+            "max_cluster_entropy": 2.232420815482916,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01869940662118473,
+            "normalized_mutual_info": 0.07648817660632225,
+            "adjusted_mutual_info": 0.038297025004061666,
+            "v_measure": 0.07648817660632222,
+            "homogeneity": 0.07381525376813426,
+            "completeness": 0.07936195079153571,
+            "fowlkes_mallows": 0.12942800587970868,
+            "mean_cluster_entropy": 2.0638451537038347,
+            "weighted_cluster_entropy": 2.132619190031967,
+            "max_cluster_entropy": 2.261536341046313,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00018292429701925668,
+            "normalized_mutual_info": 0.027925609204177745,
+            "adjusted_mutual_info": 0.0027354336911201323,
+            "v_measure": 0.027925609204177748,
+            "homogeneity": 0.01538561507823536,
+            "completeness": 0.1509873174410301,
+            "fowlkes_mallows": 0.2994780980387385,
+            "noise_ratio": 0.034
+          }
+        },
+        "fisher_ratio": 0.09438979599566885,
+        "within_class_scatter": 1421.2954318210097,
+        "between_class_scatter": 134.15578586010506,
+        "mean_centroid_distance": 0.6706225837047071,
+        "min_centroid_distance": 0.05878625191531031,
+        "max_centroid_distance": 1.525944916144178
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.092,
+        "knn_1_std": 0.01939071942966531,
+        "knn_5_accuracy": 0.118,
+        "knn_5_std": 0.026381811916545837,
+        "mean_local_purity": 0.11259999999999999,
+        "std_local_purity": 0.1096414155326353,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.013191673652902226,
+            "normalized_mutual_info": 0.06590950361242918,
+            "adjusted_mutual_info": 0.028412472509448665,
+            "v_measure": 0.06590950361242918,
+            "homogeneity": 0.06449926657615218,
+            "completeness": 0.06738278706146582,
+            "fowlkes_mallows": 0.11970625155145909,
+            "mean_cluster_entropy": 2.1051568228437594,
+            "weighted_cluster_entropy": 2.1540700432667483,
+            "max_cluster_entropy": 2.240884358419086,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.015210074427117528,
+            "normalized_mutual_info": 0.067510120604761,
+            "adjusted_mutual_info": 0.030594312298748514,
+            "v_measure": 0.067510120604761,
+            "homogeneity": 0.06650479202097559,
+            "completeness": 0.0685463100691808,
+            "fowlkes_mallows": 0.11882109428680096,
+            "mean_cluster_entropy": 2.1235862693379555,
+            "weighted_cluster_entropy": 2.149452150273877,
+            "max_cluster_entropy": 2.2454006212980056,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 4.337887788668229e-05,
+            "normalized_mutual_info": 0.010575353976094489,
+            "adjusted_mutual_info": 0.0016577537606078763,
+            "v_measure": 0.010575353976094493,
+            "homogeneity": 0.005443874970267165,
+            "completeness": 0.18428824749835424,
+            "fowlkes_mallows": 0.3094603575402423,
+            "noise_ratio": 0.054
+          }
+        },
+        "fisher_ratio": 0.1085473624951636,
+        "within_class_scatter": 2788.5329542752306,
+        "between_class_scatter": 302.6878974185084,
+        "mean_centroid_distance": 0.9964002963149251,
+        "min_centroid_distance": 0.13610945618651346,
+        "max_centroid_distance": 2.3499500204884383
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.124,
+        "knn_1_std": 0.019595917942265423,
+        "knn_5_accuracy": 0.13,
+        "knn_5_std": 0.027568097504180444,
+        "mean_local_purity": 0.1142,
+        "std_local_purity": 0.1153185154257546,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.012586528284243441,
+            "normalized_mutual_info": 0.05829577834754924,
+            "adjusted_mutual_info": 0.019796983373884133,
+            "v_measure": 0.05829577834754924,
+            "homogeneity": 0.056559156036062874,
+            "completeness": 0.060142423193488455,
+            "fowlkes_mallows": 0.12061198355149681,
+            "mean_cluster_entropy": 2.1125930272173674,
+            "weighted_cluster_entropy": 2.1723528234330836,
+            "max_cluster_entropy": 2.2535506374615037,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01601457409288896,
+            "normalized_mutual_info": 0.06491840647598215,
+            "adjusted_mutual_info": 0.02635083853159401,
+            "v_measure": 0.06491840647598215,
+            "homogeneity": 0.06262330842519258,
+            "completeness": 0.0673881317875523,
+            "fowlkes_mallows": 0.12674650409590763,
+            "mean_cluster_entropy": 2.0984771261665243,
+            "weighted_cluster_entropy": 2.158389596540229,
+            "max_cluster_entropy": 2.239745866608458,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.013357004700252466,
+            "normalized_mutual_info": 0.03917392098189959,
+            "adjusted_mutual_info": 0.01966687765073873,
+            "v_measure": 0.03917392098189959,
+            "homogeneity": 0.02726840361196558,
+            "completeness": 0.0695318751677762,
+            "fowlkes_mallows": 0.23253388641952963,
+            "noise_ratio": 0.054
+          }
+        },
+        "fisher_ratio": 0.1023798641890137,
+        "within_class_scatter": 22525.38721581898,
+        "between_class_scatter": 2306.1460839615165,
+        "mean_centroid_distance": 2.6805128448311875,
+        "min_centroid_distance": 0.1933595976259482,
+        "max_centroid_distance": 6.9122884457849425
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.16,
+        "knn_1_std": 0.014142135623730947,
+        "knn_5_accuracy": 0.15000000000000002,
+        "knn_5_std": 0.0282842712474619,
+        "mean_local_purity": 0.13160000000000002,
+        "std_local_purity": 0.1247455009208749,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.018761249541658576,
+            "normalized_mutual_info": 0.06647482232380018,
+            "adjusted_mutual_info": 0.030198504779193967,
+            "v_measure": 0.06647482232380018,
+            "homogeneity": 0.06614558704387759,
+            "completeness": 0.06680735149244922,
+            "fowlkes_mallows": 0.11724759043466271,
+            "mean_cluster_entropy": 2.148370299509232,
+            "weighted_cluster_entropy": 2.1502792502994725,
+            "max_cluster_entropy": 2.2392514414990234,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.01736196011111289,
+            "normalized_mutual_info": 0.071149364743423,
+            "adjusted_mutual_info": 0.03431300965703827,
+            "v_measure": 0.07114936474342298,
+            "homogeneity": 0.07001957073661139,
+            "completeness": 0.07231621604838301,
+            "fowlkes_mallows": 0.121375043673909,
+            "mean_cluster_entropy": 2.1143585431097773,
+            "weighted_cluster_entropy": 2.1413590731980823,
+            "max_cluster_entropy": 2.2728842083330454,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0208291265523199,
+            "normalized_mutual_info": 0.06431734254942371,
+            "adjusted_mutual_info": 0.029615868516754393,
+            "v_measure": 0.06431734254942371,
+            "homogeneity": 0.05544575322937953,
+            "completeness": 0.07656870685444606,
+            "fowlkes_mallows": 0.16393114029366945,
+            "noise_ratio": 0.026
+          }
+        },
+        "fisher_ratio": 0.11421677548160002,
+        "within_class_scatter": 6637.17430764119,
+        "between_class_scatter": 758.07664772924,
+        "mean_centroid_distance": 1.5582694437164712,
+        "min_centroid_distance": 0.04429874477539717,
+        "max_centroid_distance": 3.7943609074704736
+      }
+    }
+  },
+  "epoch_09": {
+    "pca": {
+      "student": {
+        "knn_1_accuracy": 0.128,
+        "knn_1_std": 0.04261455150532504,
+        "knn_5_accuracy": 0.132,
+        "knn_5_std": 0.03867815921162743,
+        "mean_local_purity": 0.11880000000000002,
+        "std_local_purity": 0.10791922905580821,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.5,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.018305457775787244,
+            "normalized_mutual_info": 0.0721580462306199,
+            "adjusted_mutual_info": 0.03492379955325362,
+            "v_measure": 0.07215804623061992,
+            "homogeneity": 0.0705520903777411,
+            "completeness": 0.0738388168419814,
+            "fowlkes_mallows": 0.12539994020994913,
+            "mean_cluster_entropy": 2.1210835078823047,
+            "weighted_cluster_entropy": 2.14013290141069,
+            "max_cluster_entropy": 2.255812541655225,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.018074421120273246,
+            "normalized_mutual_info": 0.07520202897799848,
+            "adjusted_mutual_info": 0.037706804841586374,
+            "v_measure": 0.07520202897799849,
+            "homogeneity": 0.07301230530872245,
+            "completeness": 0.07752715832260554,
+            "fowlkes_mallows": 0.12949389113980644,
+            "mean_cluster_entropy": 2.0899463858030023,
+            "weighted_cluster_entropy": 2.1344680471850515,
+            "max_cluster_entropy": 2.2558774056788686,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.00016619952732066975,
+            "normalized_mutual_info": 0.011438820639560128,
+            "adjusted_mutual_info": 0.002090927800332378,
+            "v_measure": 0.011438820639560126,
+            "homogeneity": 0.0060326845388301185,
+            "completeness": 0.11013800724485914,
+            "fowlkes_mallows": 0.3050685817471818,
+            "noise_ratio": 0.056
+          }
+        },
+        "fisher_ratio": 0.10904790741729334,
+        "within_class_scatter": 113.17703627075751,
+        "between_class_scatter": 12.341718974107694,
+        "mean_centroid_distance": 0.20493408311463931,
+        "min_centroid_distance": 0.01679626640066024,
+        "max_centroid_distance": 0.47546710263978725
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.084,
+        "knn_1_std": 0.01854723699099141,
+        "knn_5_accuracy": 0.12,
+        "knn_5_std": 0.02280350850198276,
+        "mean_local_purity": 0.11259999999999999,
+        "std_local_purity": 0.10129777885027885,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.4,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.01558526398494411,
+            "normalized_mutual_info": 0.06917122891000972,
+            "adjusted_mutual_info": 0.03201431835685371,
+            "v_measure": 0.06917122891000974,
+            "homogeneity": 0.06800384928865977,
+            "completeness": 0.07037938791983207,
+            "fowlkes_mallows": 0.11889316802409855,
+            "mean_cluster_entropy": 2.1198153869500223,
+            "weighted_cluster_entropy": 2.146000443355764,
+            "max_cluster_entropy": 2.266843744482709,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.0146807048965799,
+            "normalized_mutual_info": 0.06384907412278802,
+            "adjusted_mutual_info": 0.025510024811571656,
+            "v_measure": 0.06384907412278801,
+            "homogeneity": 0.06193124866876362,
+            "completeness": 0.06588947397017582,
+            "fowlkes_mallows": 0.12353581307395593,
+            "mean_cluster_entropy": 2.111976503730495,
+            "weighted_cluster_entropy": 2.159983123018843,
+            "max_cluster_entropy": 2.2726798714955327,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.0,
+            "normalized_mutual_info": 0.0,
+            "adjusted_mutual_info": 0.0,
+            "v_measure": 0.0,
+            "homogeneity": 0.0,
+            "completeness": 1.0,
+            "fowlkes_mallows": 0.31353354760323343,
+            "noise_ratio": 0.056
+          }
+        },
+        "fisher_ratio": 0.11336960081333286,
+        "within_class_scatter": 2157.2559801204425,
+        "between_class_scatter": 244.5672493195634,
+        "mean_centroid_distance": 0.9020334025339866,
+        "min_centroid_distance": 0.1281598315467445,
+        "max_centroid_distance": 2.0305835507978505
+      }
+    },
+    "umap": {
+      "student": {
+        "knn_1_accuracy": 0.166,
+        "knn_1_std": 0.024166091947189147,
+        "knn_5_accuracy": 0.138,
+        "knn_5_std": 0.030594117081556717,
+        "mean_local_purity": 0.12560000000000002,
+        "std_local_purity": 0.11200285710641492,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.021084313306416642,
+            "normalized_mutual_info": 0.08237580895437047,
+            "adjusted_mutual_info": 0.04687398026058745,
+            "v_measure": 0.08237580895437047,
+            "homogeneity": 0.0821420120659896,
+            "completeness": 0.08261094053146108,
+            "fowlkes_mallows": 0.11842452286854707,
+            "mean_cluster_entropy": 2.1041889222574968,
+            "weighted_cluster_entropy": 2.1134461205023607,
+            "max_cluster_entropy": 2.2515624848424958,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.018183232440254122,
+            "normalized_mutual_info": 0.07522654846300078,
+            "adjusted_mutual_info": 0.03728370594805725,
+            "v_measure": 0.07522654846300078,
+            "homogeneity": 0.07290631818604655,
+            "completeness": 0.07769931498888352,
+            "fowlkes_mallows": 0.12710693871085352,
+            "mean_cluster_entropy": 2.08003214077938,
+            "weighted_cluster_entropy": 2.134712091553774,
+            "max_cluster_entropy": 2.2243476448360884,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.013555773683743095,
+            "normalized_mutual_info": 0.039618786471972534,
+            "adjusted_mutual_info": 0.02673655634509458,
+            "v_measure": 0.039618786471972534,
+            "homogeneity": 0.026283350264564184,
+            "completeness": 0.0804233359368288,
+            "fowlkes_mallows": 0.2337408209671499,
+            "noise_ratio": 0.054
+          }
+        },
+        "fisher_ratio": 0.11742732801032318,
+        "within_class_scatter": 5263.6878015048915,
+        "between_class_scatter": 618.100794012426,
+        "mean_centroid_distance": 1.4065622535219597,
+        "min_centroid_distance": 0.19024995287295088,
+        "max_centroid_distance": 3.4865612125576346
+      },
+      "teacher": {
+        "knn_1_accuracy": 0.136,
+        "knn_1_std": 0.01624807680927192,
+        "knn_5_accuracy": 0.156,
+        "knn_5_std": 0.030066592756745822,
+        "mean_local_purity": 0.1264,
+        "std_local_purity": 0.11181699334179934,
+        "min_local_purity": 0.0,
+        "max_local_purity": 0.6,
+        "clustering": {
+          "kmeans": {
+            "adjusted_rand_index": 0.018033678945710088,
+            "normalized_mutual_info": 0.07696978918741613,
+            "adjusted_mutual_info": 0.04067894372129265,
+            "v_measure": 0.07696978918741613,
+            "homogeneity": 0.07610411283342726,
+            "completeness": 0.07785538609225431,
+            "fowlkes_mallows": 0.11967713016697579,
+            "mean_cluster_entropy": 2.1130539947990306,
+            "weighted_cluster_entropy": 2.127348897268259,
+            "max_cluster_entropy": 2.2250404035767373,
+            "n_clusters": 10
+          },
+          "agglomerative": {
+            "adjusted_rand_index": 0.019562084803022132,
+            "normalized_mutual_info": 0.0823492363612494,
+            "adjusted_mutual_info": 0.04579590003369894,
+            "v_measure": 0.08234923636124941,
+            "homogeneity": 0.08079607377553867,
+            "completeness": 0.08396328298015454,
+            "fowlkes_mallows": 0.12507872693766478,
+            "mean_cluster_entropy": 2.081657041398119,
+            "weighted_cluster_entropy": 2.1165452579460426,
+            "max_cluster_entropy": 2.2366779151156484,
+            "n_clusters": 10
+          },
+          "dbscan": {
+            "adjusted_rand_index": 0.008547312906622306,
+            "normalized_mutual_info": 0.07643372726103645,
+            "adjusted_mutual_info": 0.039536803474487556,
+            "v_measure": 0.07643372726103645,
+            "homogeneity": 0.059568485576196324,
+            "completeness": 0.10662050385370325,
+            "fowlkes_mallows": 0.20991746782254217,
+            "noise_ratio": 0.032
+          }
+        },
+        "fisher_ratio": 0.1156104679094448,
+        "within_class_scatter": 4309.517246895436,
+        "between_class_scatter": 498.2253053785598,
+        "mean_centroid_distance": 1.2692080889915653,
+        "min_centroid_distance": 0.08172074151149489,
+        "max_centroid_distance": 2.6596115954671014
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "mask_type": "ijepa",
+  "num_mask_samples": 5,
+  "samples_per_mask": 500,
+  "mask_results": {
+    "mask_00": {
+      "mask_ratio": 0.3125,
+      "num_masked_patches": 0,
+      "num_visible_patches": 44,
+      "total_samples": 500,
+      "embedding_dim": 256
+    },
+    "mask_01": {
+      "mask_ratio": 0.390625,
+      "num_masked_patches": 0,
+      "num_visible_patches": 39,
+      "total_samples": 500,
+      "embedding_dim": 256
+    },
+    "mask_02": {
+      "mask_ratio": 0.328125,
+      "num_masked_patches": 0,
+      "num_visible_patches": 43,
+      "total_samples": 500,
+      "embedding_dim": 256
+    },
+    "mask_03": {
+      "mask_ratio": 0.3125,
+      "num_masked_patches": 0,
+      "num_visible_patches": 44,
+      "total_samples": 500,
+      "embedding_dim": 256
+    },
+    "mask_04": {
+      "mask_ratio": 0.3125,
+      "num_masked_patches": 0,
+      "num_visible_patches": 44,
+      "total_samples": 500,
+      "embedding_dim": 256
+    }
+  },
+  "M": 4,
+  "target_scale": [
+    0.15,
+    0.2
+  ],
+  "target_aspect_ratio": [
+    0.75,
+    1.5
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "student_epoch0_vs_teacher_epoch0": {
+    "correlation": 0.006982728755748688,
+    "p_value": 5.466471275055231e-23
+  },
+  "student_epoch0_vs_student_epoch1": {
+    "correlation": 0.010337584623162619,
+    "p_value": 2.211636676045106e-48
+  },
+  "student_epoch0_vs_teacher_epoch1": {
+    "correlation": 0.00835325146869307,
+    "p_value": 3.443979941469214e-32
+  },
+  "student_epoch0_vs_student_epoch2": {
+    "correlation": 0.01119931426340944,
+    "p_value": 1.7917352914092323e-56
+  },
+  "student_epoch0_vs_teacher_epoch2": {
+    "correlation": 0.0077186433338487315,
+    "p_value": 9.964434130736589e-28
+  },
+  "student_epoch0_vs_student_epoch3": {
+    "correlation": 0.004045744759235817,
+    "p_value": 1.0643858814712647e-08
+  },
+  "student_epoch0_vs_teacher_epoch3": {
+    "correlation": 0.005262117800851382,
+    "p_value": 1.0072757990807103e-13
+  },
+  "student_epoch0_vs_student_epoch4": {
+    "correlation": 0.006893374715920071,
+    "p_value": 1.9117075283394263e-22
+  },
+  "student_epoch0_vs_teacher_epoch4": {
+    "correlation": 0.009263099967958335,
+    "p_value": 3.425358284875496e-39
+  },
+  "teacher_epoch0_vs_student_epoch1": {
+    "correlation": 0.12586795346032215,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_teacher_epoch1": {
+    "correlation": 0.12738552060563849,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_student_epoch2": {
+    "correlation": 0.1271907724256873,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_teacher_epoch2": {
+    "correlation": 0.1123246812272322,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_student_epoch3": {
+    "correlation": 0.1265908658695944,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_teacher_epoch3": {
+    "correlation": 0.12334220175643443,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_student_epoch4": {
+    "correlation": 0.12833058647195034,
+    "p_value": 0.0
+  },
+  "teacher_epoch0_vs_teacher_epoch4": {
+    "correlation": 0.11990576816399484,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_teacher_epoch1": {
+    "correlation": 0.9582256200746575,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_student_epoch2": {
+    "correlation": 0.9508125682598242,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_teacher_epoch2": {
+    "correlation": 0.9480346786672109,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_student_epoch3": {
+    "correlation": 0.8018612072883073,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_teacher_epoch3": {
+    "correlation": 0.8212373143125983,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_student_epoch4": {
+    "correlation": 0.8401180372958238,
+    "p_value": 0.0
+  },
+  "student_epoch1_vs_teacher_epoch4": {
+    "correlation": 0.8838705139966002,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_student_epoch2": {
+    "correlation": 0.9610510650430616,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_teacher_epoch2": {
+    "correlation": 0.9710627429180922,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_student_epoch3": {
+    "correlation": 0.8929057528427015,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_teacher_epoch3": {
+    "correlation": 0.91106617453771,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_student_epoch4": {
+    "correlation": 0.9349794814503964,
+    "p_value": 0.0
+  },
+  "teacher_epoch1_vs_teacher_epoch4": {
+    "correlation": 0.955350441897639,
+    "p_value": 0.0
+  },
+  "student_epoch2_vs_teacher_epoch2": {
+    "correlation": 0.981737330160088,
+    "p_value": 0.0
+  },
+  "student_epoch2_vs_student_epoch3": {
+    "correlation": 0.8627102972422269,
+    "p_value": 0.0
+  },
+  "student_epoch2_vs_teacher_epoch3": {
+    "correlation": 0.8723517201579437,
+    "p_value": 0.0
+  },
+  "student_epoch2_vs_student_epoch4": {
+    "correlation": 0.9224424820458604,
+    "p_value": 0.0
+  },
+  "student_epoch2_vs_teacher_epoch4": {
+    "correlation": 0.9342076979474214,
+    "p_value": 0.0
+  },
+  "teacher_epoch2_vs_student_epoch3": {
+    "correlation": 0.8699752277381683,
+    "p_value": 0.0
+  },
+  "teacher_epoch2_vs_teacher_epoch3": {
+    "correlation": 0.8918278811515018,
+    "p_value": 0.0
+  },
+  "teacher_epoch2_vs_student_epoch4": {
+    "correlation": 0.9197068071924679,
+    "p_value": 0.0
+  },
+  "teacher_epoch2_vs_teacher_epoch4": {
+    "correlation": 0.9437512755020581,
+    "p_value": 0.0
+  },
+  "student_epoch3_vs_teacher_epoch3": {
+    "correlation": 0.9837873735425251,
+    "p_value": 0.0
+  },
+  "student_epoch3_vs_student_epoch4": {
+    "correlation": 0.9390657717168764,
+    "p_value": 0.0
+  },
+  "student_epoch3_vs_teacher_epoch4": {
+    "correlation": 0.9258443900883536,
+    "p_value": 0.0
+  },
+  "teacher_epoch3_vs_student_epoch4": {
+    "correlation": 0.9376685005990827,
+    "p_value": 0.0
+  },
+  "teacher_epoch3_vs_teacher_epoch4": {
+    "correlation": 0.9346542069416182,
+    "p_value": 0.0
+  },
+  "student_epoch4_vs_teacher_epoch4": {
+    "correlation": 0.9797072581341836,
+    "p_value": 0.0
+  }
+}

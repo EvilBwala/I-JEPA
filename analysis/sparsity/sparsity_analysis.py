@@ -20,8 +20,8 @@ from tqdm import tqdm
 class SparsityAnalyzer:
     """Analyze sparsity in I-JEPA student and teacher embeddings."""
     
-    def __init__(self, embeddings_dir: str = "analysis/dim_reduction/embeddings",
-                 output_dir: str = "analysis/sparsity/results"):
+    def __init__(self, embeddings_dir: str = "../dim_reduction/embeddings",
+                 output_dir: str = "results"):
         self.embeddings_dir = Path(embeddings_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)

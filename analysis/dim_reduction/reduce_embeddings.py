@@ -329,11 +329,11 @@ def main():
         description="Reduce dimensionality of I-JEPA embeddings using driada"
     )
     parser.add_argument(
-        '--embeddings_dir', type=str, default='analysis/dim_reduction/embeddings',
+        '--embeddings_dir', type=str, default='embeddings',
         help='Directory containing extracted embeddings'
     )
     parser.add_argument(
-        '--output_dir', type=str, default='analysis/dim_reduction/reduced_embeddings',
+        '--output_dir', type=str, default='reduced_embeddings',
         help='Output directory for reduced embeddings'
     )
     parser.add_argument(

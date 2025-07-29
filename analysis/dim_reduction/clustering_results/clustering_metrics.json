@@ -1,0 +1,2302 @@
+{
+  "epoch_00": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 0,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.12799787521362305,
+          "davies_bouldin": 34.684392735416,
+          "calinski_harabasz": 4.719360791545562
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 0.4922755540538973,
+          "std_intra_distance": 0.20559905422503744,
+          "mean_inter_distance": 0.20978553945381795,
+          "std_inter_distance": 0.10398490056946282,
+          "separation_ratio": 0.42615468809020424
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.0128542240071898,
+          "normalized_mutual_info": 0.06670682257607523,
+          "v_measure": 0.06670682257607523
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09726938143372536,
+            "std": 0.013658099096436706,
+            "percentile_5": -0.1223208837211132,
+            "percentile_95": -0.07793666198849679
+          },
+          "davies_bouldin": {
+            "mean": 50.36648369319518,
+            "std": 25.596123157612794,
+            "percentile_5": 27.840620211609345,
+            "percentile_95": 97.3059807276494
+          },
+          "calinski_harabasz": {
+            "mean": 0.9301079245406177,
+            "std": 0.31659199708280544,
+            "percentile_5": 0.5028194913839035,
+            "percentile_95": 1.5190980296904437
+          },
+          "separation_ratio": {
+            "mean": 0.1848831658456818,
+            "std": 0.030779824227790704,
+            "percentile_5": 0.13709604380490736,
+            "percentile_95": 0.23479941931818432
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.249836786432053,
+          "calinski_harabasz_z_score": 11.968883932381448,
+          "separation_ratio_z_score": 7.838625732848777,
+          "davies_bouldin_z_score": 0.6126744609413639
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 0,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1272321492433548,
+          "davies_bouldin": 14.986988900962595,
+          "calinski_harabasz": 5.886009061111555
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.2034913689065525,
+          "std_intra_distance": 1.0870065931576025,
+          "mean_inter_distance": 1.0746390974250681,
+          "std_inter_distance": 0.5436002386510091,
+          "separation_ratio": 0.48769834441482623
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.011989823526481334,
+          "normalized_mutual_info": 0.06067970805591095,
+          "v_measure": 0.06067970805591094
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09809070445597172,
+            "std": 0.014703007919737315,
+            "percentile_5": -0.12445226199924946,
+            "percentile_95": -0.07627074830234051
+          },
+          "davies_bouldin": {
+            "mean": 49.289322611825035,
+            "std": 44.59546386939815,
+            "percentile_5": 24.869344821878492,
+            "percentile_95": 79.31760686115811
+          },
+          "calinski_harabasz": {
+            "mean": 0.9978471939428222,
+            "std": 0.3531050920340808,
+            "percentile_5": 0.4846341443153438,
+            "percentile_95": 1.6103299548095762
+          },
+          "separation_ratio": {
+            "mean": 0.19854126049224508,
+            "std": 0.034170566334611074,
+            "percentile_5": 0.14321755882065168,
+            "percentile_95": 0.2554972543905702
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9820056512561357,
+          "calinski_harabasz_z_score": 13.843362719609097,
+          "separation_ratio_z_score": 8.462168320274412,
+          "davies_bouldin_z_score": 0.769188853182914
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 0,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.15010151267051697,
+          "davies_bouldin": 14.869006146952504,
+          "calinski_harabasz": 5.599804333004779
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.910602872599861,
+          "std_intra_distance": 1.3767043747549113,
+          "mean_inter_distance": 1.3422123605609506,
+          "std_inter_distance": 0.7536350585166262,
+          "separation_ratio": 0.4611458226008611
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01611172360761976,
+          "normalized_mutual_info": 0.0653738563654851,
+          "v_measure": 0.06537385636548511
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.1065597841143608,
+            "std": 0.01749911686148846,
+            "percentile_5": -0.13915495574474335,
+            "percentile_95": -0.08181064128875733
+          },
+          "davies_bouldin": {
+            "mean": 56.45000007591728,
+            "std": 37.29025775938845,
+            "percentile_5": 26.85939659293229,
+            "percentile_95": 100.88647538499536
+          },
+          "calinski_harabasz": {
+            "mean": 1.0183303349546677,
+            "std": 0.4869523322630832,
+            "percentile_5": 0.3713068269560955,
+            "percentile_95": 1.773056895495094
+          },
+          "separation_ratio": {
+            "mean": 0.18920617400016396,
+            "std": 0.044420921503039765,
+            "percentile_5": 0.12385619141347237,
+            "percentile_95": 0.2602863948432998
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.488224343022791,
+          "calinski_harabasz_z_score": 9.40846504781684,
+          "separation_ratio_z_score": 6.121882198731247,
+          "davies_bouldin_z_score": 1.1150631941796125
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 0,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.16634689271450043,
+          "davies_bouldin": 20.348276293276363,
+          "calinski_harabasz": 6.074811316337466
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 3.1207729836380733,
+          "std_intra_distance": 1.6699412391914912,
+          "mean_inter_distance": 1.487584308669459,
+          "std_inter_distance": 0.9452043163464534,
+          "separation_ratio": 0.4766717450138186
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.012063660663923656,
+          "normalized_mutual_info": 0.06323208961800497,
+          "v_measure": 0.06323208961800497
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.1256775473803282,
+            "std": 0.021358250946017277,
+            "percentile_5": -0.15986521393060685,
+            "percentile_95": -0.09530583359301091
+          },
+          "davies_bouldin": {
+            "mean": 71.4875017877008,
+            "std": 37.14996480742709,
+            "percentile_5": 35.849346974896804,
+            "percentile_95": 150.887897303602
+          },
+          "calinski_harabasz": {
+            "mean": 0.9974804747400525,
+            "std": 0.5103901723045761,
+            "percentile_5": 0.39060597177388495,
+            "percentile_95": 1.9814057329763488
+          },
+          "separation_ratio": {
+            "mean": 0.18550975857525626,
+            "std": 0.04685788368206494,
+            "percentile_5": 0.11906084533053911,
+            "percentile_95": 0.2687200928122074
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9041514886665356,
+          "calinski_harabasz_z_score": 9.947940060584688,
+          "separation_ratio_z_score": 6.21372464053484,
+          "davies_bouldin_z_score": 1.3765618826158506
+        }
+      }
+    }
+  },
+  "epoch_01": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 1,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.11874843388795853,
+          "davies_bouldin": 16.959350198596077,
+          "calinski_harabasz": 4.464070401707594
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 0.4666499734693169,
+          "std_intra_distance": 0.20345619531746328,
+          "mean_inter_distance": 0.19224192450744254,
+          "std_inter_distance": 0.10130737297303624,
+          "separation_ratio": 0.41196170859841635
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.013223763537902227,
+          "normalized_mutual_info": 0.06698841886059623,
+          "v_measure": 0.06698841886059624
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09954822085797786,
+            "std": 0.01306616288778698,
+            "percentile_5": -0.1199003964662552,
+            "percentile_95": -0.0796370416879654
+          },
+          "davies_bouldin": {
+            "mean": 47.489233977777715,
+            "std": 26.183485966994382,
+            "percentile_5": 24.882300591925475,
+            "percentile_95": 90.47512525369739
+          },
+          "calinski_harabasz": {
+            "mean": 1.0135936109033301,
+            "std": 0.370737652918168,
+            "percentile_5": 0.5024197625734662,
+            "percentile_95": 1.6344178559975269
+          },
+          "separation_ratio": {
+            "mean": 0.19613293402464724,
+            "std": 0.036954487501552884,
+            "percentile_5": 0.13616077396628712,
+            "percentile_95": 0.2575857398583062
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.4694607127488988,
+          "calinski_harabasz_z_score": 9.307057871367274,
+          "separation_ratio_z_score": 5.8403942028610105,
+          "davies_bouldin_z_score": 1.1659976756978085
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 1,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1281946450471878,
+          "davies_bouldin": 15.016183533308828,
+          "calinski_harabasz": 5.524286292392494
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.1835415120186163,
+          "std_intra_distance": 1.095497676405419,
+          "mean_inter_distance": 1.031697627649676,
+          "std_inter_distance": 0.5303433135272502,
+          "separation_ratio": 0.47248821112222483
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.017951943678301743,
+          "normalized_mutual_info": 0.0778566260300172,
+          "v_measure": 0.0778566260300172
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09864797376096249,
+            "std": 0.013990195723725856,
+            "percentile_5": -0.120982601121068,
+            "percentile_95": -0.07715623117983342
+          },
+          "davies_bouldin": {
+            "mean": 42.544109793357784,
+            "std": 16.38359448392154,
+            "percentile_5": 24.359470019940474,
+            "percentile_95": 74.01890582583519
+          },
+          "calinski_harabasz": {
+            "mean": 1.0123200762242877,
+            "std": 0.3717273773517084,
+            "percentile_5": 0.5109670807047847,
+            "percentile_95": 1.6752062983332998
+          },
+          "separation_ratio": {
+            "mean": 0.19925474305944998,
+            "std": 0.03564183587967156,
+            "percentile_5": 0.14258619815547485,
+            "percentile_95": 0.256543434551027
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.1119555344116714,
+          "calinski_harabasz_z_score": 12.137836734847825,
+          "separation_ratio_z_score": 7.666088497383336,
+          "davies_bouldin_z_score": 1.680212867027696
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 1,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.14732281863689423,
+          "davies_bouldin": 15.270041763777897,
+          "calinski_harabasz": 6.020015453207561
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.537701659517096,
+          "std_intra_distance": 1.182114406990046,
+          "mean_inter_distance": 1.2039037826085317,
+          "std_inter_distance": 0.6901907142028672,
+          "separation_ratio": 0.474407136610989
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.014364117060368378,
+          "normalized_mutual_info": 0.06634548383344996,
+          "v_measure": 0.06634548383344996
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10564385503530502,
+            "std": 0.016832412364865306,
+            "percentile_5": -0.1301056146621704,
+            "percentile_95": -0.08357831835746765
+          },
+          "davies_bouldin": {
+            "mean": 56.4708789089116,
+            "std": 46.50263887813782,
+            "percentile_5": 28.128210865400725,
+            "percentile_95": 110.23363076349167
+          },
+          "calinski_harabasz": {
+            "mean": 0.9795156572843737,
+            "std": 0.42767663624959584,
+            "percentile_5": 0.4720250345677463,
+            "percentile_95": 1.8614650482746664
+          },
+          "separation_ratio": {
+            "mean": 0.18777337777800696,
+            "std": 0.03944210611091742,
+            "percentile_5": 0.13453180009783586,
+            "percentile_95": 0.2520650677001612
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.4761135063793174,
+          "calinski_harabasz_z_score": 11.785773102137634,
+          "separation_ratio_z_score": 7.267202162757808,
+          "davies_bouldin_z_score": 0.8859892285489922
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 1,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.16584643721580505,
+          "davies_bouldin": 13.048360006586208,
+          "calinski_harabasz": 5.593183426384812
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.8868042614646816,
+          "std_intra_distance": 1.4907225135693223,
+          "mean_inter_distance": 1.3436291703758627,
+          "std_inter_distance": 0.7774954356980329,
+          "separation_ratio": 0.4654382646088243
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.014740730556486123,
+          "normalized_mutual_info": 0.067777796142765,
+          "v_measure": 0.067777796142765
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.1160849667340517,
+            "std": 0.017712051498467662,
+            "percentile_5": -0.14640908017754556,
+            "percentile_95": -0.0928058721125126
+          },
+          "davies_bouldin": {
+            "mean": 66.90952287668057,
+            "std": 33.75849509688221,
+            "percentile_5": 32.79849949297712,
+            "percentile_95": 108.41999425613444
+          },
+          "calinski_harabasz": {
+            "mean": 0.9846049342327723,
+            "std": 0.4052803751860036,
+            "percentile_5": 0.36667641392792366,
+            "percentile_95": 1.6542706633263016
+          },
+          "separation_ratio": {
+            "mean": 0.18762891044641347,
+            "std": 0.03909942595739995,
+            "percentile_5": 0.11704557070233515,
+            "percentile_95": 0.25264258144829477
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.8094696137292963,
+          "calinski_harabasz_z_score": 11.371333956244317,
+          "separation_ratio_z_score": 7.105202886228888,
+          "davies_bouldin_z_score": 1.5954847132705496
+        }
+      }
+    }
+  },
+  "epoch_02": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 2,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17463834583759308,
+          "davies_bouldin": 17.154781920490297,
+          "calinski_harabasz": 4.950831440153307
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.3323988304052576,
+          "std_intra_distance": 0.5693138257535765,
+          "mean_inter_distance": 0.5695171679723692,
+          "std_inter_distance": 0.316048883950738,
+          "separation_ratio": 0.4274374539377015
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.016403745117718353,
+          "normalized_mutual_info": 0.06999445572915582,
+          "v_measure": 0.06999445572915582
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11746259041130543,
+            "std": 0.019682494274734588,
+            "percentile_5": -0.15409331545233726,
+            "percentile_95": -0.08505268394947052
+          },
+          "davies_bouldin": {
+            "mean": 52.267904505967856,
+            "std": 30.464499602510866,
+            "percentile_5": 25.414100336343427,
+            "percentile_95": 93.39383665757873
+          },
+          "calinski_harabasz": {
+            "mean": 1.02702677909813,
+            "std": 0.37534141157791434,
+            "percentile_5": 0.5212570726143262,
+            "percentile_95": 1.7162561424107725
+          },
+          "separation_ratio": {
+            "mean": 0.19330047036000125,
+            "std": 0.036351657950999504,
+            "percentile_5": 0.13991014218256986,
+            "percentile_95": 0.25539178700036486
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.904903953137751,
+          "calinski_harabasz_z_score": 10.453961486849321,
+          "separation_ratio_z_score": 6.4408887180141,
+          "davies_bouldin_z_score": 1.1525914767555727
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 2,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.13761770725250244,
+          "davies_bouldin": 15.513820700711179,
+          "calinski_harabasz": 5.963665103007614
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.1037214842349545,
+          "std_intra_distance": 1.0240020892191635,
+          "mean_inter_distance": 1.0315272567219287,
+          "std_inter_distance": 0.5181305837441218,
+          "separation_ratio": 0.49033451412115603
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.023121881073231154,
+          "normalized_mutual_info": 0.08031589729966372,
+          "v_measure": 0.08031589729966374
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10397168904542924,
+            "std": 0.015817717425281874,
+            "percentile_5": -0.13395997881889343,
+            "percentile_95": -0.08005460351705551
+          },
+          "davies_bouldin": {
+            "mean": 51.11375814764193,
+            "std": 27.223204340231906,
+            "percentile_5": 28.35589151550583,
+            "percentile_95": 89.96652663510903
+          },
+          "calinski_harabasz": {
+            "mean": 0.928440978928252,
+            "std": 0.3538888141937536,
+            "percentile_5": 0.4625136753861945,
+            "percentile_95": 1.7389258772484741
+          },
+          "separation_ratio": {
+            "mean": 0.18756613748660894,
+            "std": 0.033815596177281554,
+            "percentile_5": 0.13906666574741125,
+            "percentile_95": 0.249367948150249
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.127109576081811,
+          "calinski_harabasz_z_score": 14.228265834145816,
+          "separation_ratio_z_score": 8.953512901184839,
+          "davies_bouldin_z_score": 1.307705625025165
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 2,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.21026259660720825,
+          "davies_bouldin": 23.762829357535214,
+          "calinski_harabasz": 6.01643652780118
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 4.567650505136965,
+          "std_intra_distance": 2.099427666382086,
+          "mean_inter_distance": 2.115018765524421,
+          "std_inter_distance": 1.3162342891061483,
+          "separation_ratio": 0.4630430367899984
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01995627215269286,
+          "normalized_mutual_info": 0.06668221266989968,
+          "v_measure": 0.0666822126698997
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.14059629142284394,
+            "std": 0.026505078234153004,
+            "percentile_5": -0.19372783601284027,
+            "percentile_95": -0.10238569676876068
+          },
+          "davies_bouldin": {
+            "mean": 104.79637360609338,
+            "std": 78.6602118807377,
+            "percentile_5": 48.261760346672204,
+            "percentile_95": 201.94803432851302
+          },
+          "calinski_harabasz": {
+            "mean": 0.9803697210066976,
+            "std": 0.48528817159601684,
+            "percentile_5": 0.3630665742733131,
+            "percentile_95": 2.0838807835288136
+          },
+          "separation_ratio": {
+            "mean": 0.17391281689950827,
+            "std": 0.043173649532613045,
+            "percentile_5": 0.10871161877689257,
+            "percentile_95": 0.2661571872145018
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.6284134900079676,
+          "calinski_harabasz_z_score": 10.377476933410215,
+          "separation_ratio_z_score": 6.696914044111175,
+          "davies_bouldin_z_score": 1.0301719549321688
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 2,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17317526042461395,
+          "davies_bouldin": 23.26192753103304,
+          "calinski_harabasz": 6.2111219395716075
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 3.5739522104389247,
+          "std_intra_distance": 1.9430493033302054,
+          "mean_inter_distance": 1.7431714366295343,
+          "std_inter_distance": 1.0754850233595032,
+          "separation_ratio": 0.48774335220839965
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.019733960438983466,
+          "normalized_mutual_info": 0.07170721630090966,
+          "v_measure": 0.07170721630090965
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.1215401117503643,
+            "std": 0.019042526967346197,
+            "percentile_5": -0.15802884325385094,
+            "percentile_95": -0.09701563119888305
+          },
+          "davies_bouldin": {
+            "mean": 75.52476958484456,
+            "std": 46.38927263368584,
+            "percentile_5": 39.83507726839565,
+            "percentile_95": 141.70966499902727
+          },
+          "calinski_harabasz": {
+            "mean": 0.946089220364204,
+            "std": 0.49040847814727095,
+            "percentile_5": 0.3823243534977643,
+            "percentile_95": 1.624348900684843
+          },
+          "separation_ratio": {
+            "mean": 0.18144491915917524,
+            "std": 0.043047787712594876,
+            "percentile_5": 0.12177514772755046,
+            "percentile_95": 0.24236513602869214
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.711570200887347,
+          "calinski_harabasz_z_score": 10.736014881101424,
+          "separation_ratio_z_score": 7.115311827269767,
+          "davies_bouldin_z_score": 1.1266148203380226
+        }
+      }
+    }
+  },
+  "epoch_03": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 3,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.12854182720184326,
+          "davies_bouldin": 15.861279449710219,
+          "calinski_harabasz": 4.12387206723006
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.7852077497087167,
+          "std_intra_distance": 0.749759901986932,
+          "mean_inter_distance": 0.7055630567929007,
+          "std_inter_distance": 0.3650140822435837,
+          "separation_ratio": 0.39522741986513876
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01059280527173098,
+          "normalized_mutual_info": 0.05520562200594411,
+          "v_measure": 0.055205622005944116
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09896715104579926,
+            "std": 0.014457658929728633,
+            "percentile_5": -0.12258732169866562,
+            "percentile_95": -0.07472577169537545
+          },
+          "davies_bouldin": {
+            "mean": 54.417484455605006,
+            "std": 40.20108910869807,
+            "percentile_5": 26.287346807742612,
+            "percentile_95": 106.21283323893068
+          },
+          "calinski_harabasz": {
+            "mean": 0.9914821094036883,
+            "std": 0.35620665065074036,
+            "percentile_5": 0.44177645155188977,
+            "percentile_95": 1.5653718917100508
+          },
+          "separation_ratio": {
+            "mean": 0.19051166334906103,
+            "std": 0.03593719882176032,
+            "percentile_5": 0.12849737755806595,
+            "percentile_95": 0.2368937186383232
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.045606159322996,
+          "calinski_harabasz_z_score": 8.793743609514106,
+          "separation_ratio_z_score": 5.696486182226322,
+          "davies_bouldin_z_score": 0.9590835935226594
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 3,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.12688890099525452,
+          "davies_bouldin": 14.785637725631725,
+          "calinski_harabasz": 5.245263069476424
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.909490508437861,
+          "std_intra_distance": 0.8692213890116838,
+          "mean_inter_distance": 0.8686601481059568,
+          "std_inter_distance": 0.4333588520058104,
+          "separation_ratio": 0.45491723562817205
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.012375930401125992,
+          "normalized_mutual_info": 0.06557741433923757,
+          "v_measure": 0.06557741433923758
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09520218946039677,
+            "std": 0.011967985024045655,
+            "percentile_5": -0.11456016227602958,
+            "percentile_95": -0.07836410775780679
+          },
+          "davies_bouldin": {
+            "mean": 56.72650685199278,
+            "std": 75.47390828042248,
+            "percentile_5": 25.162027003106612,
+            "percentile_95": 97.25302731653979
+          },
+          "calinski_harabasz": {
+            "mean": 1.0293251768261724,
+            "std": 0.35531625435079195,
+            "percentile_5": 0.5359857401788839,
+            "percentile_95": 1.63413453767309
+          },
+          "separation_ratio": {
+            "mean": 0.20004395561001886,
+            "std": 0.034443723217917145,
+            "percentile_5": 0.14547482008301732,
+            "percentile_95": 0.25677940962389517
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.6476229265990825,
+          "calinski_harabasz_z_score": 11.865311088436714,
+          "separation_ratio_z_score": 7.399701780368844,
+          "davies_bouldin_z_score": 0.5557002424007277
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 3,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.16721951961517334,
+          "davies_bouldin": 19.49426575251342,
+          "calinski_harabasz": 5.475800318214019
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.2556488419515954,
+          "std_intra_distance": 0.5840288008093336,
+          "mean_inter_distance": 0.5594869454635126,
+          "std_inter_distance": 0.3399911893924476,
+          "separation_ratio": 0.44557596225563273
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01177872764974299,
+          "normalized_mutual_info": 0.05297518072963947,
+          "v_measure": 0.05297518072963947
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11468508750200272,
+            "std": 0.018801764512158974,
+            "percentile_5": -0.14929238334298134,
+            "percentile_95": -0.08646669238805771
+          },
+          "davies_bouldin": {
+            "mean": 61.35209113404543,
+            "std": 34.35823062437745,
+            "percentile_5": 33.270159343556124,
+            "percentile_95": 155.79682449620344
+          },
+          "calinski_harabasz": {
+            "mean": 0.9490551714776677,
+            "std": 0.35620081770717693,
+            "percentile_5": 0.4005100289838023,
+            "percentile_95": 1.543270190585828
+          },
+          "separation_ratio": {
+            "mean": 0.18180516696037738,
+            "std": 0.03627817261001642,
+            "percentile_5": 0.12203920926265543,
+            "percentile_95": 0.24516960470988883
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.794122438837959,
+          "calinski_harabasz_z_score": 12.7084075097707,
+          "separation_ratio_z_score": 7.270785056643899,
+          "davies_bouldin_z_score": 1.2182765125231314
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 3,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.13788101077079773,
+          "davies_bouldin": 19.622088261063375,
+          "calinski_harabasz": 5.3864875127619625
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.4400260706309007,
+          "std_intra_distance": 1.035187313921073,
+          "mean_inter_distance": 1.0996681990043293,
+          "std_inter_distance": 0.5790487492965106,
+          "separation_ratio": 0.4506788709078043
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.013163071075255847,
+          "normalized_mutual_info": 0.0623996435628031,
+          "v_measure": 0.062399643562803093
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09797422274947166,
+            "std": 0.011938061629037244,
+            "percentile_5": -0.11518011912703514,
+            "percentile_95": -0.07942503727972508
+          },
+          "davies_bouldin": {
+            "mean": 47.008689902741565,
+            "std": 19.104549563956727,
+            "percentile_5": 27.22843823314699,
+            "percentile_95": 88.74492813197651
+          },
+          "calinski_harabasz": {
+            "mean": 0.9830762889651041,
+            "std": 0.34456512769747116,
+            "percentile_5": 0.4839105805391995,
+            "percentile_95": 1.6643517494035476
+          },
+          "separation_ratio": {
+            "mean": 0.18953289063633988,
+            "std": 0.032960751513886735,
+            "percentile_5": 0.13762740289716827,
+            "percentile_95": 0.25071045460223246
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.342819735848891,
+          "calinski_harabasz_z_score": 12.77961949667484,
+          "separation_ratio_z_score": 7.922937684277031,
+          "davies_bouldin_z_score": 1.4335120307335931
+        }
+      }
+    }
+  },
+  "epoch_04": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 4,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1706005185842514,
+          "davies_bouldin": 13.590226567092325,
+          "calinski_harabasz": 4.696438697497933
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.004771702494969,
+          "std_intra_distance": 0.9136576317616295,
+          "mean_inter_distance": 0.841270560329475,
+          "std_inter_distance": 0.4719222761293476,
+          "separation_ratio": 0.41963409354100517
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01593116824500982,
+          "normalized_mutual_info": 0.06627271875749596,
+          "v_measure": 0.06627271875749596
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11483407102525234,
+            "std": 0.019494915601888298,
+            "percentile_5": -0.15241927206516265,
+            "percentile_95": -0.08711997754871846
+          },
+          "davies_bouldin": {
+            "mean": 57.15697374236211,
+            "std": 19.401497778687137,
+            "percentile_5": 33.07089227759647,
+            "percentile_95": 94.36736997572075
+          },
+          "calinski_harabasz": {
+            "mean": 1.016639917674614,
+            "std": 0.48492420611341597,
+            "percentile_5": 0.3628129014763271,
+            "percentile_95": 1.9199254828012913
+          },
+          "separation_ratio": {
+            "mean": 0.18500589056353958,
+            "std": 0.04196501621654506,
+            "percentile_5": 0.11376574768089173,
+            "percentile_95": 0.2647692108809405
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.8605636822350475,
+          "calinski_harabasz_z_score": 7.58839986421027,
+          "separation_ratio_z_score": 5.591042828787504,
+          "davies_bouldin_z_score": 2.245535250537645
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 4,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.14644302427768707,
+          "davies_bouldin": 11.294608535560467,
+          "calinski_harabasz": 5.141651945473476
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.006086967604646,
+          "std_intra_distance": 0.9790671420702256,
+          "mean_inter_distance": 0.9166872295654295,
+          "std_inter_distance": 0.4532379328494363,
+          "separation_ratio": 0.4569528837976873
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.019805622361366265,
+          "normalized_mutual_info": 0.06751025661681474,
+          "v_measure": 0.06751025661681474
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10633962169289589,
+            "std": 0.014513967293465331,
+            "percentile_5": -0.12826768159866334,
+            "percentile_95": -0.08244469799101353
+          },
+          "davies_bouldin": {
+            "mean": 50.0933637571859,
+            "std": 24.22602665675504,
+            "percentile_5": 27.35658057623492,
+            "percentile_95": 94.48633237120221
+          },
+          "calinski_harabasz": {
+            "mean": 1.0282275409353183,
+            "std": 0.4098652334678641,
+            "percentile_5": 0.44441848830430825,
+            "percentile_95": 1.8439016318291124
+          },
+          "separation_ratio": {
+            "mean": 0.19509917858101178,
+            "std": 0.03936734627528724,
+            "percentile_5": 0.1311714745174866,
+            "percentile_95": 0.2599671982172995
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.763090323542831,
+          "calinski_harabasz_z_score": 10.036041285411136,
+          "separation_ratio_z_score": 6.651545760427686,
+          "davies_bouldin_z_score": 1.6015319297441215
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 4,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.19537577033042908,
+          "davies_bouldin": 36.4287160753247,
+          "calinski_harabasz": 4.675851727103101
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.0734060704423167,
+          "std_intra_distance": 1.0441320001421976,
+          "mean_inter_distance": 0.8267472053932952,
+          "std_inter_distance": 0.5873911579930376,
+          "separation_ratio": 0.39873868085547737
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01099486007394357,
+          "normalized_mutual_info": 0.061855486689782954,
+          "v_measure": 0.06185548668978297
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12524721130728722,
+            "std": 0.023062235261632463,
+            "percentile_5": -0.16638792380690576,
+            "percentile_95": -0.08983119502663614
+          },
+          "davies_bouldin": {
+            "mean": 75.45605468713043,
+            "std": 36.33457356711131,
+            "percentile_5": 40.18853813347231,
+            "percentile_95": 143.1797348139877
+          },
+          "calinski_harabasz": {
+            "mean": 0.9872301547978835,
+            "std": 0.4927121652323541,
+            "percentile_5": 0.4017537120726477,
+            "percentile_95": 1.899212347727712
+          },
+          "separation_ratio": {
+            "mean": 0.18141350255527341,
+            "std": 0.045024339050553204,
+            "percentile_5": 0.12243066391491456,
+            "percentile_95": 0.26751989435517426
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.0408396336070416,
+          "calinski_harabasz_z_score": 7.4863618814155535,
+          "separation_ratio_z_score": 4.826837725617512,
+          "davies_bouldin_z_score": 1.0741102696504965
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 4,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17340590059757233,
+          "davies_bouldin": 30.46245497775626,
+          "calinski_harabasz": 4.690035721770318
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.8250577020627516,
+          "std_intra_distance": 1.664735000031648,
+          "mean_inter_distance": 1.2052037269613574,
+          "std_inter_distance": 0.7783288804024532,
+          "separation_ratio": 0.42661207302606313
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01342634490653609,
+          "normalized_mutual_info": 0.052561857116642595,
+          "v_measure": 0.05256185711664259
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.1242568276822567,
+            "std": 0.018930057113377592,
+            "percentile_5": -0.15287504121661186,
+            "percentile_95": -0.0947761856019497
+          },
+          "davies_bouldin": {
+            "mean": 98.42911293838559,
+            "std": 48.843181494384204,
+            "percentile_5": 53.1686936903285,
+            "percentile_95": 169.76548823051507
+          },
+          "calinski_harabasz": {
+            "mean": 1.0079187345175513,
+            "std": 0.4805581442019289,
+            "percentile_5": 0.32340882503841906,
+            "percentile_95": 1.871290363597622
+          },
+          "separation_ratio": {
+            "mean": 0.1879326616608773,
+            "std": 0.046857298904320284,
+            "percentile_5": 0.10965756324545829,
+            "percentile_95": 0.2620136658039617
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.596351010509245,
+          "calinski_harabasz_z_score": 7.662167485201445,
+          "separation_ratio_z_score": 5.09375096188439,
+          "davies_bouldin_z_score": 1.3915280676064041
+        }
+      }
+    }
+  },
+  "epoch_05": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 5,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.16187120974063873,
+          "davies_bouldin": 26.99855689637983,
+          "calinski_harabasz": 3.847196928697325
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.488055658292601,
+          "std_intra_distance": 0.8531812796146181,
+          "mean_inter_distance": 0.5699173906986397,
+          "std_inter_distance": 0.37041554305320834,
+          "separation_ratio": 0.38299467072529914
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.008810086170333749,
+          "normalized_mutual_info": 0.058898904530780956,
+          "v_measure": 0.058898904530780956
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12298929013311863,
+            "std": 0.019859410900644404,
+            "percentile_5": -0.15499270781874658,
+            "percentile_95": -0.09269010908901693
+          },
+          "davies_bouldin": {
+            "mean": 70.25538799020036,
+            "std": 31.196755324957206,
+            "percentile_5": 37.7368669103951,
+            "percentile_95": 125.4241539953345
+          },
+          "calinski_harabasz": {
+            "mean": 1.0048690937413702,
+            "std": 0.39489469322413173,
+            "percentile_5": 0.4419570705833932,
+            "percentile_95": 1.7468641275538235
+          },
+          "separation_ratio": {
+            "mean": 0.19151845172117984,
+            "std": 0.038398818569133096,
+            "percentile_5": 0.12735087433048173,
+            "percentile_95": 0.254140331636845
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9578586596573442,
+          "calinski_harabasz_z_score": 7.197685569663316,
+          "separation_ratio_z_score": 4.986513287105075,
+          "davies_bouldin_z_score": 1.3865810929130613
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 5,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.11999072134494781,
+          "davies_bouldin": 14.727094956924754,
+          "calinski_harabasz": 5.078883385164222
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.8819048769147597,
+          "std_intra_distance": 0.9107645788961244,
+          "mean_inter_distance": 0.8714051001153487,
+          "std_inter_distance": 0.38311809006075054,
+          "separation_ratio": 0.46304417729843467
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.014747711478621134,
+          "normalized_mutual_info": 0.06978825947561934,
+          "v_measure": 0.06978825947561935
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09566135846078395,
+            "std": 0.01310575654459002,
+            "percentile_5": -0.11598971150815487,
+            "percentile_95": -0.07681940905749798
+          },
+          "davies_bouldin": {
+            "mean": 44.315716593514125,
+            "std": 24.50147000313581,
+            "percentile_5": 22.684359056798986,
+            "percentile_95": 72.52194007116142
+          },
+          "calinski_harabasz": {
+            "mean": 0.9738419628921052,
+            "std": 0.3650598237888159,
+            "percentile_5": 0.4983808632280604,
+            "percentile_95": 1.6161046446618577
+          },
+          "separation_ratio": {
+            "mean": 0.19818323592905374,
+            "std": 0.03656263832537499,
+            "percentile_5": 0.14448410649105675,
+            "percentile_95": 0.2600835748404637
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.8563875195901514,
+          "calinski_harabasz_z_score": 11.244845789020184,
+          "separation_ratio_z_score": 7.244032528844169,
+          "davies_bouldin_z_score": 1.2076263845721291
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 5,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1418091207742691,
+          "davies_bouldin": 15.790792465241008,
+          "calinski_harabasz": 4.242281619737692
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.3727922805699158,
+          "std_intra_distance": 0.4907021290936304,
+          "mean_inter_distance": 0.5485188414138418,
+          "std_inter_distance": 0.25911427833286965,
+          "separation_ratio": 0.39956433699531035
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.00953594378781989,
+          "normalized_mutual_info": 0.05549620145183128,
+          "v_measure": 0.05549620145183129
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10038335874676704,
+            "std": 0.015961413751650753,
+            "percentile_5": -0.12630737572908401,
+            "percentile_95": -0.07177889682352542
+          },
+          "davies_bouldin": {
+            "mean": 57.28054184348535,
+            "std": 38.5332184637065,
+            "percentile_5": 28.142018756987117,
+            "percentile_95": 104.85327122954129
+          },
+          "calinski_harabasz": {
+            "mean": 0.944655064944061,
+            "std": 0.3952669416983666,
+            "percentile_5": 0.39070040033745784,
+            "percentile_95": 1.5084438641139393
+          },
+          "separation_ratio": {
+            "mean": 0.17968494988391573,
+            "std": 0.03715424400820857,
+            "percentile_5": 0.11973129748935486,
+            "percentile_95": 0.23805584885032946
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.5953692243093283,
+          "calinski_harabasz_z_score": 8.342783589805222,
+          "separation_ratio_z_score": 5.91801537027146,
+          "davies_bouldin_z_score": 1.0767268095532307
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 5,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.11850195378065109,
+          "davies_bouldin": 13.757028158319425,
+          "calinski_harabasz": 4.091418712364563
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.4999841012503463,
+          "std_intra_distance": 0.9921638995011585,
+          "mean_inter_distance": 1.0104610927238216,
+          "std_inter_distance": 0.4325206482158085,
+          "separation_ratio": 0.4041870058999886
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01908592397964033,
+          "normalized_mutual_info": 0.07198806957856033,
+          "v_measure": 0.07198806957856034
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09688688948750496,
+            "std": 0.012885838524068195,
+            "percentile_5": -0.12202815636992455,
+            "percentile_95": -0.07805423438549043
+          },
+          "davies_bouldin": {
+            "mean": 47.817868918962716,
+            "std": 21.74958699654424,
+            "percentile_5": 24.47807009852145,
+            "percentile_95": 98.06227975047358
+          },
+          "calinski_harabasz": {
+            "mean": 1.0213635904187088,
+            "std": 0.3708720559737749,
+            "percentile_5": 0.5267639940298543,
+            "percentile_95": 1.7739556710458357
+          },
+          "separation_ratio": {
+            "mean": 0.19320250447028617,
+            "std": 0.0343693096994833,
+            "percentile_5": 0.14008910289990764,
+            "percentile_95": 0.2554330421020834
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.6774278408637107,
+          "calinski_harabasz_z_score": 8.277935941776493,
+          "separation_ratio_z_score": 6.1387471344201705,
+          "davies_bouldin_z_score": 1.5660454042669942
+        }
+      }
+    }
+  },
+  "epoch_06": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 6,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17319287359714508,
+          "davies_bouldin": 30.437733472271088,
+          "calinski_harabasz": 5.494400082269389
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.7376867784611065,
+          "std_intra_distance": 0.9553089371101764,
+          "mean_inter_distance": 0.7924394221272089,
+          "std_inter_distance": 0.5038582905407814,
+          "separation_ratio": 0.45603121770235266
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.011544452917729554,
+          "normalized_mutual_info": 0.05249235691739958,
+          "v_measure": 0.05249235691739958
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12631038047373294,
+            "std": 0.02205488433229641,
+            "percentile_5": -0.1596114806830883,
+            "percentile_95": -0.09999984130263329
+          },
+          "davies_bouldin": {
+            "mean": 101.51264343600054,
+            "std": 75.28507817923621,
+            "percentile_5": 44.3334617281673,
+            "percentile_95": 239.91196638327548
+          },
+          "calinski_harabasz": {
+            "mean": 1.004541603077408,
+            "std": 0.5309841375548469,
+            "percentile_5": 0.36782164294279207,
+            "percentile_95": 1.8584433719202504
+          },
+          "separation_ratio": {
+            "mean": 0.18560811444615483,
+            "std": 0.04835063012882361,
+            "percentile_5": 0.11971231658984137,
+            "percentile_95": 0.2652254008547923
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.1257192926992157,
+          "calinski_harabasz_z_score": 8.455729958087893,
+          "separation_ratio_z_score": 5.592959234154605,
+          "davies_bouldin_z_score": 0.9440769895266187
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 6,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1294844001531601,
+          "davies_bouldin": 16.25607210879128,
+          "calinski_harabasz": 5.651458974620809
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.865022922714451,
+          "std_intra_distance": 0.8511109994187935,
+          "mean_inter_distance": 0.8724094677866951,
+          "std_inter_distance": 0.45644957549459814,
+          "separation_ratio": 0.46777412356905723
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.016008166589547016,
+          "normalized_mutual_info": 0.062362145771582264,
+          "v_measure": 0.062362145771582264
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09954633489251137,
+            "std": 0.015182893814809,
+            "percentile_5": -0.1222683172672987,
+            "percentile_95": -0.07567461878061295
+          },
+          "davies_bouldin": {
+            "mean": 47.300581583143696,
+            "std": 22.537998449697007,
+            "percentile_5": 24.90377123190902,
+            "percentile_95": 94.72961297703768
+          },
+          "calinski_harabasz": {
+            "mean": 1.0220592610355068,
+            "std": 0.40838417602713417,
+            "percentile_5": 0.4625819179711999,
+            "percentile_95": 1.7883540109003768
+          },
+          "separation_ratio": {
+            "mean": 0.19606017411178459,
+            "std": 0.03854352709874504,
+            "percentile_5": 0.1393202078470555,
+            "percentile_95": 0.25335565964233236
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9718286662485853,
+          "calinski_harabasz_z_score": 11.335893958040412,
+          "separation_ratio_z_score": 7.049535159591545,
+          "davies_bouldin_z_score": 1.3774297457532112
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 6,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1227882131934166,
+          "davies_bouldin": 22.209620738817026,
+          "calinski_harabasz": 2.9554738932325813
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.3075319743499114,
+          "std_intra_distance": 0.5484850817400319,
+          "mean_inter_distance": 0.43430136909122413,
+          "std_inter_distance": 0.23218354629888932,
+          "separation_ratio": 0.33215353374866263
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.006928888876440191,
+          "normalized_mutual_info": 0.045260792407313385,
+          "v_measure": 0.045260792407313385
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10808808147907258,
+            "std": 0.01655742113207723,
+            "percentile_5": -0.13704705908894538,
+            "percentile_95": -0.08376702181994915
+          },
+          "davies_bouldin": {
+            "mean": 45.40469935392732,
+            "std": 26.915735192082526,
+            "percentile_5": 24.24674125244981,
+            "percentile_95": 86.77577371760407
+          },
+          "calinski_harabasz": {
+            "mean": 1.0638603031503004,
+            "std": 0.37907246556633933,
+            "percentile_5": 0.5610525045924503,
+            "percentile_95": 1.7420633407019106
+          },
+          "separation_ratio": {
+            "mean": 0.1969738190159266,
+            "std": 0.03443969750877775,
+            "percentile_5": 0.1432338996317557,
+            "percentile_95": 0.2566098640915282
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -0.8878273734226024,
+          "calinski_harabasz_z_score": 4.990110762215833,
+          "separation_ratio_z_score": 3.9251132997983618,
+          "davies_bouldin_z_score": 0.8617664889916626
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 6,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.14504505693912506,
+          "davies_bouldin": 16.806402907519704,
+          "calinski_harabasz": 5.715233033138725
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.457951443545396,
+          "std_intra_distance": 1.1859910135175091,
+          "mean_inter_distance": 1.1434089732477652,
+          "std_inter_distance": 0.6557972676565784,
+          "separation_ratio": 0.4651877772437248
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01930339405517689,
+          "normalized_mutual_info": 0.06613087560757276,
+          "v_measure": 0.06613087560757278
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10997587531805038,
+            "std": 0.017547996246506933,
+            "percentile_5": -0.138832388818264,
+            "percentile_95": -0.08024300746619702
+          },
+          "davies_bouldin": {
+            "mean": 52.33105030948045,
+            "std": 25.833732555458667,
+            "percentile_5": 28.99930868947432,
+            "percentile_95": 95.38378526760407
+          },
+          "calinski_harabasz": {
+            "mean": 1.0200574232306776,
+            "std": 0.41077913325082327,
+            "percentile_5": 0.49076035100414744,
+            "percentile_95": 1.8553463115712416
+          },
+          "separation_ratio": {
+            "mean": 0.1932784684767329,
+            "std": 0.0393396372218433,
+            "percentile_5": 0.1384928774251933,
+            "percentile_95": 0.2577333128845637
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9984721405474133,
+          "calinski_harabasz_z_score": 11.429927252514933,
+          "separation_ratio_z_score": 6.911840778643848,
+          "davies_bouldin_z_score": 1.37512639049344
+        }
+      }
+    }
+  },
+  "epoch_07": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 7,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.15229998528957367,
+          "davies_bouldin": 16.798226350318068,
+          "calinski_harabasz": 4.245439345127495
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 0.9189810125478145,
+          "std_intra_distance": 0.5001194251516287,
+          "mean_inter_distance": 0.3770565879544481,
+          "std_inter_distance": 0.21797258478413098,
+          "separation_ratio": 0.4102985575361322
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.012087287732219867,
+          "normalized_mutual_info": 0.05908955018844898,
+          "v_measure": 0.05908955018844898
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11464494839310646,
+            "std": 0.01734844416042559,
+            "percentile_5": -0.14372314214706422,
+            "percentile_95": -0.08880263864994051
+          },
+          "davies_bouldin": {
+            "mean": 64.1548920774385,
+            "std": 45.76691348012808,
+            "percentile_5": 30.750385992414188,
+            "percentile_95": 136.32068645766
+          },
+          "calinski_harabasz": {
+            "mean": 1.019828401248512,
+            "std": 0.46190602241578715,
+            "percentile_5": 0.39507933318722194,
+            "percentile_95": 1.661832201342646
+          },
+          "separation_ratio": {
+            "mean": 0.1939667540136765,
+            "std": 0.04247396382232569,
+            "percentile_5": 0.12441422277780739,
+            "percentile_95": 0.2586828846457484
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.1705137675898345,
+          "calinski_harabasz_z_score": 6.983262367978895,
+          "separation_ratio_z_score": 5.093280307611523,
+          "davies_bouldin_z_score": 1.0347358413776935
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 7,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.15133267641067505,
+          "davies_bouldin": 23.18988141409293,
+          "calinski_harabasz": 4.392894226253357
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.7554670194765614,
+          "std_intra_distance": 0.8644174538768518,
+          "mean_inter_distance": 0.7362396482784896,
+          "std_inter_distance": 0.3801008280418376,
+          "separation_ratio": 0.41939816351778414
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.0113580796640215,
+          "normalized_mutual_info": 0.05805585876607198,
+          "v_measure": 0.058055858766071985
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10304082974791527,
+            "std": 0.01436016803333995,
+            "percentile_5": -0.12645189836621284,
+            "percentile_95": -0.08027012236416341
+          },
+          "davies_bouldin": {
+            "mean": 50.82073475779777,
+            "std": 57.08197935197026,
+            "percentile_5": 24.990911056006944,
+            "percentile_95": 100.70305391997721
+          },
+          "calinski_harabasz": {
+            "mean": 1.0504675796188647,
+            "std": 0.3450861832297217,
+            "percentile_5": 0.5127505515665418,
+            "percentile_95": 1.5555862284787423
+          },
+          "separation_ratio": {
+            "mean": 0.2028828744696581,
+            "std": 0.033385447839421996,
+            "percentile_5": 0.1489830025221042,
+            "percentile_95": 0.24720976351486518
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.3629026172006324,
+          "calinski_harabasz_z_score": 9.68577360980419,
+          "separation_ratio_z_score": 6.485319295087059,
+          "davies_bouldin_z_score": 0.4840556276672127
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 7,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.12975162267684937,
+          "davies_bouldin": 43.56545910017904,
+          "calinski_harabasz": 3.685285496608913
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.2755928588580527,
+          "std_intra_distance": 0.8919446030231091,
+          "mean_inter_distance": 0.8222819433399489,
+          "std_inter_distance": 0.47163921893614075,
+          "separation_ratio": 0.3613484444397076
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.007760550765819853,
+          "normalized_mutual_info": 0.04883312210742009,
+          "v_measure": 0.04883312210742009
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09988519798964263,
+            "std": 0.015252911803428795,
+            "percentile_5": -0.12960516810417175,
+            "percentile_95": -0.07941315658390521
+          },
+          "davies_bouldin": {
+            "mean": 52.11590734163922,
+            "std": 34.02951150418741,
+            "percentile_5": 26.068518635068465,
+            "percentile_95": 107.93127287347158
+          },
+          "calinski_harabasz": {
+            "mean": 1.0178375880151405,
+            "std": 0.40812225538459124,
+            "percentile_5": 0.4739843430452131,
+            "percentile_95": 1.7403089424935407
+          },
+          "separation_ratio": {
+            "mean": 0.19025799897361767,
+            "std": 0.03692805099350642,
+            "percentile_5": 0.13463394369450532,
+            "percentile_95": 0.2522826051934401
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -1.9580802060687772,
+          "calinski_harabasz_z_score": 6.535904066491354,
+          "separation_ratio_z_score": 4.63307542269629,
+          "davies_bouldin_z_score": 0.25126567686427204
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 7,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.1441088318824768,
+          "davies_bouldin": 20.106230402708626,
+          "calinski_harabasz": 4.309988862873189
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.275358030014353,
+          "std_intra_distance": 0.989827450815388,
+          "mean_inter_distance": 0.9165977084064411,
+          "std_inter_distance": 0.49292738570396405,
+          "separation_ratio": 0.4028366930773933
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.008374028708008664,
+          "normalized_mutual_info": 0.05488384037110323,
+          "v_measure": 0.05488384037110322
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.09992758676409721,
+            "std": 0.013611859294576,
+            "percentile_5": -0.12367342673242092,
+            "percentile_95": -0.0768179714679718
+          },
+          "davies_bouldin": {
+            "mean": 51.15092924571135,
+            "std": 26.695241672228523,
+            "percentile_5": 26.22212423867517,
+            "percentile_95": 93.77609708704826
+          },
+          "calinski_harabasz": {
+            "mean": 0.9512164534905275,
+            "std": 0.41262639149688973,
+            "percentile_5": 0.4491750485181196,
+            "percentile_95": 1.630962997379133
+          },
+          "separation_ratio": {
+            "mean": 0.18588573527169008,
+            "std": 0.03667963081629365,
+            "percentile_5": 0.13190609006858348,
+            "percentile_95": 0.24352582948046508
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.245790612600937,
+          "calinski_harabasz_z_score": 8.139984447427132,
+          "separation_ratio_z_score": 5.91475303806303,
+          "davies_bouldin_z_score": 1.1629300541339176
+        }
+      }
+    }
+  },
+  "epoch_08": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 8,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.18791650235652924,
+          "davies_bouldin": 23.997154769402307,
+          "calinski_harabasz": 5.138999932399689
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.5147391001896278,
+          "std_intra_distance": 0.7403757978207668,
+          "mean_inter_distance": 0.6706225837047071,
+          "std_inter_distance": 0.382770541422969,
+          "separation_ratio": 0.4427314111013829
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.017568871444094712,
+          "normalized_mutual_info": 0.07361864685735092,
+          "v_measure": 0.07361864685735092
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12591598749160768,
+            "std": 0.025998777533333364,
+            "percentile_5": -0.169235946983099,
+            "percentile_95": -0.08360995762050152
+          },
+          "davies_bouldin": {
+            "mean": 49.46047354411429,
+            "std": 20.286925090190625,
+            "percentile_5": 27.35445381756599,
+            "percentile_95": 93.892303364506
+          },
+          "calinski_harabasz": {
+            "mean": 0.9742457779661586,
+            "std": 0.39872119066560074,
+            "percentile_5": 0.48427510452717976,
+            "percentile_95": 1.7237784257126858
+          },
+          "separation_ratio": {
+            "mean": 0.1910739709895742,
+            "std": 0.036547341166649504,
+            "percentile_5": 0.1377661307326064,
+            "percentile_95": 0.25185645645125804
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.3847473130392345,
+          "calinski_harabasz_z_score": 10.445279187396949,
+          "separation_ratio_z_score": 6.88579338683749,
+          "davies_bouldin_z_score": 1.2551591067403465
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 8,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17139986157417297,
+          "davies_bouldin": 19.20383222450521,
+          "calinski_harabasz": 5.909800427507174
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.104534990866204,
+          "std_intra_distance": 1.0714468632509262,
+          "mean_inter_distance": 0.9964002963149251,
+          "std_inter_distance": 0.5936884650940344,
+          "separation_ratio": 0.473453896421213
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.013191673652902226,
+          "normalized_mutual_info": 0.06590950361242918,
+          "v_measure": 0.06590950361242918
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12126499623060226,
+            "std": 0.021282405606539913,
+            "percentile_5": -0.15421648919582367,
+            "percentile_95": -0.08979569934308529
+          },
+          "davies_bouldin": {
+            "mean": 61.53175067659494,
+            "std": 34.341404108405044,
+            "percentile_5": 30.096068222885382,
+            "percentile_95": 119.23618706328536
+          },
+          "calinski_harabasz": {
+            "mean": 1.022852753397005,
+            "std": 0.4508888387453191,
+            "percentile_5": 0.42870249211366723,
+            "percentile_95": 1.8342689622863482
+          },
+          "separation_ratio": {
+            "mean": 0.19130966995191978,
+            "std": 0.041225497199358925,
+            "percentile_5": 0.12520900137211333,
+            "percentile_95": 0.2534510998177839
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.3556954166950317,
+          "calinski_harabasz_z_score": 10.838475593472214,
+          "separation_ratio_z_score": 6.843925377173636,
+          "davies_bouldin_z_score": 1.2325622539624113
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 8,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.23792050778865814,
+          "davies_bouldin": 32.97976259492294,
+          "calinski_harabasz": 5.574014777564025
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 5.972315944668949,
+          "std_intra_distance": 3.0630404321018996,
+          "mean_inter_distance": 2.6805128448311875,
+          "std_inter_distance": 1.7505396423876598,
+          "separation_ratio": 0.4488230135807962
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.012586528284243441,
+          "normalized_mutual_info": 0.05829577834754924,
+          "v_measure": 0.05829577834754924
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.15678745411336423,
+            "std": 0.03247746387712295,
+            "percentile_5": -0.21143793538212777,
+            "percentile_95": -0.10776222683489324
+          },
+          "davies_bouldin": {
+            "mean": 102.13650833816725,
+            "std": 50.90123495804323,
+            "percentile_5": 49.54049588980531,
+            "percentile_95": 162.82848940769074
+          },
+          "calinski_harabasz": {
+            "mean": 1.0107868007050465,
+            "std": 0.4834945627061302,
+            "percentile_5": 0.4747495757016013,
+            "percentile_95": 1.818247044485745
+          },
+          "separation_ratio": {
+            "mean": 0.17933248620128162,
+            "std": 0.04338519344041086,
+            "percentile_5": 0.11481923470473511,
+            "percentile_95": 0.24945497590481167
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.4981339054754166,
+          "calinski_harabasz_z_score": 9.43801301780621,
+          "separation_ratio_z_score": 6.211578329128742,
+          "davies_bouldin_z_score": 1.3586457342390352
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 8,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.18517175316810608,
+          "davies_bouldin": 43.2855224950177,
+          "calinski_harabasz": 6.2184686621196175
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 3.1585709308075285,
+          "std_intra_distance": 1.8159786040424721,
+          "mean_inter_distance": 1.5582694437164712,
+          "std_inter_distance": 0.9700648875941159,
+          "separation_ratio": 0.4933463496368646
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.018761249541658576,
+          "normalized_mutual_info": 0.06647482232380018,
+          "v_measure": 0.06647482232380018
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.12782127529382706,
+            "std": 0.022986590436858967,
+            "percentile_5": -0.16795941144227983,
+            "percentile_95": -0.09323940128087997
+          },
+          "davies_bouldin": {
+            "mean": 87.67807032347822,
+            "std": 99.58422880647429,
+            "percentile_5": 36.49647523543559,
+            "percentile_95": 142.95783891245063
+          },
+          "calinski_harabasz": {
+            "mean": 1.04016811893104,
+            "std": 0.47009938762502024,
+            "percentile_5": 0.4690416250816665,
+            "percentile_95": 2.0714408322602007
+          },
+          "separation_ratio": {
+            "mean": 0.19354848223316565,
+            "std": 0.042739999806975085,
+            "percentile_5": 0.13816042421895017,
+            "percentile_95": 0.2758757929045062
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.494953657081635,
+          "calinski_harabasz_z_score": 11.015331394813693,
+          "separation_ratio_z_score": 7.014456451980903,
+          "davies_bouldin_z_score": 0.4457788985315155
+        }
+      }
+    }
+  },
+  "epoch_09": {
+    "pca": {
+      "student": {
+        "method": "pca",
+        "epoch": 9,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.16659364104270935,
+          "davies_bouldin": 25.361888914218106,
+          "calinski_harabasz": 5.937052801484616
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 0.4356635350284136,
+          "std_intra_distance": 0.1911840913571557,
+          "mean_inter_distance": 0.20493408311463931,
+          "std_inter_distance": 0.11337594942195463,
+          "separation_ratio": 0.4703952980533951
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.018305457775787244,
+          "normalized_mutual_info": 0.0721580462306199,
+          "v_measure": 0.07215804623061992
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10381649941205978,
+            "std": 0.016831969526198254,
+            "percentile_5": -0.13184000849723815,
+            "percentile_95": -0.07531138509511948
+          },
+          "davies_bouldin": {
+            "mean": 49.741687499636,
+            "std": 30.419487018294785,
+            "percentile_5": 26.237504699568017,
+            "percentile_95": 127.39336442092184
+          },
+          "calinski_harabasz": {
+            "mean": 1.0288432237211342,
+            "std": 0.3884390383683637,
+            "percentile_5": 0.45325465341449334,
+            "percentile_95": 1.7093523536234994
+          },
+          "separation_ratio": {
+            "mean": 0.19309616024767962,
+            "std": 0.037359876981892574,
+            "percentile_5": 0.13171816993402155,
+            "percentile_95": 0.2552694685382063
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.7296373150473916,
+          "calinski_harabasz_z_score": 12.635726826995537,
+          "separation_ratio_z_score": 7.422378235884332,
+          "davies_bouldin_z_score": 0.801453310858118
+        }
+      },
+      "teacher": {
+        "method": "pca",
+        "epoch": 9,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.14641964435577393,
+          "davies_bouldin": 19.537372653449488,
+          "calinski_harabasz": 6.172344154294277
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 1.8496372656561917,
+          "std_intra_distance": 0.9451740293389215,
+          "mean_inter_distance": 0.9020334025339866,
+          "std_inter_distance": 0.5227822617919775,
+          "separation_ratio": 0.4876812412930931
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.01558526398494411,
+          "normalized_mutual_info": 0.06917122891000972,
+          "v_measure": 0.06917122891000974
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.10398438066244126,
+            "std": 0.016689814682680198,
+            "percentile_5": -0.13141724839806557,
+            "percentile_95": -0.07873076610267163
+          },
+          "davies_bouldin": {
+            "mean": 50.452885551573445,
+            "std": 32.218316051913575,
+            "percentile_5": 25.0004876947295,
+            "percentile_95": 103.51446149629618
+          },
+          "calinski_harabasz": {
+            "mean": 0.9745333620013276,
+            "std": 0.3687714006806861,
+            "percentile_5": 0.4774266639412322,
+            "percentile_95": 1.6443446616492738
+          },
+          "separation_ratio": {
+            "mean": 0.195182771819921,
+            "std": 0.03707407353881445,
+            "percentile_5": 0.1405266935796665,
+            "percentile_95": 0.260897783318708
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -2.5425844744321653,
+          "calinski_harabasz_z_score": 14.094940070457524,
+          "separation_ratio_z_score": 7.889569220575203,
+          "davies_bouldin_z_score": 0.9595632760045434
+        }
+      }
+    },
+    "umap": {
+      "student": {
+        "method": "umap",
+        "epoch": 9,
+        "network": "student",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.17262224853038788,
+          "davies_bouldin": 20.970470888374482,
+          "calinski_harabasz": 6.393265578474266
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.9633962379733454,
+          "std_intra_distance": 1.3212336431438638,
+          "mean_inter_distance": 1.4065622535219597,
+          "std_inter_distance": 0.8767538234769868,
+          "separation_ratio": 0.47464535142200504
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.021084313306416642,
+          "normalized_mutual_info": 0.08237580895437047,
+          "v_measure": 0.08237580895437047
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11296633295714856,
+            "std": 0.01923622133183754,
+            "percentile_5": -0.14686010181903839,
+            "percentile_95": -0.08351598978042603
+          },
+          "davies_bouldin": {
+            "mean": 55.16304171109341,
+            "std": 27.28469759765882,
+            "percentile_5": 28.357868127596625,
+            "percentile_95": 108.20966759704162
+          },
+          "calinski_harabasz": {
+            "mean": 0.9969548569379242,
+            "std": 0.4495314729881327,
+            "percentile_5": 0.4298175854337814,
+            "percentile_95": 1.7945072232783346
+          },
+          "separation_ratio": {
+            "mean": 0.18500757689902336,
+            "std": 0.03984976779095273,
+            "percentile_5": 0.13280672367640603,
+            "percentile_95": 0.2512747772908486
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.101228382858323,
+          "calinski_harabasz_z_score": 12.004300134239546,
+          "separation_ratio_z_score": 7.268242466113929,
+          "davies_bouldin_z_score": 1.2531775622703933
+        }
+      },
+      "teacher": {
+        "method": "umap",
+        "epoch": 9,
+        "network": "teacher",
+        "n_samples": 500,
+        "n_classes": 10,
+        "internal_metrics": {
+          "silhouette": -0.161329984664917,
+          "davies_bouldin": 31.799183003132136,
+          "calinski_harabasz": 6.294347622071462
+        },
+        "separation_metrics": {
+          "mean_intra_distance": 2.6104343440193727,
+          "std_intra_distance": 1.343378959696415,
+          "mean_inter_distance": 1.2692080889915653,
+          "std_inter_distance": 0.7768175573223292,
+          "separation_ratio": 0.48620571018662984
+        },
+        "external_metrics": {
+          "adjusted_rand": 0.018033678945710088,
+          "normalized_mutual_info": 0.07696978918741613,
+          "v_measure": 0.07696978918741613
+        },
+        "random_baseline": {
+          "silhouette": {
+            "mean": -0.11256541892886161,
+            "std": 0.016123643510701464,
+            "percentile_5": -0.1418624736368656,
+            "percentile_95": -0.08400870934128761
+          },
+          "davies_bouldin": {
+            "mean": 54.264444704535535,
+            "std": 31.472052142267415,
+            "percentile_5": 31.36363614912795,
+            "percentile_95": 100.62987661275785
+          },
+          "calinski_harabasz": {
+            "mean": 1.0871465842720331,
+            "std": 0.45594643415464287,
+            "percentile_5": 0.5080914888377602,
+            "percentile_95": 1.9652970063734774
+          },
+          "separation_ratio": {
+            "mean": 0.20004235489623354,
+            "std": 0.039202847111313326,
+            "percentile_5": 0.14436617600050042,
+            "percentile_95": 0.263929586690338
+          }
+        },
+        "z_scores": {
+          "silhouette_z_score": -3.0244135392654723,
+          "calinski_harabasz_z_score": 11.420642092429016,
+          "separation_ratio_z_score": 7.299555424580732,
+          "davies_bouldin_z_score": 0.7138162328865817
+        }
+      }
+    }
+  }
+}

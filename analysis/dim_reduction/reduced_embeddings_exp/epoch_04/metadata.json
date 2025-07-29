@@ -1,0 +1,14 @@
+{
+  "epoch": 4,
+  "n_components": 2,
+  "n_neighbors": 15,
+  "min_dist": 0.1,
+  "metric": "euclidean",
+  "normalized": true,
+  "num_classes": 50,
+  "n_masks": 5,
+  "methods": [
+    "pca",
+    "umap"
+  ]
+}

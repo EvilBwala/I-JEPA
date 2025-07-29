@@ -1,0 +1,64 @@
+{
+  "mask_results": {
+    "mask_00": {
+      "mask_ratio": 0.328125,
+      "n_samples": 500,
+      "student": {
+        "train_acc": 0.56,
+        "test_acc": 0.16
+      },
+      "teacher": {
+        "train_acc": 0.5975,
+        "test_acc": 0.22
+      },
+      "accuracy_gap": 0.06
+    },
+    "mask_01": {
+      "mask_ratio": 0.34375,
+      "n_samples": 500,
+      "student": {
+        "train_acc": 0.5925,
+        "test_acc": 0.25
+      },
+      "teacher": {
+        "train_acc": 0.6275,
+        "test_acc": 0.23
+      },
+      "accuracy_gap": -0.01999999999999999
+    },
+    "mask_02": {
+      "mask_ratio": 0.296875,
+      "n_samples": 500,
+      "student": {
+        "train_acc": 0.5825,
+        "test_acc": 0.19
+      },
+      "teacher": {
+        "train_acc": 0.6275,
+        "test_acc": 0.25
+      },
+      "accuracy_gap": 0.06
+    }
+  },
+  "summary": {
+    "num_masks_analyzed": 3,
+    "student": {
+      "mean_test_acc": 0.20000000000000004,
+      "std_test_acc": 0.03741657386773942,
+      "min_test_acc": 0.16,
+      "max_test_acc": 0.25
+    },
+    "teacher": {
+      "mean_test_acc": 0.2333333333333333,
+      "std_test_acc": 0.01247219128924647,
+      "min_test_acc": 0.22,
+      "max_test_acc": 0.25
+    },
+    "accuracy_gap": {
+      "mean": 0.03333333333333333,
+      "std": 0.037712361663282526,
+      "min": -0.01999999999999999,
+      "max": 0.06
+    }
+  }
+}

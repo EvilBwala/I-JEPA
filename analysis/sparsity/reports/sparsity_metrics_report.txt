@@ -1,0 +1,85 @@
+================================================================================
+I-JEPA SPARSITY ANALYSIS: STUDENT VS TEACHER METRICS OVER TIME
+================================================================================
+
+1. SUMMARY STATISTICS
+----------------------------------------
+
+L1 Sparsity:
+  Student: 0.2335 → 0.2547 (Δ = +0.0213)
+  Teacher: 0.2267 → 0.2499 (Δ = +0.0232)
+
+Gini Coefficient:
+  Student: 0.4386 → 0.4559 (Δ = +0.0174)
+  Teacher: 0.4345 → 0.4529 (Δ = +0.0184)
+
+Activation Ratio:
+  Student: 0.5887 → 0.5470 (Δ = -0.0417)
+  Teacher: 0.6174 → 0.5261 (Δ = -0.0913)
+
+Mean Neuron Activation:
+  Student: 0.5922 → 0.5867 (Δ = -0.0055)
+  Teacher: 0.6416 → 0.5158 (Δ = -0.1258)
+
+
+2. DETAILED METRIC EVOLUTION
+----------------------------------------
+
+L1 Sparsity by Epoch:
+Network   Student   Teacher
+Epoch                      
+0        0.233462  0.226656
+1        0.253683  0.250681
+2        0.234692  0.237602
+3        0.250483  0.249190
+4        0.254742  0.249862
+
+Gini Coefficient by Epoch:
+Network   Student   Teacher
+Epoch                      
+0        0.438555  0.434492
+1        0.458434  0.454194
+2        0.448786  0.448413
+3        0.459097  0.458012
+4        0.455906  0.452930
+
+Activation Ratio by Epoch:
+Network   Student   Teacher
+Epoch                      
+0        0.588747  0.617367
+1        0.448052  0.524470
+2        0.583859  0.552207
+3        0.566082  0.493426
+4        0.547044  0.526093
+
+
+3. STUDENT-TEACHER CORRELATION
+----------------------------------------
+
+Activation Pattern Correlation:
+  Epoch 0.0: 0.9109
+  Epoch 1.0: 0.8852
+  Epoch 2.0: 0.9197
+  Epoch 3.0: 0.9150
+  Epoch 4.0: 0.9568
+
+
+4. KEY OBSERVATIONS
+----------------------------------------
+
+• L1 Sparsity Trends:
+  - Student: Increasing (slope = 0.0039/epoch)
+  - Teacher: Increasing (slope = 0.0045/epoch)
+
+• Activation Correlation: Increasing (slope = 0.0122/epoch)
+
+• Final Epoch Comparison:
+  - L1 Sparsity difference: 0.0049
+  - Gini difference: 0.0030
+  - Activation correlation: 0.9568
+
+• Notable Patterns:
+  - Both networks maintain moderate sparsity (L1 ~0.23-0.25)
+  - No dead neurons observed in either network
+  - High activation correlation maintained throughout training (>0.88)
+  - Teacher network shows slightly higher activation ratios

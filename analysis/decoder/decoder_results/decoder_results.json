@@ -1,0 +1,30 @@
+{
+  "student": {
+    "0": {
+      "best_C": 0.01,
+      "train_accuracy": 0.1632,
+      "val_accuracy": 0.1152,
+      "train_balanced_accuracy": 0.16320000000000004,
+      "val_balanced_accuracy": 0.1152,
+      "train_f1_macro": 0.12167835719075203,
+      "val_f1_macro": 0.07874278958925891,
+      "n_train_samples": 2500,
+      "n_val_samples": 2500,
+      "n_classes": 50
+    }
+  },
+  "teacher": {
+    "0": {
+      "best_C": 0.01,
+      "train_accuracy": 0.1492,
+      "val_accuracy": 0.114,
+      "train_balanced_accuracy": 0.14919999999999997,
+      "val_balanced_accuracy": 0.114,
+      "train_f1_macro": 0.10091734607528206,
+      "val_f1_macro": 0.07732745515664095,
+      "n_train_samples": 2500,
+      "n_val_samples": 2500,
+      "n_classes": 50
+    }
+  }
+}

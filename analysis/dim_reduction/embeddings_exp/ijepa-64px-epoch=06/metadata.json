@@ -1,0 +1,16 @@
+{
+  "checkpoint": "exp/ijepa-64px-epoch=06.ckpt",
+  "extraction_date": "2025-07-29T14:39:35.368479",
+  "model_info": {
+    "embed_dim": 256,
+    "patch_size": 8,
+    "img_size": 64,
+    "num_patches": 64
+  },
+  "extraction_config": {
+    "batch_size": 50,
+    "pool_patches": true,
+    "device": "cuda",
+    "with_masks": true
+  }
+}

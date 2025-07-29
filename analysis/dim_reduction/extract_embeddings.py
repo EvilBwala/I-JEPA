@@ -560,7 +560,7 @@ def main():
                        help='Path to model checkpoint')
     parser.add_argument('--data_path', type=str, required=True,
                        help='Path to dataset')
-    parser.add_argument('--output_dir', type=str, default='analysis/dim_reduction/embeddings',
+    parser.add_argument('--output_dir', type=str, default='embeddings',
                        help='Output directory for embeddings')
     parser.add_argument('--batch_size', type=int, default=32,
                        help='Batch size for extraction')
@@ -680,9 +680,11 @@ def main():
         json.dump(metadata, f, indent=2)
         
     print(f"\nExtraction complete! Results saved to: {output_dir}")
-    print("\nExtraction summary:")
-    for stats in all_stats:
-        print(f"  {stats['split']}: {stats['total_samples']} samples")
+    
+    if not args.with_masks:
+        print("\nExtraction summary:")
+        for stats in all_stats:
+            print(f"  {stats['split']}: {stats['total_samples']} samples")
         
     # Perform analysis if requested
     if args.analyze:

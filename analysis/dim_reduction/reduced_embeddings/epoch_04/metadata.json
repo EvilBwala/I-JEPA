@@ -1,0 +1,14 @@
+{
+  "n_components": 2,
+  "n_neighbors": 5,
+  "min_dist": 0.05,
+  "metric": "euclidean",
+  "normalized": true,
+  "methods": [
+    "pca",
+    "umap"
+  ],
+  "splits": [
+    "val"
+  ]
+}

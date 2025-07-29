@@ -1,0 +1,527 @@
+{
+  "epoch_0": {
+    "student": {
+      "l0_sparsity": 1.0416666666666667e-06,
+      "l1_sparsity": 0.2334618841315576,
+      "gini_coefficient": 0.43855508471969284,
+      "activation_ratio": 0.588746875,
+      "kurtosis": 0.9975407123565674,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5922446250915527,
+          "std": 0.3726152181625366,
+          "min": 0.14410585165023804,
+          "max": 2.3723156452178955,
+          "percentiles": {
+            "25": 0.3549715057015419,
+            "50": 0.49755874276161194,
+            "75": 0.6543379724025726,
+            "90": 1.0440775752067566,
+            "95": 1.3714620769023895,
+            "99": 1.788635051250456
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.14770616345132642,
+        "std": 0.06133284447808987
+      },
+      "population_sparsity_stats": {
+        "mean": 0.25512472640291767,
+        "std": 0.02707018794840239
+      }
+    },
+    "teacher": {
+      "l0_sparsity": 0.0,
+      "l1_sparsity": 0.2266560740100767,
+      "gini_coefficient": 0.43449231589122106,
+      "activation_ratio": 0.6173666666666666,
+      "kurtosis": 0.7619390487670898,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.6415916681289673,
+          "std": 0.41136911511421204,
+          "min": 0.15830600261688232,
+          "max": 2.4079809188842773,
+          "percentiles": {
+            "25": 0.3627704381942749,
+            "50": 0.5506342947483063,
+            "75": 0.7476376742124557,
+            "90": 1.0354525446891785,
+            "95": 1.480930209159851,
+            "99": 2.0318412542343127
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.137564460035125,
+        "std": 0.06875448457178537
+      },
+      "population_sparsity_stats": {
+        "mean": 0.24875153903118893,
+        "std": 0.02291008076273331
+      }
+    },
+    "differences": {
+      "l0_sparsity": {
+        "absolute": -1.0416666666666667e-06,
+        "relative": -0.9904912836767037
+      },
+      "l1_sparsity": {
+        "absolute": -0.006805810121480904,
+        "relative": -0.0291516958122758
+      },
+      "gini_coefficient": {
+        "absolute": -0.0040627688284717856,
+        "relative": -0.009263987301455357
+      },
+      "activation_ratio": {
+        "absolute": 0.028619791666666616,
+        "relative": 0.048611368307564996
+      },
+      "kurtosis": {
+        "absolute": -0.23560166358947754,
+        "relative": -0.23618250193625934
+      }
+    },
+    "activation_correlation": 0.9109472250270313,
+    "dead_neuron_overlap": {
+      "n_both_dead": 0,
+      "n_student_only_dead": 0,
+      "n_teacher_only_dead": 0,
+      "jaccard_similarity": 0.0
+    },
+    "epoch": 0,
+    "split": "val",
+    "n_samples": 10000,
+    "n_features": 96
+  },
+  "epoch_1": {
+    "student": {
+      "l0_sparsity": 2.0833333333333334e-06,
+      "l1_sparsity": 0.2536830134362578,
+      "gini_coefficient": 0.4584338513470978,
+      "activation_ratio": 0.44805208333333335,
+      "kurtosis": 1.7375292778015137,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.4675470292568207,
+          "std": 0.28314197063446045,
+          "min": 0.14277863502502441,
+          "max": 1.8837884664535522,
+          "percentiles": {
+            "25": 0.25899841636419296,
+            "50": 0.39174921810626984,
+            "75": 0.5698161870241165,
+            "90": 0.8044999241828918,
+            "95": 1.0085318684577942,
+            "99": 1.4903976082801806
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.17221695646292434,
+        "std": 0.058131970153634444
+      },
+      "population_sparsity_stats": {
+        "mean": 0.2644780188434432,
+        "std": 0.028133598683054668
+      }
+    },
+    "teacher": {
+      "l0_sparsity": 2.0833333333333334e-06,
+      "l1_sparsity": 0.250680879312927,
+      "gini_coefficient": 0.45419389943774013,
+      "activation_ratio": 0.5244697916666666,
+      "kurtosis": 1.4806575775146484,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5102666020393372,
+          "std": 0.32575851678848267,
+          "min": 0.12326409667730331,
+          "max": 2.170974016189575,
+          "percentiles": {
+            "25": 0.317859910428524,
+            "50": 0.427963525056839,
+            "75": 0.6069325953722,
+            "90": 0.8386616110801697,
+            "95": 1.0610851049423218,
+            "99": 1.8217532575130453
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.16243516716491493,
+        "std": 0.056130591631305314
+      },
+      "population_sparsity_stats": {
+        "mean": 0.2700930475323255,
+        "std": 0.02878929740544503
+      }
+    },
+    "differences": {
+      "l0_sparsity": {
+        "absolute": 0.0,
+        "relative": 0.0
+      },
+      "l1_sparsity": {
+        "absolute": -0.003002134123330835,
+        "relative": -0.011834194037367947
+      },
+      "gini_coefficient": {
+        "absolute": -0.004239951909357664,
+        "relative": -0.009248775596328463
+      },
+      "activation_ratio": {
+        "absolute": 0.07641770833333328,
+        "relative": 0.17055540967304772
+      },
+      "kurtosis": {
+        "absolute": -0.25687170028686523,
+        "relative": -0.14783733551443246
+      }
+    },
+    "activation_correlation": 0.8852198756812385,
+    "dead_neuron_overlap": {
+      "n_both_dead": 0,
+      "n_student_only_dead": 0,
+      "n_teacher_only_dead": 0,
+      "jaccard_similarity": 0.0
+    },
+    "epoch": 1,
+    "split": "val",
+    "n_samples": 10000,
+    "n_features": 96
+  },
+  "epoch_2": {
+    "student": {
+      "l0_sparsity": 1.0416666666666667e-06,
+      "l1_sparsity": 0.23469194598177415,
+      "gini_coefficient": 0.4487858052572469,
+      "activation_ratio": 0.583859375,
+      "kurtosis": 0.6382076740264893,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5407193899154663,
+          "std": 0.3395479619503021,
+          "min": 0.11325932294130325,
+          "max": 1.7936993837356567,
+          "percentiles": {
+            "25": 0.28148311376571655,
+            "50": 0.447238564491272,
+            "75": 0.6920867264270782,
+            "90": 0.9946050941944122,
+            "95": 1.2429317235946655,
+            "99": 1.599252170324325
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.14785030474165073,
+        "std": 0.06935426825667948
+      },
+      "population_sparsity_stats": {
+        "mean": 0.25291103741928717,
+        "std": 0.03266168844785493
+      }
+    },
+    "teacher": {
+      "l0_sparsity": 2.0833333333333334e-06,
+      "l1_sparsity": 0.2376016664549975,
+      "gini_coefficient": 0.44841268428759107,
+      "activation_ratio": 0.5522072916666667,
+      "kurtosis": 0.7982285022735596,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.4685245752334595,
+          "std": 0.26556453108787537,
+          "min": 0.1344894915819168,
+          "max": 1.5174734592437744,
+          "percentiles": {
+            "25": 0.2786311060190201,
+            "50": 0.4118463397026062,
+            "75": 0.6043139398097992,
+            "90": 0.7458265721797943,
+            "95": 0.9656113237142563,
+            "99": 1.4276188969612118
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.16368381583730782,
+        "std": 0.0633532900361398
+      },
+      "population_sparsity_stats": {
+        "mean": 0.24863650085282032,
+        "std": 0.03393732247115419
+      }
+    },
+    "differences": {
+      "l0_sparsity": {
+        "absolute": 1.0416666666666667e-06,
+        "relative": 0.9904912836767037
+      },
+      "l1_sparsity": {
+        "absolute": 0.002909720473223354,
+        "relative": 0.012398040917300629
+      },
+      "gini_coefficient": {
+        "absolute": -0.00037312096965580466,
+        "relative": -0.0008314009867756836
+      },
+      "activation_ratio": {
+        "absolute": -0.03165208333333325,
+        "relative": -0.05421182590622098
+      },
+      "kurtosis": {
+        "absolute": 0.1600208282470703,
+        "relative": 0.25073472515637796
+      }
+    },
+    "activation_correlation": 0.9197004371962386,
+    "dead_neuron_overlap": {
+      "n_both_dead": 0,
+      "n_student_only_dead": 0,
+      "n_teacher_only_dead": 0,
+      "jaccard_similarity": 0.0
+    },
+    "epoch": 2,
+    "split": "val",
+    "n_samples": 10000,
+    "n_features": 96
+  },
+  "epoch_3": {
+    "student": {
+      "l0_sparsity": 2.0833333333333334e-06,
+      "l1_sparsity": 0.25048345582018716,
+      "gini_coefficient": 0.45909650519434253,
+      "activation_ratio": 0.5660822916666667,
+      "kurtosis": 1.0327692031860352,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5801381468772888,
+          "std": 0.40483787655830383,
+          "min": 0.128606915473938,
+          "max": 2.031277656555176,
+          "percentiles": {
+            "25": 0.3011842891573906,
+            "50": 0.45166534185409546,
+            "75": 0.6742843389511108,
+            "90": 1.174490213394165,
+            "95": 1.5288253724575043,
+            "99": 1.9000146806240077
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.1394281186640062,
+        "std": 0.06210768012063973
+      },
+      "population_sparsity_stats": {
+        "mean": 0.2731160352144181,
+        "std": 0.020510049785300296
+      }
+    },
+    "teacher": {
+      "l0_sparsity": 1.0416666666666667e-06,
+      "l1_sparsity": 0.24919010122040305,
+      "gini_coefficient": 0.45801200261082875,
+      "activation_ratio": 0.49342604166666665,
+      "kurtosis": 1.2239689826965332,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.49709299206733704,
+          "std": 0.307283490896225,
+          "min": 0.13403424620628357,
+          "max": 1.6079612970352173,
+          "percentiles": {
+            "25": 0.28726112842559814,
+            "50": 0.4117138236761093,
+            "75": 0.6069657504558563,
+            "90": 0.9468343257904053,
+            "95": 1.1377466022968292,
+            "99": 1.560320347547531
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.16084424012437815,
+        "std": 0.060104158252355884
+      },
+      "population_sparsity_stats": {
+        "mean": 0.26422828308948004,
+        "std": 0.03270304849691524
+      }
+    },
+    "differences": {
+      "l0_sparsity": {
+        "absolute": -1.0416666666666667e-06,
+        "relative": -0.4976114649681529
+      },
+      "l1_sparsity": {
+        "absolute": -0.0012933545997841078,
+        "relative": -0.005163433025605608
+      },
+      "gini_coefficient": {
+        "absolute": -0.00108450258351378,
+        "relative": -0.0023622540089521123
+      },
+      "activation_ratio": {
+        "absolute": -0.07265625000000003,
+        "relative": -0.12834926968408053
+      },
+      "kurtosis": {
+        "absolute": 0.19119977951049805,
+        "relative": 0.1851331130608139
+      }
+    },
+    "activation_correlation": 0.9150041172103244,
+    "dead_neuron_overlap": {
+      "n_both_dead": 0,
+      "n_student_only_dead": 0,
+      "n_teacher_only_dead": 0,
+      "jaccard_similarity": 0.0
+    },
+    "epoch": 3,
+    "split": "val",
+    "n_samples": 10000,
+    "n_features": 96
+  },
+  "epoch_4": {
+    "student": {
+      "l0_sparsity": 1.0416666666666667e-06,
+      "l1_sparsity": 0.25474227839872504,
+      "gini_coefficient": 0.45590580400626646,
+      "activation_ratio": 0.54704375,
+      "kurtosis": 1.7236237525939941,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5867109894752502,
+          "std": 0.430025190114975,
+          "min": 0.12321145087480545,
+          "max": 2.709291458129883,
+          "percentiles": {
+            "25": 0.3088094890117645,
+            "50": 0.4745712876319885,
+            "75": 0.7365869730710983,
+            "90": 1.1135124564170837,
+            "95": 1.4771487414836884,
+            "99": 1.9694172918796518
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.13325739388514046,
+        "std": 0.06798281619352604
+      },
+      "population_sparsity_stats": {
+        "mean": 0.2794369602148492,
+        "std": 0.025093629491807157
+      }
+    },
+    "teacher": {
+      "l0_sparsity": 0.0,
+      "l1_sparsity": 0.24986181501187282,
+      "gini_coefficient": 0.45293041881750207,
+      "activation_ratio": 0.5260927083333333,
+      "kurtosis": 1.4536118507385254,
+      "dead_neurons": {
+        "n_dead": 0,
+        "n_total": 96,
+        "dead_ratio": 0.0,
+        "dead_indices": [],
+        "activation_stats": {
+          "mean": 0.5157892107963562,
+          "std": 0.33235564827919006,
+          "min": 0.11429330706596375,
+          "max": 1.96015465259552,
+          "percentiles": {
+            "25": 0.30779148638248444,
+            "50": 0.4306928515434265,
+            "75": 0.5855574011802673,
+            "90": 0.9320817291736603,
+            "95": 1.2340514063835144,
+            "99": 1.6335292994976034
+          }
+        }
+      },
+      "lifetime_sparsity_stats": {
+        "mean": 0.15374944426796652,
+        "std": 0.06169236411218556
+      },
+      "population_sparsity_stats": {
+        "mean": 0.26844377630669886,
+        "std": 0.02553871738122623
+      }
+    },
+    "differences": {
+      "l0_sparsity": {
+        "absolute": -1.0416666666666667e-06,
+        "relative": -0.9904912836767037
+      },
+      "l1_sparsity": {
+        "absolute": -0.0048804633868522185,
+        "relative": -0.0191584342651946
+      },
+      "gini_coefficient": {
+        "absolute": -0.00297538518876439,
+        "relative": -0.006526315518151065
+      },
+      "activation_ratio": {
+        "absolute": -0.020951041666666725,
+        "relative": -0.038298657618664224
+      },
+      "kurtosis": {
+        "absolute": -0.27001190185546875,
+        "relative": -0.1566536199577048
+      }
+    },
+    "activation_correlation": 0.9568344817644983,
+    "dead_neuron_overlap": {
+      "n_both_dead": 0,
+      "n_student_only_dead": 0,
+      "n_teacher_only_dead": 0,
+      "jaccard_similarity": 0.0
+    },
+    "epoch": 4,
+    "split": "val",
+    "n_samples": 10000,
+    "n_features": 96
+  }
+}

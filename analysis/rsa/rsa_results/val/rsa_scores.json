@@ -1,0 +1,6 @@
+{
+  "student_epoch0_vs_teacher_epoch0": {
+    "correlation": 0.006756894529535812,
+    "p_value": 2.1164936168428076e-81
+  }
+}

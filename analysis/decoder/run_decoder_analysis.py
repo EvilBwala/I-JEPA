@@ -31,8 +31,8 @@ class DecoderAnalyzer:
         self,
         embeddings_dir: str = "analysis/dim_reduction/embeddings",
         output_dir: str = "analysis/decoder/decoder_results",
-        C: float = 0.01,  # Strong L2 regularization
-        max_iter: int = 100,  # Limited iterations
+        C: float = 1000.0,  # C = 1/alpha, so for alpha=0.001, C=1000
+        max_iter: int = 1000,  # Increased iterations
         solver: str = 'lbfgs',
         random_state: int = 42,
         n_jobs: int = -1

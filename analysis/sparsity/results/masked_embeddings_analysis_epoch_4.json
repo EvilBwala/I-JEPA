@@ -1,0 +1,91 @@
+{
+  "n_mask_samples": 10,
+  "student": {
+    "l0_sparsity": 4.166666666666667e-06,
+    "l1_sparsity": 0.2583540203882659,
+    "gini_coefficient": 0.45890693581222647,
+    "activation_ratio": 0.5083208333333334,
+    "kurtosis": 1.9636112885215582,
+    "dead_neurons": {
+      "n_dead": 0.0,
+      "n_total": 96,
+      "dead_ratio": 0.0,
+      "activation_stats": {
+        "mean": 0.629214882850647,
+        "std": 0.4701939523220062
+      }
+    },
+    "lifetime_sparsity_stats": {
+      "mean": 0.13506278201382274,
+      "std": 0.06260660907100155
+    },
+    "population_sparsity_stats": {
+      "mean": 0.2836756180377597,
+      "std": 0.03183221956175409
+    }
+  },
+  "teacher": {
+    "l0_sparsity": 0.0,
+    "l1_sparsity": 0.2640101525826248,
+    "gini_coefficient": 0.4659465875457016,
+    "activation_ratio": 0.4684375,
+    "kurtosis": 1.9430854654705016,
+    "dead_neurons": {
+      "n_dead": 0.0,
+      "n_total": 96,
+      "dead_ratio": 0.0,
+      "activation_stats": {
+        "mean": 0.5388800501823425,
+        "std": 0.3689644932746887
+      }
+    },
+    "lifetime_sparsity_stats": {
+      "mean": 0.16227417689010593,
+      "std": 0.05721919308610004
+    },
+    "population_sparsity_stats": {
+      "mean": 0.28309000480716895,
+      "std": 0.0348573964539211
+    }
+  },
+  "differences": {
+    "l0_sparsity": {
+      "absolute": -4.166666666666667e-06,
+      "relative": -0.9976057462090981
+    },
+    "l1_sparsity": {
+      "absolute": 0.005656132194358898,
+      "relative": 0.021892951257073915
+    },
+    "gini_coefficient": {
+      "absolute": 0.00703965173347515,
+      "relative": 0.015340041805241282
+    },
+    "activation_ratio": {
+      "absolute": -0.03988333333333344,
+      "relative": -0.07846094421742958
+    }
+  },
+  "mask_variance": {
+    "l0_sparsity": {
+      "student_std": 8.333333333333334e-06,
+      "teacher_std": 0.0
+    },
+    "l1_sparsity": {
+      "student_std": 0.0010105340644578694,
+      "teacher_std": 5.551115123125783e-17
+    },
+    "gini_coefficient": {
+      "student_std": 0.0005343102697379401,
+      "teacher_std": 0.0
+    },
+    "activation_ratio": {
+      "student_std": 0.004000924372358647,
+      "teacher_std": 0.0
+    }
+  },
+  "activation_correlation": {
+    "mean": 0.9270274469849464,
+    "std": 0.0053859339394978795
+  }
+}

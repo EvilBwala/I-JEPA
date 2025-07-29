@@ -504,11 +504,11 @@ def main():
         description="Visualize reduced I-JEPA embeddings"
     )
     parser.add_argument(
-        '--reduced_dir', type=str, default='analysis/dim_reduction/reduced_embeddings',
+        '--reduced_dir', type=str, default='reduced_embeddings',
         help='Directory containing reduced embeddings'
     )
     parser.add_argument(
-        '--output_dir', type=str, default='analysis/dim_reduction/embedding_plots',
+        '--output_dir', type=str, default='embedding_plots',
         help='Output directory for plots'
     )
     parser.add_argument(
